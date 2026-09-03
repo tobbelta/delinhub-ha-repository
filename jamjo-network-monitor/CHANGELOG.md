@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.31
+
+- Loggar även den publika nyckel som faktiskt härleds från privatnyckeln.
+
 ## 1.0.30
 
 - Loggar den publika OpenWrt-nyckeln vid varje appstart för enklare SSH-felsökning.
