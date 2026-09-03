@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.32
+
+- Begränsar SSH till appens avsedda nyckel och publiknyckelautentisering.
+
 ## 1.0.31
 
 - Loggar även den publika nyckel som faktiskt härleds från privatnyckeln.
