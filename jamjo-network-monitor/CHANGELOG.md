@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.41
+
+- Låter endast matcher som finns i SVT Texts målservice aktivera målservicen.
+- CEV och HockeyAllsvenskan används enbart för att komplettera en SVT-match med tätare ställning, matchtid och händelser.
+
 ## 1.0.40
 
 - Visar poängställningen i aktuellt set på volleybollens poänghändelser i stället för matchens setställning.
