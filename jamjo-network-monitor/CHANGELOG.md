@@ -1,5 +1,12 @@
 # Ändringslogg
 
+## 1.0.42
+
+- Ersätter de hårdkodade valen Kalmar FF och Kalmar HC med generella lagsökord.
+- Följer som standard alla SVT Text-lag vars namn innehåller `Kalmar`, i samtliga sporter.
+- Lägger till ett HA-fält där flera egna sökord kan anges med komma eller semikolon.
+- Behåller Sverige som ett separat lagval med sportfilter och migrerar äldre Kalmar-inställningar automatiskt.
+
 ## 1.0.41
 
 - Låter endast matcher som finns i SVT Texts målservice aktivera målservicen.
