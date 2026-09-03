@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.43
+
+- Hindrar setresultat från avslutade volleybollmatcher utan starttid från att kopplas till föregående fotbollsmatch.
+- Visar första eller andra halvlek för fotboll, handboll och bandy utifrån avsparkstiden när SVT Text saknar halvleksdata, utan att visa en påhittad matchminut.
+
 ## 1.0.42
 
 - Ersätter de hårdkodade valen Kalmar FF och Kalmar HC med generella lagsökord.
