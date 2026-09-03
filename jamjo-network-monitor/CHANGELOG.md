@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.37
+
+- Roterar en tidigare inkonsekvent SSH-nyckel en gång vid migrering till GitHub-appen.
+
 ## 1.0.36
 
 - Återskapar automatiskt ett trasigt eller inkonsekvent SSH-nyckelpar.
