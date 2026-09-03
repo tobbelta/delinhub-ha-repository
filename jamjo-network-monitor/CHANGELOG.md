@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.30
+
+- Loggar den publika OpenWrt-nyckeln vid varje appstart för enklare SSH-felsökning.
+
 ## 1.0.29
 
 - Lägger till tydliga sensorer för senaste fondtransaktion, köp och försäljningar.
