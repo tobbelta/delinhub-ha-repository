@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.35
+
+- Loggar SSH-klientens autentiseringsdiagnostik vid anslutningsfel.
+
 ## 1.0.34
 
 - Synkroniserar SSH-publiknyckeln från den privata nyckeln vid varje appstart.
