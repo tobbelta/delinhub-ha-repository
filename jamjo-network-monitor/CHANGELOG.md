@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.39
+
+- Lägger till matchhändelser för samtliga sporter och publicerar dem som en del av den aktiva matchen.
+- Använder HockeyAllsvenskans Game Center för periodtid, mål, utvisningar och timeout i Kalmar HC-matcher.
+- Bygger ut testmatchen med händelsetyp, lag, spelare, matchtid och detaljtext.
+
 ## 1.0.38
 
 - Visar halvlek och delresultat för fotboll, handboll och bandy när SVT Text levererar uppgifterna.
