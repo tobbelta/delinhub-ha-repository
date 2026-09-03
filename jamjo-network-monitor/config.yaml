@@ -1,0 +1,111 @@
+name: "Jämjö nätverksövervakning"
+version: "1.0.29"
+slug: "jamjo_network_monitor"
+description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
+url: "https://developers.home-assistant.io/docs/apps"
+arch:
+  - aarch64
+  - amd64
+image: "ghcr.io/tobbelta/jamjo-network-monitor"
+startup: services
+boot: auto
+init: false
+homeassistant_api: true
+hassio_api: true
+services:
+  - mqtt:need
+ports:
+  8099/tcp: 8099
+ports_description:
+  8099/tcp: "Vidarekopplad radio till högtalarna"
+options:
+  mqtt_host: "192.168.1.249"
+  mqtt_port: 1883
+  mqtt_username: "jamjo_mqtt"
+  mqtt_password: ""
+  tobias_phone_mac: "dc:69:e2:49:8c:ed"
+  tobias_phone_hostnames: "Tobias-mobil"
+  radio_relay_enabled: true
+  radio_relay_port: 8099
+  personer:
+    - namn: "Tobias"
+      macar: "e2:1f:fe:dc:31:e2"
+      natverksnamn: "Tobias-mobil"
+    - namn: "Claudia"
+      macar: "38:7f:8b:e2:43:8d"
+      natverksnamn: "Clauas-Iphone"
+  zte_sms_enabled: false
+  zte_host: "192.168.0.1"
+  zte_admin_password: ""
+  zte_sms_recipient: ""
+  zte_sms_min_interval_minutes: 60
+  openai_enabled: false
+  openai_api_key: ""
+  openai_model: "gpt-5.4-nano"
+  openai_min_interval_minutes: 10
+  ai_remediation_enabled: false
+  ai_remediation_cooldown_minutes: 360
+  ai_proposal_ttl_minutes: 30
+  sports_enabled: true
+  glooko_enabled: false
+  glooko_username: ""
+  glooko_password: ""
+  glooko_poll_minutes: 30
+  waste_pickup_id: "4317918"
+  waste_address: "Jämjö Bygata 2"
+  stugsommar_house_id: "65555"
+  guest_ignore_macs: ""
+  coop_probe_store: ""
+  fund_portfolio_enabled: false
+  fund_transactions:
+    - fund_id: "lf_sverige_index"
+      name: "Länsförsäkringar Sverige Index"
+      isin: "SE0002656611"
+      units: 7.07
+      invested_sek: 5000
+      purchase_date: ""
+      source_url: "https://lf.fondlista.se/sv/1/details/SE0002656611"
+schema:
+  mqtt_host: str
+  mqtt_port: port
+  mqtt_username: str
+  mqtt_password: password
+  tobias_phone_mac: str
+  tobias_phone_hostnames: str?
+  radio_relay_enabled: bool
+  radio_relay_port: port
+  personer:
+    - namn: str
+      macar: str?
+      natverksnamn: str?
+  zte_sms_enabled: bool
+  zte_host: str
+  zte_admin_password: password
+  zte_sms_recipient: str
+  zte_sms_min_interval_minutes: int(5,1440)
+  openai_enabled: bool
+  openai_api_key: password
+  openai_model: str
+  openai_min_interval_minutes: int(5,1440)
+  ai_remediation_enabled: bool
+  ai_remediation_cooldown_minutes: int(60,10080)
+  ai_proposal_ttl_minutes: int(5,120)
+  sports_enabled: bool
+  glooko_enabled: bool
+  glooko_username: str
+  glooko_password: password
+  glooko_poll_minutes: int(15,1440)
+  waste_pickup_id: str
+  waste_address: str
+  stugsommar_house_id: str
+  guest_ignore_macs: str?
+  coop_probe_store: str?
+  fund_portfolio_enabled: bool
+  fund_transactions:
+    - fund_id: str
+      name: str
+      isin: str
+      units: float
+      invested_sek: float
+      purchase_date: str
+      source_url: str
