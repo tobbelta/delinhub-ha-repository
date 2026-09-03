@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.33
+
+- Förbättrar SSH-diagnostiken vid anslutningsfel.
+
 ## 1.0.32
 
 - Begränsar SSH till appens avsedda nyckel och publiknyckelautentisering.
