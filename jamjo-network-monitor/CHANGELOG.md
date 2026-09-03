@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.34
+
+- Synkroniserar SSH-publiknyckeln från den privata nyckeln vid varje appstart.
+
 ## 1.0.33
 
 - Förbättrar SSH-diagnostiken vid anslutningsfel.
