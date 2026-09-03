@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.38
+
+- Visar halvlek och delresultat för fotboll, handboll och bandy när SVT Text levererar uppgifterna.
+- Visar period och periodresultat för ishockey och innebandy samt set och poäng för volleyboll.
+- Bygger ut testmatchen i Home Assistant med delnummer, delställning och knappar för nästa del.
+
 ## 1.0.37
 
 - Roterar en tidigare inkonsekvent SSH-nyckel en gång vid migrering till GitHub-appen.
