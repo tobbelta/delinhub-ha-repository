@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.40
+
+- Visar poängställningen i aktuellt set på volleybollens poänghändelser i stället för matchens setställning.
+
 ## 1.0.39
 
 - Lägger till matchhändelser för samtliga sporter och publicerar dem som en del av den aktiva matchen.
