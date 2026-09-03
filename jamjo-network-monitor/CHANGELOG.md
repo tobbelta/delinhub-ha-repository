@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.36
+
+- Återskapar automatiskt ett trasigt eller inkonsekvent SSH-nyckelpar.
+
 ## 1.0.35
 
 - Loggar SSH-klientens autentiseringsdiagnostik vid anslutningsfel.
