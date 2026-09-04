@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.46
+
+- Märker varje börsvärde som `Pågående, fördröjd`, `Senaste stängning` eller
+  `Senast sparad` och publicerar kurstiden i börsens lokala tid.
+- Förtydligar på Börser-sidan att värdena inte ska tolkas som realtidskurser.
+
 ## 1.0.45
 
 - Följer OMX Stockholm Benchmark GI och Cap GI som närmaste marknadsreferenser
