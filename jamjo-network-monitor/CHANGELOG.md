@@ -608,6 +608,12 @@ verklig källa först.
 - Stöd för flera köp i samma fond och flera framtida fonder.
 - Hämtar NAV och kursdatum från fondbolagets angivna fondsida var sjätte timme.
 - Knapp i Home Assistant för att uppdatera fondkurser direkt.
+# 1.0.55
+
+- Delar nyhetsurval och trendförklaringar i separata strukturerade OpenAI-anrop.
+- Avvisar ett trendresultat om modellen inte har förklarat samtliga sex inskickade trender.
+- Tar bort en motsägelse i instruktionen som kunde göra viralsidan tom.
+
 # 1.0.54
 
 - Kräver en förklaring för sex aktuella Google Trends-poster i varje full analys så viralsidan inte blir tom.
