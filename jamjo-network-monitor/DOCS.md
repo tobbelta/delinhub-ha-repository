@@ -71,7 +71,8 @@ En helt offline puck kräver fysisk omstart eller ett separat smartuttag. Funkti
 # Personliga nyheter och trender
 
 Under **Konfiguration** kan du ändra intresseprofil, ämnen som ska väljas bort,
-om vanliga nyheter och virala trender ska ingå, trösklarna för visning och
+om vanliga nyheter och virala trender ska ingå, separata trösklar för vanlig
+nyhetsrelevans och viral visning samt den högre tröskeln för
 avisering, högsta antal nyhetsaviseringar per dygn samt tyst tid. OpenAI måste
 vara aktiverat och ha en API-nyckel. Offentliga rubriker och trendunderlag
 skickas för bedömning; lösenord, HA-data och hälsovärden ingår inte.

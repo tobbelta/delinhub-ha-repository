@@ -1,5 +1,5 @@
 name: "Delin Hub"
-version: "1.0.50"
+version: "1.0.51"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"
@@ -50,6 +50,7 @@ options:
   news_include_news: true
   news_include_viral: true
   news_relevance_threshold: 55
+  news_viral_relevance_threshold: 30
   news_notification_threshold: 88
   news_max_notifications_per_day: 3
   news_quiet_start: "22:30"
@@ -110,6 +111,7 @@ schema:
   news_include_news: bool
   news_include_viral: bool
   news_relevance_threshold: int(0,100)
+  news_viral_relevance_threshold: int(0,100)
   news_notification_threshold: int(0,100)
   news_max_notifications_per_day: int(0,20)
   news_quiet_start: str
