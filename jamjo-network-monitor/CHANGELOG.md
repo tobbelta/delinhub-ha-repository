@@ -608,6 +608,12 @@ verklig källa först.
 - Stöd för flera köp i samma fond och flera framtida fonder.
 - Hämtar NAV och kursdatum från fondbolagets angivna fondsida var sjätte timme.
 - Knapp i Home Assistant för att uppdatera fondkurser direkt.
+# 1.0.54
+
+- Kräver en förklaring för sex aktuella Google Trends-poster i varje full analys så viralsidan inte blir tom.
+- Visar en osäker trend med låg säkerhet men tillåter aldrig att den aviseras.
+- Rensar äldre oöversatta poster en gång när de nya språkreglerna tas i bruk.
+
 # 1.0.53
 
 - Kräver svenska rubriker för vanliga internationella nyheter samtidigt som virala namn bevaras i original.
