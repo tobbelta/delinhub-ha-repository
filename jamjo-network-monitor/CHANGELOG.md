@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.44
+
+- Byter appnamnet i Home Assistant från Jämjö nätverksövervakning till Delin Hub.
+- Lägger till samma hus- och pulsikon som telefonappen i Home Assistants appvy.
+
 ## 1.0.43
 
 - Hindrar setresultat från avslutade volleybollmatcher utan starttid från att kopplas till föregående fotbollsmatch.
