@@ -608,6 +608,10 @@ verklig källa först.
 - Stöd för flera köp i samma fond och flera framtida fonder.
 - Hämtar NAV och kursdatum från fondbolagets angivna fondsida var sjätte timme.
 - Knapp i Home Assistant för att uppdatera fondkurser direkt.
+# 1.0.58
+
+- Aktiverar den rättade nyhetsmigreringen för redan installerade versioner.
+
 # 1.0.57
 
 - Rättar versionsmigreringen så gamla nyhetsposter och aviseringsposter verkligen rensas.
