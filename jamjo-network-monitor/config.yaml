@@ -1,5 +1,5 @@
 name: "Delin Hub"
-version: "1.0.46"
+version: "1.0.47"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"
@@ -53,6 +53,8 @@ options:
   glooko_poll_minutes: 30
   markets_enabled: true
   markets_poll_minutes: 10
+  weather_enabled: true
+  weather_poll_minutes: 15
   waste_pickup_id: "4317918"
   waste_address: "Jämjö Bygata 2"
   stugsommar_house_id: "65555"
@@ -99,6 +101,8 @@ schema:
   glooko_poll_minutes: int(15,1440)
   markets_enabled: bool
   markets_poll_minutes: int(5,60)
+  weather_enabled: bool
+  weather_poll_minutes: int(5,60)
   waste_pickup_id: str
   waste_address: str
   stugsommar_house_id: str

@@ -1,5 +1,13 @@
 # Ändringslogg
 
+## 1.0.47
+
+- Hämtar väder från Open-Meteo var femtonde minut för Stugan och Nygatan.
+- Tar emot en avrundad position från Tobias telefon och publicerar dess aktuella
+  väder som en egen Home Assistant-sensor.
+- Behåller senaste giltiga prognos vid tillfälliga källfel och märker den som
+  gammal i stället för att tömma dashboarden.
+
 ## 1.0.46
 
 - Märker varje börsvärde som `Pågående, fördröjd`, `Senaste stängning` eller
