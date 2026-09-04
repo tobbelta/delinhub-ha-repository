@@ -1,4 +1,4 @@
-# Jämjö nätverksövervakning
+# Delin Hub
 
 Appen läser status från de fyra OpenWrt-puckarna via SSH och publicerar mätvärden till Home Assistant genom MQTT.
 
