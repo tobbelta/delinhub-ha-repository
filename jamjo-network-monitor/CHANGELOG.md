@@ -1,5 +1,15 @@
 # Ändringslogg
 
+## 1.0.45
+
+- Följer OMX Stockholm Benchmark GI och Cap GI som närmaste marknadsreferenser
+  för Länsförsäkringar Sverige Index, samt OMXS30.
+- Lägger till S&P 500, Nasdaq Composite, Dow Jones, Euro Stoxx 50, DAX,
+  FTSE 100, Nikkei 225 och Hang Seng.
+- Publicerar kurs, dagsändring i procent och punkter samt källans kurstid till
+  Home Assistant var tionde minut. Senaste giltiga värde behålls vid tillfälliga
+  källfel och markeras då som gammalt.
+
 ## 1.0.44
 
 - Byter appnamnet i Home Assistant från Jämjö nätverksövervakning till Delin Hub.

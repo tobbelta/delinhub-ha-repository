@@ -6,6 +6,16 @@ Från version 1.0 hämtar appen MQTT-adress och tillfälliga tjänsteuppgifter d
 
 Efter start ska loggen visa Kök, Lillstugan, Sovrum och Vardagsrum som `online`. Appen startar automatiskt igen efter omstart av Raspberry Pi.
 
+## Börsmarknader
+
+När `markets_enabled` är aktiverat hämtar appen svenska och stora
+internationella börsindex var tionde minut. `markets_poll_minutes` kan ställas
+mellan 5 och 60 minuter. Varje index publiceras med kurs, dagsändring i procent,
+punktändring och källans kurstid. OMX Stockholm Benchmark GI och Cap GI används
+som marknadsreferenser för Länsförsäkringar Sverige Index; fondens officiella
+jämförelseindex är en anpassad variant och indexvärdena är därför inte fondens
+NAV eller en exakt värdering av fonden.
+
 ## Närvaro
 
 Tobias telefon identifieras med den MAC-adress som anges i `tobias_phone_mac`. Appen läser riktiga associerade wifi-klienter från alla fyra OpenWrt-puckar och publicerar närvaro, starkaste RSSI samt ansluten puck. Lillstugans gästnärvaro räknas från riktiga klienter på Puck 2 efter att infrastrukturens MAC-adresser har filtrerats bort.
