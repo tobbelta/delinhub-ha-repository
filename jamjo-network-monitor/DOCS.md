@@ -18,6 +18,19 @@ NAV eller en exakt värdering av fonden. Varje värde märks som pågående,
 fördröjd kurs eller senaste stängningskurs. Yahoo Finance är inte en garanterad
 realtidskälla.
 
+## Väder
+
+När `weather_enabled` är aktiverat hämtar appen en tredygnsprognos från
+Open-Meteo för Stugan och Nygatan. Tobias telefon kan publicera en position till
+`jamjo/weather/phone_location/set`; koordinaterna avrundas till två decimaler
+innan de lämnar telefonen och sparas som ett retained MQTT-meddelande. Därmed
+fortsätter HA att uppdatera telefonens senaste plats även när telefonappen är
+stängd. `weather_poll_minutes` kan ställas mellan 5 och 60 minuter.
+
+Prognoserna publiceras som `sensor.vader_stugan`, `sensor.vader_nygatan` och
+`sensor.vader_tobias_telefon`. Senaste giltiga prognos behålls och märks som
+gammal vid ett tillfälligt källfel.
+
 ## Närvaro
 
 Tobias telefon identifieras med den MAC-adress som anges i `tobias_phone_mac`. Appen läser riktiga associerade wifi-klienter från alla fyra OpenWrt-puckar och publicerar närvaro, starkaste RSSI samt ansluten puck. Lillstugans gästnärvaro räknas från riktiga klienter på Puck 2 efter att infrastrukturens MAC-adresser har filtrerats bort.
