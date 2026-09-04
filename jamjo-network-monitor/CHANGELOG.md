@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.49
+
+- Slår sparsamt upp telefonens avrundade position till ett ortnamn via
+  OpenStreetMap och behåller resultatet i tilläggets lokala cache.
+- Skickar ortnamnet med telefonens centrala väderprognos till Delin Hub-appen.
+
 ## 1.0.48
 
 - Förnyar en utgången Glooko-session direkt med de sparade uppgifterna och
