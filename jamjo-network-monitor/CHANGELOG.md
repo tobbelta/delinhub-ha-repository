@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.48
+
+- Förnyar en utgången Glooko-session direkt med de sparade uppgifterna och
+  gör om hämtningen utan att invänta nästa schemalagda körning.
+
 ## 1.0.47
 
 - Hämtar väder från Open-Meteo var femtonde minut för Stugan och Nygatan.
