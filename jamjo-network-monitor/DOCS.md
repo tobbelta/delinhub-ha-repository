@@ -14,7 +14,9 @@ mellan 5 och 60 minuter. Varje index publiceras med kurs, dagsändring i procent
 punktändring och källans kurstid. OMX Stockholm Benchmark GI och Cap GI används
 som marknadsreferenser för Länsförsäkringar Sverige Index; fondens officiella
 jämförelseindex är en anpassad variant och indexvärdena är därför inte fondens
-NAV eller en exakt värdering av fonden.
+NAV eller en exakt värdering av fonden. Varje värde märks som pågående,
+fördröjd kurs eller senaste stängningskurs. Yahoo Finance är inte en garanterad
+realtidskälla.
 
 ## Närvaro
 
