@@ -1,5 +1,5 @@
 name: "Delin Hub"
-version: "1.0.58"
+version: "1.0.59"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"
@@ -45,7 +45,7 @@ options:
   openai_min_interval_minutes: 10
   news_enabled: true
   news_poll_minutes: 30
-  news_interests: "teknik, AI, programmering, svensk politik, internationell politik, ekonomi, fonder och börser, Kalmar FF, svenska fotbollslandslaget, Kalmar, Jämjö, Borgholm, Blekinge, diabetes och diabetesteknik, Home Assistant, smarta hem, vetenskap, cybersäkerhet och större samhällshändelser"
+  news_interests: "teknik, AI, programmering, svensk/internationell politik, ekonomi, fonder, börser, Kalmar FF, svenska fotbollslandslaget, Kalmar, Jämjö, Borgholm, Blekinge, diabetes, Home Assistant, smarta hem, vetenskap, cybersäkerhet, stora samhällshändelser"
   news_excluded_topics: "kändisskvaller"
   news_include_news: true
   news_include_viral: true

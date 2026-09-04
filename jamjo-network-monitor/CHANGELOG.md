@@ -608,6 +608,13 @@ verklig källa först.
 - Stöd för flera köp i samma fond och flera framtida fonder.
 - Hämtar NAV och kursdatum från fondbolagets angivna fondsida var sjätte timme.
 - Knapp i Home Assistant för att uppdatera fondkurser direkt.
+# 1.0.59
+
+- Lägger till MQTT-reglage för nyhetskällor, intressen, bortval, intervall, relevans, aviseringar, tyst tid och historik.
+- Sparar ändringar från Home Assistant och tillämpar dem utan omstart.
+- Lägger till manuell nyhetsuppdatering och status för inställningskommandon.
+- Förbereder en egen Nyheter-dashboard med vyer för personligt urval, vanliga nyheter, viralt och inställningar.
+
 # 1.0.58
 
 - Aktiverar den rättade nyhetsmigreringen för redan installerade versioner.
