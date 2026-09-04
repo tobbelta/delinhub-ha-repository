@@ -1,5 +1,5 @@
 name: "Delin Hub"
-version: "1.0.63"
+version: "1.0.64"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"

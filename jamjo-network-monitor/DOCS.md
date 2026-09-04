@@ -47,6 +47,21 @@ tidsserie. En ny journalexport importeras manuellt med:
 python scripts/import_1177_journal.py <sökväg-till-pdf>
 ```
 
+## Privat DNA-rapport
+
+`scripts/import_dna_traits.py` läser en MyHeritage-råfil lokalt och använder
+bara ett litet, fast urval markörer för vardagliga egenskaper. Den fullständiga
+råfilen skickas inte till Home Assistant och ingår aldrig i Git eller appbilden.
+
+Tolkningarna, använda markörer, säkerhetsnivåer och forskningskällor sparas i
+appens privata lagring och publiceras som
+`sensor.delin_hub_dna_egenskaper`. Resultaten är utbildande
+sannolikhetsassociationer och ska inte användas som medicinska diagnoser.
+
+```text
+python scripts/import_dna_traits.py <sökväg-till-MyHeritage-csv>
+```
+
 ## Närvaro
 
 Tobias telefon identifieras med den MAC-adress som anges i `tobias_phone_mac`. Appen läser riktiga associerade wifi-klienter från alla fyra OpenWrt-puckar och publicerar närvaro, starkaste RSSI samt ansluten puck. Lillstugans gästnärvaro räknas från riktiga klienter på Puck 2 efter att infrastrukturens MAC-adresser har filtrerats bort.
