@@ -608,3 +608,9 @@ verklig källa först.
 - Stöd för flera köp i samma fond och flera framtida fonder.
 - Hämtar NAV och kursdatum från fondbolagets angivna fondsida var sjätte timme.
 - Knapp i Home Assistant för att uppdatera fondkurser direkt.
+# 1.0.50
+
+- Lägger till en konfigurerbar personlig nyhets- och trendbevakning i Home Assistant.
+- Hämtar offentliga flöden från SVT, Ekot, Google Trends och Wikimedia och låter OpenAI välja bort brus.
+- Bevarar virala termer i original men skriver sammanfattning, förklaring och svensk kontext på svenska.
+- Publicerar endast poster med hög säkerhet som aviseringskandidater och begränsar antalet per dygn.
