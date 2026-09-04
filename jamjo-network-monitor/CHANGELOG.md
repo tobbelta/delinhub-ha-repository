@@ -1,5 +1,14 @@
 # Ändringslogg
 
+## 1.0.64
+
+- Tar emot en lokalt skapad DNA-tolkning med ett strikt urval vardagliga
+  egenskaper och forskningslänkar.
+- Sparar endast använda markörer och tolkningar i appens privata data; den
+  fullständiga DNA-råfilen lämnar inte datorn.
+- Publicerar rapporten som `sensor.delin_hub_dna_egenskaper` för HA och
+  Delin Hub-telefonen.
+
 ## 1.0.63
 
 - Tar emot en lokalt skapad och strikt validerad 1177-import med HbA1c, LDL,
