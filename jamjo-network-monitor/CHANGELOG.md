@@ -1,5 +1,13 @@
 # Ändringslogg
 
+## 1.0.63
+
+- Tar emot en lokalt skapad och strikt validerad 1177-import med HbA1c, LDL,
+  eGFR och albumin/kreatinin utan att journalens fritext skickas till Home Assistant.
+- Sparar journalhistoriken i appens beständiga data och publicerar den som en
+  enda MQTT-sensor för Delin Hub-telefonen.
+- Undantar sammanfattningssensorn från Home Assistants recorder-historik.
+
 ## 1.0.49
 
 - Slår sparsamt upp telefonens avrundade position till ett ortnamn via

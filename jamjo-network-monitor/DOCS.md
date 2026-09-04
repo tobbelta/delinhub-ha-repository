@@ -31,6 +31,22 @@ Prognoserna publiceras som `sensor.vader_stugan`, `sensor.vader_nygatan` och
 `sensor.vader_tobias_telefon`. Senaste giltiga prognos behålls och märks som
 gammal vid ett tillfälligt källfel.
 
+## Journalhistorik
+
+Journalexporten från 1177 behandlas lokalt med `scripts/import_1177_journal.py`.
+Importören skickar endast strukturerade värden för HbA1c, LDL, eGFR och
+albumin/kreatinin. PDF-filen, journalanteckningar, beställare och vårdenheter
+skickas inte vidare.
+
+Den validerade sammanställningen sparas i appens beständiga lagring och
+publiceras som `sensor.delin_hub_journalhistorik`. Sensorn är undantagen från
+Home Assistants recorder-historik eftersom den redan innehåller sin egen
+tidsserie. En ny journalexport importeras manuellt med:
+
+```text
+python scripts/import_1177_journal.py <sökväg-till-pdf>
+```
+
 ## Närvaro
 
 Tobias telefon identifieras med den MAC-adress som anges i `tobias_phone_mac`. Appen läser riktiga associerade wifi-klienter från alla fyra OpenWrt-puckar och publicerar närvaro, starkaste RSSI samt ansluten puck. Lillstugans gästnärvaro räknas från riktiga klienter på Puck 2 efter att infrastrukturens MAC-adresser har filtrerats bort.
