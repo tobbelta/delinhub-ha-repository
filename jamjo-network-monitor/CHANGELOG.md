@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.68
+
+- Statusentiteten blir otillgänglig när tillägget stannar eller dess puls uteblir.
+- Telefonen markerar gammal uppdragsstatus och visar även avslutade kommandon i detaljerna.
+
 ## 1.0.67
 
 - Oberoende jobb: nyhets-AI, Glooko och övriga källor blockerar inte nätverk eller målservice.
