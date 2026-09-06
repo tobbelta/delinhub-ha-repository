@@ -49,6 +49,19 @@ python scripts/import_1177_journal.py <sökväg-till-pdf>
 
 ## Privat DNA-rapport
 
+Från 1.0.65 kan `jamjo/dna/command` med `{"action":"review"}` starta en
+bakgrundsgranskning. Telefonens DNA-vy och den uppdaterade HA-dashboarden har
+knappen **Granska igen**. Rapporten visar status, historik och forskningskällor.
+Genotyper matchas lokalt; litteratursökning och AI-anrop gäller alltid samma
+fasta offentliga markörurval och innehåller inga personliga genotyper.
+Nya forskningsspår är obekräftade personliga tolkningar, inte beräknad risk.
+En ny import behövs för markörer som inte fanns med i en äldre rapport.
+
+Modeller väljs separat med `openai_network_model`, `openai_news_model` och
+`openai_dna_model`. Tomt nätverksval använder det tidigare `openai_model`;
+nyheter och DNA använder `gpt-5.4-mini` som standard. AI kräver befintlig
+OpenAI-aktivering och API-nyckel. Utan AI fungerar omräkning och källsökning.
+
 `scripts/import_dna_traits.py` läser en MyHeritage-råfil lokalt och använder
 bara ett litet, fast urval markörer för vardagliga egenskaper. Den fullständiga
 råfilen skickas inte till Home Assistant och ingår aldrig i Git eller appbilden.
