@@ -1,5 +1,12 @@
 # Ändringslogg
 
+## 1.0.69
+
+- Kortare DNA-förklaringar på vardagssvenska med betydelse och osäkerhet per träff.
+- Hälsospår förklarar ämnet utan att en mätt markör framställs som personlig risk.
+- AI sammanfattar forskningen i två korta meningar och en separat osäkerhet.
+- Rättade forskningsrubriker för ljusutlöst nysning och åksjuka.
+
 ## 1.0.68
 
 - Statusentiteten blir otillgänglig när tillägget stannar eller dess puls uteblir.
