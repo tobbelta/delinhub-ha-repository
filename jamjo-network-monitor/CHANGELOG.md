@@ -1,5 +1,14 @@
 # Ändringslogg
 
+## 1.0.67
+
+- Oberoende jobb: nyhets-AI, Glooko och övriga källor blockerar inte nätverk eller målservice.
+- Beständig uppdrags- och händelsehistorik, verkliga kommandokvitton och AI-tokenmätning.
+- Nyheter: ombedömning, återanvändbara bedömningar, sparade uttryck och följda ämnen.
+- Glooko: läser pumpsynktiden även ur JavaScript-objekt och samlar avslutade dygn centralt.
+- DNA: 25 forskningsmarkörer, blandat litteratururval, katalogtäckning och källförändringar.
+- Samlad installationskontroll och versionstelemetri. Ingen ny stugvy.
+
 ## 1.0.66
 
 - Tre separata flöden: Nyheter, Skvaller och Trender på nätet.

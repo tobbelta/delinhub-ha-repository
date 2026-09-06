@@ -1,5 +1,5 @@
 name: "Delin Hub"
-version: "1.0.66"
+version: "1.0.67"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"
@@ -68,6 +68,7 @@ options:
   glooko_username: ""
   glooko_password: ""
   glooko_poll_minutes: 30
+  glooko_glucose_unit: "mmol/L"
   markets_enabled: true
   markets_poll_minutes: 10
   weather_enabled: true
@@ -133,6 +134,7 @@ schema:
   glooko_username: str
   glooko_password: password
   glooko_poll_minutes: int(15,1440)
+  glooko_glucose_unit: list(mmol/L|mg/dL)
   markets_enabled: bool
   markets_poll_minutes: int(5,60)
   weather_enabled: bool

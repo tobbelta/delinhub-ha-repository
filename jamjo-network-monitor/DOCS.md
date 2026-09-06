@@ -138,3 +138,34 @@ nyhetsrelevans och viral visning samt den högre tröskeln för
 avisering, högsta antal nyhetsaviseringar per dygn samt tyst tid. OpenAI måste
 vara aktiverat och ha en API-nyckel. Offentliga rubriker och trendunderlag
 skickas för bedömning; lösenord, HA-data och hälsovärden ingår inte.
+
+
+## Uppdrag och historik från 1.0.67
+
+Källorna körs som separata jobb. Varje jobb kan bara ha en aktiv körning;
+en ny begäran under arbetet köas till nästa körning. Fel bevarar senaste
+lyckade tid och försöks igen inom högst en minut. `sensor.delin_hub_uppdrag`
+publicerar jobb, senaste 50 kommandon, 100 händelser, 90 hälsodagar och
+AI-användning. Historiken ligger i `/data/hub.json`. Core-paketet undantar
+den stora statusentiteten från Recorder.
+
+Telefonens Systemkontroll och HA-dashboarden Delin Hub visar status.
+Kör igen begär ett nytt källjobb. DNA startas i Hälsa → DNA. Nyheter har
+separata val för att hämta nytt och bedöma om. Gränser filtrerar upp till
+300 sparade bedömningar från sju dagar utan ett nytt AI-anrop. Ordlistan
+behåller upp till 100 poster. Följda termer prioriteras i det befintliga
+källurvalet; detta är inte en fullständig bevakning av alla sociala medier.
+
+Glookos `glooko_glucose_unit` ska motsvara kontots glukosenhet (mmol/L i
+denna installation). Avslutade dygn hämtas för senaste veckan och sparas
+centralt. Veckobilden kräver minst fyra matchade dagar, glukostäckning på
+minst 70 procent och steg rapporterade efter kl. 21. Skillnader beskrivs
+som observationer, aldrig som orsak eller behandlingsråd. Steghistoriken
+kräver fortfarande synk från telefonen. Pumpens senaste synk visas separat
+från tidpunkten då rapporten hämtades.
+
+Installationsmanifestet genereras med `scripts/installation_manifest.py
+--write`. `--check --record` jämför installerade Core-filer, dashboards och
+tillägg samt läser Android-releasen. Telefon och klocka rapporterar sina
+observerade versioner separat. Fysisk kontroll och en fullständig
+provåterställning ingår inte i denna automatiska kontroll.
