@@ -6,6 +6,24 @@ Från version 1.0 hämtar appen MQTT-adress och tillfälliga tjänsteuppgifter d
 
 Efter start ska loggen visa Kök, Lillstugan, Sovrum och Vardagsrum som `online`. Appen startar automatiskt igen efter omstart av Raspberry Pi.
 
+## Nyheter, Skvaller och Trender på nätet
+
+Från 1.0.66 finns tre separata flöden. Nättrender bygger på Know Your Meme
+och Google Trends och visar betydelse, ursprung, illustrativa exempel och
+osäkerheter. Skvaller hämtas från Nöjesbladet och BBC Entertainment med
+tydlig källstatus. Ordinarie bedömning använder RSS-utdrag; **Fördjupa** gör
+en ny webbsökning. En söktopp är inte automatiskt ett nätfenomen.
+
+`news_include_gossip` styr det nya skvallerflödet. I HA finns
+`switch.nyheter_skvaller`; `switch.nyheter_viralt` styr fortsatt nättrender.
+Skvaller och trender delar `news_viral_relevance_threshold` (normalt 30).
+Den äldre exakta standarduteslutningen `kändisskvaller` migreras en gång i
+sparade inställningar. Egna sammansatta uteslutningar bevaras.
+
+Alla kategorier får plats i historiken. Bara nyheter kan ge automatiska
+pushnotiser; trender och skvaller visas i flödena. Modellen styrs av
+`openai_news_model`, normalt GPT-5.4 mini.
+
 ## Börsmarknader
 
 När `markets_enabled` är aktiverat hämtar appen svenska och stora
