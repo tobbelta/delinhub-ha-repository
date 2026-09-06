@@ -1,5 +1,15 @@
 # Ändringslogg
 
+## 1.0.66
+
+- Tre separata flöden: Nyheter, Skvaller och Trender på nätet.
+- Nättrender hämtar meme- och uttrycksförklaringar från Know Your Meme, med
+  Google Trends som kompletterande signal. Vanliga söktoppar filtreras bort.
+- Betydelse, ursprung, illustrativa exempel, aktualitet, osäkerheter och källänk.
+- Skvaller från Nöjesbladet och BBC Entertainment med tydlig källstatus.
+- Egen skvallerknapp i HA, balanserad historik och återförsök vid delfel.
+- Den gamla standarduteslutningen av kändisskvaller migreras en gång.
+
 ## 1.0.65
 
 - Separata modellval för nätverk, nyheter och DNA. Nätverket behåller sitt
