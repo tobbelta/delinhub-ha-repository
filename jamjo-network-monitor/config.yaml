@@ -1,5 +1,5 @@
 name: "Delin Hub"
-version: "1.0.64"
+version: "1.0.65"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"
@@ -42,6 +42,9 @@ options:
   openai_enabled: false
   openai_api_key: ""
   openai_model: "gpt-5.4-nano"
+  openai_network_model: ""
+  openai_news_model: "gpt-5.4-mini"
+  openai_dna_model: "gpt-5.4-mini"
   openai_min_interval_minutes: 10
   news_enabled: true
   news_poll_minutes: 30
@@ -103,6 +106,9 @@ schema:
   openai_enabled: bool
   openai_api_key: password
   openai_model: str
+  openai_network_model: str?
+  openai_news_model: str?
+  openai_dna_model: str?
   openai_min_interval_minutes: int(5,1440)
   news_enabled: bool
   news_poll_minutes: int(15,360)

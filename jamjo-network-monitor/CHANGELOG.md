@@ -1,5 +1,17 @@
 # Ändringslogg
 
+## 1.0.65
+
+- Separata modellval för nätverk, nyheter och DNA. Nätverket behåller sitt
+  tidigare val; nyheter och DNA-förklaringar använder GPT-5.4 mini som standard.
+- Manuell DNA-granskning från telefonen och HA med status, historik och
+  skydd mot dubbla körningar. Tidigare rapport behålls vid fel.
+- Tio nya forskningsspår med uttryckligt obekräftad personlig tolkning.
+- Hämtar offentliga studier via Europe PMC. AI förklarar hela det fasta
+  forskningsurvalet utan att få personliga genotyper eller hälsovärden.
+- Ny import kontrollerar build 37, saknade mätningar och motstridiga dubletter.
+
+
 ## 1.0.64
 
 - Tar emot en lokalt skapad DNA-tolkning med ett strikt urval vardagliga
