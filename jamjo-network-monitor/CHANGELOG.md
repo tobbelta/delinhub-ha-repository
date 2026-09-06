@@ -1,5 +1,13 @@
 # Ändringslogg
 
+## 1.0.70
+
+- Snabbare hämtning av senaste nätverksmätning och index för historikrensing.
+- Nyhetskällor hämtas upp till fyra samtidigt med bibehållen källordning och felredovisning.
+- Ordnad nyhetscache behåller nyligen bedömda poster vid stor historik och undviker onödiga AI-anrop.
+- MQTT återställer online-status vid återanslutning efter ett avbrott.
+- Befintliga funktioner, uppdateringsintervall och lagringstider behålls.
+
 ## 1.0.69
 
 - Kortare DNA-förklaringar på vardagssvenska med betydelse och osäkerhet per träff.
