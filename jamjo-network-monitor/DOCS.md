@@ -64,6 +64,8 @@ forumflödena inte svarar. Bevakningsfrågan är inte en nyhet: modellen måste
 hitta aktuellt källunderlag eller utelämna posten. **Sluta följa: Drake**
 stänger av denna extra källa och bevakning. Manuell ombedömning kan starta
 en ny sökning tidigare. Bevakningen täcker tillgängliga källor, inte hela nätet.
+Från 1.0.77 krävs också ett uttryckligt stöd för att det finns en konkret
+händelse eller ett konkret rykte. ”Inget nytt hittat” visas inte som skvaller.
 
 `news_include_gossip` styr det nya skvallerflödet. I HA finns
 `switch.nyheter_skvaller`; `switch.nyheter_viralt` styr fortsatt nättrender.
