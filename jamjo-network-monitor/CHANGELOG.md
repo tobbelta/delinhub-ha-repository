@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.73
+
+- Skvallerrubrikens märkning följer källstatusen: Obekräftat för rykten, Blandade uppgifter för blandat underlag och ingen ryktesetikett för rapporterade uppgifter. Rättar en motsägande AI-rubrik som upptäcktes vid driftskontrollen av 1.0.72.
+- Aktuella poster bedöms om så att den tydligare märkningen används direkt.
+
 ## 1.0.72
 
 - Skvallerbedömningen söker öppna kompletterande källor, inklusive Flashback och Reddit, när tidningsunderlaget är tunt eller låst. Källknappen kan leda direkt till en verifierad alternativ länk.
