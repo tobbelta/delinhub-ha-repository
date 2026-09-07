@@ -1,5 +1,12 @@
 # Ändringslogg
 
+## 1.0.72
+
+- Skvallerbedömningen söker öppna kompletterande källor, inklusive Flashback och Reddit, när tidningsunderlaget är tunt eller låst. Källknappen kan leda direkt till en verifierad alternativ länk.
+- Flashbacks aktuella kändis- och kreatörstrådar kan själva ge skvallerposter. Aktuell uppmärksamhet skiljs från trådens historiska antal svar, och aktiva trådar kan bedömas på nytt efter sex timmar.
+- Intressanta obekräftade forumuppgifter tillåts utan mediebekräftelse och märks tydligt som Obekräftat. Forumaktivitet höjer inte uppgifternas sanningsstatus.
+- Källfel isoleras och befintlig hantering av nyheter, trender och pushaviseringar behålls. Ingen telefon- eller klockuppdatering behövs.
+
 ## 1.0.71
 
 - Målservice upptäcker matcher via CEV och HockeyAllsvenskan även när de inte finns i SVT Text; regelbunden fullsökning fortsätter under pågående bevakning.
