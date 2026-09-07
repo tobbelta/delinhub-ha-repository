@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.77
+
+- Drake-bevakningen kräver en konkret aktuell händelse eller ett konkret rykte. En tom fyndrapport som ”inget nytt hittat” får inte bli en prioriterad skvallerpost.
+- Bevakningsposten får en klickbar verifierad källänk även när modellen lämnar önskad länk tom. Rättningen upptäcktes vid driftskontrollen av 1.0.76.
+
 ## 1.0.76
 
 - Reddit r/OutOfTheLoop och Flashbacks aktuella trådar om uttryck, memes och nätfenomen används även för Trender på nätet. Trendbedömningen söker kompletterande webbkällor och kräver en begriplig förklaring och ett identifierbart fenomen. Vanliga forumfrågor blir inte nättrender bara för att de är populära.
