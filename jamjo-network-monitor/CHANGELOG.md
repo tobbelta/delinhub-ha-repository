@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.74
+
+- Källlänkar tas även från sökverktygets direkta sidöppningar och sökning på en sida. Dessa åtgärder saknar ibland sökresultatlistan; tidigare kunde en genomförd forumläsning därför felaktigt bedömas som ett svar utan källor.
+
 ## 1.0.73
 
 - Skvallerrubrikens märkning följer källstatusen: Obekräftat för rykten, Blandade uppgifter för blandat underlag och ingen ryktesetikett för rapporterade uppgifter. Rättar en motsägande AI-rubrik som upptäcktes vid driftskontrollen av 1.0.72.
