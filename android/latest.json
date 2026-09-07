@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-09-07T09:14:54Z",
-  "sourceRevision": "5ff8d6dd1b61a02ef9991f9adc81300996309097",
+  "publishedAt": "2026-09-07T10:03:50Z",
+  "sourceRevision": "07e1f18fae885136f6972e0652f6e01ec7c1bc1a",
   "phone": {
-    "versionCode": 10053,
-    "versionName": "1.1.10.53",
+    "versionCode": 10054,
+    "versionName": "1.1.10.54",
     "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/android-latest/delinhub-phone.apk",
-    "sha256": "597576f8c54c78cfe73f22a44e8666e71af3c2849332021d95793402cfeffaaa"
+    "sha256": "da589835697328dbd9fdccd0e2420930324ab2a439bcac31fcd0fdfaf8e5d463"
   },
   "watch": {
     "versionCode": 10053,
     "versionName": "1.0.19.53",
     "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/android-latest/delinhub-watch.apk",
-    "sha256": "cb3386ea7f786039512eb2c0f49e0be8bc686dd321ef14e5a323266fb31f5a65"
+    "sha256": "de73d78293e2112e611008288a4c0b535bb079eb85ce326bd26284bf257b54e1"
   }
 }
