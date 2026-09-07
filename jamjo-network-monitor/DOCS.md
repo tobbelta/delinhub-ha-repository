@@ -52,8 +52,10 @@ en konkret förklaring krävs; en forumrubrik är inte ensam tillräcklig.
 Uttryckets namn behålls, och osäker spridning eller okänt ursprung förklaras
 separat. Forumkandidater kan ombedömas efter sex timmar.
 
-Följda skvallerämnen får från 1.0.76 upp till tre prioriterade platser i
-bedömningskön och visas före övriga poster. Den vanliga poänggränsen får
+Följda skvallerämnen får från 1.0.78 en separat bedömning med upp till tre
+platser utöver de åtta vanliga skvallerplatserna och visas före övriga poster.
+Det kan innebära ett extra begränsat AI-anrop när sådana kandidater väntar.
+Den vanliga poänggränsen får
 inte dölja sådana träffar, men avvisat material med noll poäng visas aldrig.
 Det höjer inte uppgifternas källstatus och aktiverar inga pushnotiser.
 När **Drake** finns bland följda ämnen avses rapparen Aubrey Drake Graham,
@@ -66,6 +68,11 @@ stänger av denna extra källa och bevakning. Manuell ombedömning kan starta
 en ny sökning tidigare. Bevakningen täcker tillgängliga källor, inte hela nätet.
 Från 1.0.77 krävs också ett uttryckligt stöd för att det finns en konkret
 händelse eller ett konkret rykte. ”Inget nytt hittat” visas inte som skvaller.
+Att följa en artist eller välja ombedömning tömmer från 1.0.78 inte hela
+urvalet medan första batchen behandlas. Tidigare poster ersätts när just
+deras kandidater har bedömts på nytt. Utelämnade/avvisade poster tas då bort;
+obehandlade poster och misslyckade batcher behålls inom sjudagarsgränsen.
+Ändrade intressen eller uteslutningar rensar fortfarande gammalt underlag.
 
 `news_include_gossip` styr det nya skvallerflödet. I HA finns
 `switch.nyheter_skvaller`; `switch.nyheter_viralt` styr fortsatt nättrender.
