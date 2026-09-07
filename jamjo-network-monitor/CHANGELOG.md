@@ -1,5 +1,12 @@
 # Ändringslogg
 
+## 1.0.76
+
+- Reddit r/OutOfTheLoop och Flashbacks aktuella trådar om uttryck, memes och nätfenomen används även för Trender på nätet. Trendbedömningen söker kompletterande webbkällor och kräver en begriplig förklaring och ett identifierbart fenomen. Vanliga forumfrågor blir inte nättrender bara för att de är populära.
+- Följda skvallerämnen lyfts först och omfattas inte av den vanliga relevansgränsen; material utan källstöd eller med avvisad bedömning återinförs inte. Drake avser rapparen, med avgränsning mot namnlika personer.
+- När Drake följs hämtas r/Drizzys nya inlägg och en separat webbevakning körs högst var sjätte timme. Sökningen fungerar även när ett direkt forumflöde inte kan läsas. Rykten märks fortfarande Obekräftat.
+- Flashbacks lista hämtas en gång per körning för båda kategorierna. Ingen uppdatering av telefon eller klocka behövs.
+
 ## 1.0.75
 
 - Reddit är en egen skvallerkälla via r/popculturechats offentliga Hot-flöde, utöver kompletterande Reddit-sökning. Gamla fastnålade poster, odaterat material och framtidsdateringar filtreras bort.
