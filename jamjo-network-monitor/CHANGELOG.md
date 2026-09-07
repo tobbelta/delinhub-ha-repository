@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.75
+
+- Reddit är en egen skvallerkälla via r/popculturechats offentliga Hot-flöde, utöver kompletterande Reddit-sökning. Gamla fastnålade poster, odaterat material och framtidsdateringar filtreras bort.
+- Forumuppgifter från Reddit får samma märkning och möjlighet till ombedömning som Flashback. RSS-flödets publiceringstid prioriteras framför tiden då posten uppdaterades.
+
 ## 1.0.74
 
 - Källlänkar tas även från sökverktygets direkta sidöppningar och sökning på en sida. Dessa åtgärder saknar ibland sökresultatlistan; tidigare kunde en genomförd forumläsning därför felaktigt bedömas som ett svar utan källor.

@@ -30,6 +30,16 @@ Aktiva trådar kan ombedömas efter sex timmar, även om de tidigare valts bort.
 Övriga källor fortsätter om Flashback inte kan läsas. Sökningen har högst
 180 sekunders ordinarie väntetid och kan öka AI-kostnaden för nya skvallerposter.
 
+Från 1.0.75 ingår dessutom r/popculturechats offentliga Reddit Hot-RSS som
+egen källa. Högst tolv poster läses; bara poster från de senaste sju dagarna
+med en direkt Reddit-länk kan bli kandidater. Gamla fastnålade poster och
+odaterade poster tas inte med. Publiceringstid prioriteras framför en
+senare uppdateringstid. Forumaktivitet och källstatus hålls isär även här;
+RSS ger inga tillförlitliga siffror för röster och kommentarer.
+Reddit delar det balanserade skvallerurvalet med övriga källor och aktiva
+poster kan bedömas om efter sex timmar. Ett Reddit-fel hindrar inte de
+övriga källorna från att hämtas.
+
 `news_include_gossip` styr det nya skvallerflödet. I HA finns
 `switch.nyheter_skvaller`; `switch.nyheter_viralt` styr fortsatt nättrender.
 Skvaller och trender delar `news_viral_relevance_threshold` (normalt 30).
