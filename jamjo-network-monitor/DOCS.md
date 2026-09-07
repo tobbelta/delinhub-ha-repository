@@ -10,9 +10,25 @@ Efter start ska loggen visa Kök, Lillstugan, Sovrum och Vardagsrum som `online`
 
 Från 1.0.66 finns tre separata flöden. Nättrender bygger på Know Your Meme
 och Google Trends och visar betydelse, ursprung, illustrativa exempel och
-osäkerheter. Skvaller hämtas från Nöjesbladet och BBC Entertainment med
-tydlig källstatus. Ordinarie bedömning använder RSS-utdrag; **Fördjupa** gör
-en ny webbsökning. En söktopp är inte automatiskt ett nätfenomen.
+osäkerheter. Skvaller hämtas från Nöjesbladet, BBC Entertainment och från
+1.0.72 även Flashbacks aktuella kändis- och kreatörstrådar. Skvallerbedömningen
+söker öppna kompletterande källor, inklusive Flashback och Reddit, och
+prioriterar en relevant öppen länk framför en betalvägg. Länkar måste finnas
+i sökverktygets verkliga resultat. **Fördjupa** gör en ny webbsökning.
+Vanliga nyheter och nättrender bedöms fortfarande från RSS-underlaget.
+En söktopp är inte automatiskt ett nätfenomen.
+
+Aktuella forumrykten får tas med utan mediebekräftelse, med **Obekräftat**
+i rubrik och sammanfattning. Många läsare eller inlägg visar intresse och
+gör inte ett påstående mer bekräftat. Flashbacks aktuella ämneslista filtreras
+till kändisskvaller och videokreatörer: minst 10 läsare vid hämtningen och
+20 svar totalt. Historiska svar redovisas inte som nya svar. Upp till tolv
+trådar hämtas, varav ett balanserat urval delar skvallrets åtta AI-platser
+med tidningskällorna per körning. En trådrubrik ensam räcker inte för en
+sammanfattning av dess påståenden; aktuellt innehåll söks först.
+Aktiva trådar kan ombedömas efter sex timmar, även om de tidigare valts bort.
+Övriga källor fortsätter om Flashback inte kan läsas. Sökningen har högst
+180 sekunders ordinarie väntetid och kan öka AI-kostnaden för nya skvallerposter.
 
 `news_include_gossip` styr det nya skvallerflödet. I HA finns
 `switch.nyheter_skvaller`; `switch.nyheter_viralt` styr fortsatt nättrender.
