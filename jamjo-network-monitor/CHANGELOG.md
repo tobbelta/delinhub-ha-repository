@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.78
+
+- Att följa en artist eller begära ombedömning tömmer inte längre hela det sparade nyhetsurvalet. Bara kandidater som faktiskt har ombedömts ersätts; ännu obehandlade poster och poster i misslyckade batcher ligger kvar inom ordinarie åldersgräns.
+- Prioriterat skvaller får en separat bedömning med högst tre kandidater utöver de åtta vanliga skvallerplatserna. Drake lyfts överst utan att ta övriga skvallrets bedömningsplatser.
+- En ombedömd post som inte längre väljs tas bort. Ändrade intressen/uteslutningar och ändrad bedömningsversion fortsätter att rensa inkompatibelt underlag.
+
 ## 1.0.77
 
 - Drake-bevakningen kräver en konkret aktuell händelse eller ett konkret rykte. En tom fyndrapport som ”inget nytt hittat” får inte bli en prioriterad skvallerpost.
