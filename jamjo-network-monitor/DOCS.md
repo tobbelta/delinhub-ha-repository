@@ -15,7 +15,8 @@ osäkerheter. Skvaller hämtas från Nöjesbladet, BBC Entertainment och från
 söker öppna kompletterande källor, inklusive Flashback och Reddit, och
 prioriterar en relevant öppen länk framför en betalvägg. Länkar måste finnas
 i sökverktygets verkliga resultat. **Fördjupa** gör en ny webbsökning.
-Vanliga nyheter och nättrender bedöms fortfarande från RSS-underlaget.
+Vanliga nyheter bedöms från RSS-underlaget. Från 1.0.76 gör även
+nättrendbedömningen kompletterande webbsökning.
 En söktopp är inte automatiskt ett nätfenomen.
 
 Aktuella forumrykten får tas med utan mediebekräftelse, med **Obekräftat**
@@ -39,6 +40,30 @@ RSS ger inga tillförlitliga siffror för röster och kommentarer.
 Reddit delar det balanserade skvallerurvalet med övriga källor och aktiva
 poster kan bedömas om efter sex timmar. Ett Reddit-fel hindrar inte de
 övriga källorna från att hämtas.
+
+Från 1.0.76 är Reddit r/OutOfTheLoop och Flashbacks aktuella trådar med
+uttrycks-, meme- eller trendanknytning också egna trendkällor. Flashbacks
+lista läses bara en gång för både skvaller och trender. Trådens starttid
+gissas inte från hämtningstiden. Reddit-poster måste vara högst sju dagar
+gamla. Trendurvalet delar tolv AI-platser mellan källorna och söker vidare
+på Reddit, Flashback och relevanta originalkällor. Vanliga nyheter och
+allmänna forumfrågor filtreras bort. Ett identifierbart nätfenomen och
+en konkret förklaring krävs; en forumrubrik är inte ensam tillräcklig.
+Uttryckets namn behålls, och osäker spridning eller okänt ursprung förklaras
+separat. Forumkandidater kan ombedömas efter sex timmar.
+
+Följda skvallerämnen får från 1.0.76 upp till tre prioriterade platser i
+bedömningskön och visas före övriga poster. Den vanliga poänggränsen får
+inte dölja sådana träffar, men avvisat material med noll poäng visas aldrig.
+Det höjer inte uppgifternas källstatus och aktiverar inga pushnotiser.
+När **Drake** finns bland följda ämnen avses rapparen Aubrey Drake Graham,
+även kallad Drizzy. Namnlika personer som Drake Bell eller Nick Drake
+prioriteras inte. r/Drizzys offentliga nya-inläggsflöde kompletterar övriga
+källor. Dessutom görs en riktad webbsökning var sjätte timme även om
+forumflödena inte svarar. Bevakningsfrågan är inte en nyhet: modellen måste
+hitta aktuellt källunderlag eller utelämna posten. **Sluta följa: Drake**
+stänger av denna extra källa och bevakning. Manuell ombedömning kan starta
+en ny sökning tidigare. Bevakningen täcker tillgängliga källor, inte hela nätet.
 
 `news_include_gossip` styr det nya skvallerflödet. I HA finns
 `switch.nyheter_skvaller`; `switch.nyheter_viralt` styr fortsatt nättrender.
