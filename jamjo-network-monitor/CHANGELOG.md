@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.71
+
+- Målservice upptäcker matcher via CEV och HockeyAllsvenskan även när de inte finns i SVT Text; regelbunden fullsökning fortsätter under pågående bevakning.
+- Källfel får snabbare återförsök och skiljs från ett verifierat tomt matchschema. Sparade resultat behåller tiden för senaste källkontroll.
+- Bekräftade slutresultat och resultatkorrigeringar sparas, och hockeyns förlängningsperioder kan visas. Matchidentitet och händelser bevaras över omstart.
+
 ## 1.0.70
 
 - Snabbare hämtning av senaste nätverksmätning och index för historikrensing.
