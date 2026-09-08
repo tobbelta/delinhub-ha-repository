@@ -1,5 +1,12 @@
 # Ändringslogg
 
+## 1.0.82
+
+- Reddit-flöden hämtas i följd. Ett HTTP 429-svar pausar samtliga Reddit-flöden, även dem som senast fungerade, medan övriga källor fortsätter parallellt.
+- Gemensam väntetid sparas över omstart och manuell uppdatering. Den börjar på 15 minuter, ökar vid upprepade stopp och respekterar längre Retry-After. Befintliga väntetider från 1.0.81 tas med.
+- Det Reddit-flöde som väntat längst får nästa försök först. Skippade anrop räknas inte som nya misslyckade hämtningar. Tidigare innehåll och dess publiceringstid bevaras inom befintliga cachegränser.
+- Källstatus förklarar pausen på svenska. Reddits åtkomstbegränsning kan fortfarande kvarstå; uppdateringen inför ingen OAuth-inloggning.
+
 ## 1.0.81
 
 - Målservicekällor hämtas parallellt. Färdiga resultat publiceras direkt, källor som dröjer får en tidsgräns och sena svar kan inte skriva över nästa insamling. Matchbevakningens intervall räknas från körningens start.
