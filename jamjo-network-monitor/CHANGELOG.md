@@ -1,5 +1,16 @@
 # Ändringslogg
 
+## 1.0.81
+
+- Målservicekällor hämtas parallellt. Färdiga resultat publiceras direkt, källor som dröjer får en tidsgräns och sena svar kan inte skriva över nästa insamling. Matchbevakningens intervall räknas från körningens start.
+- Nyhetskällor får sparad väntetid vid fel, inklusive Retry-After, och behåller giltigt äldre underlag. Delvis uppdaterade flöden visar källfel och senaste lyckade hämtning.
+- DNA-granskningen behåller en tidigare förklaring med dess källor och datum när ny AI-text saknas eller är ofullständig.
+- Radioreläet försöker återansluta två gånger vid korta källavbrott och stänger lyssnarna om återhämtningen misslyckas. Gammal förbuffert rensas.
+- Uppdragshistoriken skiljs från automatisk steg-/versionsrapportering. Request-ID:n har separat lagring med tids- och storleksgränser.
+- Fondregistrets skrivfel återställer minnestillståndet. Aktiv fondhantering kräver även uppdatering av Core-integrationen till 1.0.3.
+
+Rättningarna från granskningen omfattar också separata telefon- och klockuppdateringar. Se `RATTNINGAR_GRANSKNING_2026-09-08.md` i källkodsprojektet för verifiering och installationsstatus.
+
 ## 1.0.80
 
 - Nytt visningsnamn: Dagskoll. Ljus turkos husikon med vit symbol och gul punkt, gemensam med telefon och klocka.
