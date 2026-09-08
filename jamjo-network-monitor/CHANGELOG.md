@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.80
+
+- Nytt visningsnamn: Dagskoll. Ljus turkos husikon med vit symbol och gul punkt, gemensam med telefon och klocka.
+- Befintligt tilläggs-id, MQTT-ämnen och sparade inställningar behålls.
+
 ## 1.0.79
 
 - Allsvenskans egen matchkälla ger fotbollsresultat, uttryckliga slutbesked och kommande avsparkar. SVT Text finns kvar som reserv. Samma match slås ihop även med namnformen Djurgårdens IF.
