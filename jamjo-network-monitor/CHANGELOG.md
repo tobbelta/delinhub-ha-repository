@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.79
+
+- Allsvenskans egen matchkälla ger fotbollsresultat, uttryckliga slutbesked och kommande avsparkar. SVT Text finns kvar som reserv. Samma match slås ihop även med namnformen Djurgårdens IF.
+- Kontroll var femte minut utan match och var 20:e sekund från tio minuter före känd avspark. SVT-sidor hämtas med högst fyra samtidiga anrop.
+- En pågående bevakning kan avslutas manuellt från telefonens Matcher. Detta sparas över omstarter, men märks inte som ett bekräftat slutresultat. Ett senare officiellt slutbesked kan bekräfta resultatet.
+
 ## 1.0.78
 
 - Att följa en artist eller begära ombedömning tömmer inte längre hela det sparade nyhetsurvalet. Bara kandidater som faktiskt har ombedömts ersätts; ännu obehandlade poster och poster i misslyckade batcher ligger kvar inom ordinarie åldersgräns.
