@@ -1,5 +1,15 @@
 # Delin Hub
 
+## Målservice från 1.0.79
+
+Allsvenskans egen matchkälla kompletterar SVT Text med kommande avsparkar
+och uttryckliga slutbesked. HA kontrollerar var femte minut utan match och
+var 20:e sekund från tio minuter före avspark och under match.
+Telefonens Matcher kan avsluta en bevakning manuellt; detta är inte ett
+bekräftat slutresultat. Den uppdaterade telefonappen har en kompakt matchrad
+i nattvyn. Klockans uppdatering kan schemalägga direkt HA-reserv efter
+kommande avspark utan tät hämtning hela dygnet.
+
 Appen läser status från de fyra OpenWrt-puckarna via SSH och publicerar mätvärden till Home Assistant genom MQTT.
 
 Från version 1.0 hämtar appen MQTT-adress och tillfälliga tjänsteuppgifter direkt från Supervisor. MQTT-fälten från äldre versioner finns bara kvar för uppgraderingskompatibilitet och används inte längre.
