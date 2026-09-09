@@ -1,5 +1,18 @@
 # Ändringslogg
 
+## 1.0.84
+
+- Lokalhistoria för Jämjö i Gärdslösa på Öland och Nygatan i Kalmar med källänkar och tydlig skillnad mellan hus och närområde.
+- Nya cachade läsare för pollen/UV/luftkvalitet, MusicBrainz och valbara Ticketmaster-, NASA-, Guardian- och TheSportsDB-källor. Nycklar anges i tilläggets konfiguration.
+- Lokal GEDCOM-import med beständig originalfil, familjerelationer, livshändelser och kontroll av saknade uppgifter. Nya telefonvyer läser på begäran och ger inga nya klockanrop.
+
+- DNA-status väntar på MQTT-kvitto och återhämtas efter avbrott utan att äldre status skriver över den färdiga granskningen.
+- Glooko hämtar om nyligen avslutade och ofullständiga dagar med begränsad frekvens, så att sena uppladdningar kommer med i historiken.
+- SVT får korrigera ett uttryckligt slutresultat från samma källa utan att matchen återöppnas.
+- Sena vädersvar efter ett platsbyte får inte återställa prognosen för den gamla platsen.
+- Fondvärdering visar okänt totalvärde när kurser saknas. Fondkommandon i den separat installerade Core-integrationen 1.0.4 sparar registrering och kvitto tillsammans och bekräftar före kursuppdateringen.
+- Installationsmanifestet uppdateras och får en automatisk kontroll mot källfiler, dashboards och tilläggsversion.
+
 ## 1.0.83
 
 - SVT:s slutresultat utan avsparkstid kan bekräfta en redan bevakad match, även när sidans datum byts efter midnatt. Okända, tvetydiga och framtida matcher avslutas inte av en sådan rad.
