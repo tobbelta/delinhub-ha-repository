@@ -1,5 +1,5 @@
 name: "Dagskoll"
-version: "1.0.83"
+version: "1.0.84"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"
@@ -73,6 +73,10 @@ options:
   markets_poll_minutes: 10
   weather_enabled: true
   weather_poll_minutes: 15
+  ticketmaster_api_key: ""
+  nasa_api_key: ""
+  guardian_api_key: ""
+  sportsdb_api_key: ""
   waste_pickup_id: "4317918"
   waste_address: "Jämjö Bygata 2"
   stugsommar_house_id: "65555"
@@ -88,6 +92,10 @@ options:
       purchase_date: ""
       source_url: "https://lf.fondlista.se/sv/1/details/SE0002656611"
 schema:
+  ticketmaster_api_key: password?
+  nasa_api_key: password?
+  guardian_api_key: password?
+  sportsdb_api_key: password?
   mqtt_host: str
   mqtt_port: port
   mqtt_username: str
