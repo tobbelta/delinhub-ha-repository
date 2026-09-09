@@ -1,5 +1,13 @@
 # Ändringslogg
 
+## 1.0.83
+
+- SVT:s slutresultat utan avsparkstid kan bekräfta en redan bevakad match, även när sidans datum byts efter midnatt. Okända, tvetydiga och framtida matcher avslutas inte av en sådan rad.
+- Bekräftat slut prioriteras framför en äldre liverad och sparas över omstart. Halvlek uppskattas bara för påbörjade matcher på rätt dag.
+- Nyheter får tolv fler källor: CNN, Fox News, Al Jazeera, Meduza, The Moscow Times, TASS, The Kyiv Independent, Ukrainska Pravda, CNA, South China Morning Post, DW och ABC Australia. CNN använder sitt aktuella officiella nyhetsindex; äldre RSS används inte.
+- TASS märks som rysk statlig källa med risk för propaganda. AI-bedömd möjlig propaganda från alla länder visas med konkret skäl och källstatus. Relevant material döljs inte enbart på grund av denna märkning.
+- Nyhetsbedömningen tar högst 24 kandidater per omgång med turordning mellan källor. Skvaller och nättrender behåller separata omgångar. Reddits gemensamma paus och återförsök behålls; utvecklarkonto räcker inte för godkänd API-åtkomst.
+
 ## 1.0.82
 
 - Reddit-flöden hämtas i följd. Ett HTTP 429-svar pausar samtliga Reddit-flöden, även dem som senast fungerade, medan övriga källor fortsätter parallellt.
