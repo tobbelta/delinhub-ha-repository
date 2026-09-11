@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.85
+
+- Dagens råd: ett kort och torrt råd per dygn, skrivet av AI och granskat av ett andra anrop innan det publiceras. Underkänt förslag ger ett nytt försök; misslyckas dygnet behålls gårdagens råd och kortet märks som äldre. Resultatet cachas per dygn, så kostnaden är två små anrop om dagen. Kräver att OpenAI är aktiverat; annars skapas varken sensor eller jobb.
+- Lokalhistoriken för Jämjö och Nygatan är nu en sökning som körs om i stället för en fast lista. Riksarkivets records-API frågas med en sökplan per plats, fel Jämjö i Blekinge filtreras bort och högst tolv nya spår visas märkta som olästa arkivförteckningar. Kurerade fynd och en sammanfattande text visas även när källan är nere.
+- Nytt kommando `jamjoctl local-history` kör om arkivsökningen för hand och skriver ut vad den skulle publicera. Med `--refresh` töms även veckocachen.
+
 ## 1.0.84
 
 - Lokalhistoria för Jämjö i Gärdslösa på Öland och Nygatan i Kalmar med källänkar och tydlig skillnad mellan hus och närområde.
