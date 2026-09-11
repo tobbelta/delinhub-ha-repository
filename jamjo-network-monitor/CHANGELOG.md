@@ -1,5 +1,9 @@
 # Ändringslogg
 
+## 1.0.86
+
+- Reddit-hämtningen identifierar sig nu i det format Reddit kräver, `plattform:app-id:version (by /u/användarnamn)`, i stället för en generisk sträng. Reddit stryper okända klienter hårdast, och de tre flödena har svarat 429 sedan 8 september. Den befintliga pausen rörs inte: den löper ut av sig själv och nästa försök görs då med den nya identiteten.
+
 ## 1.0.85
 
 - Dagens råd: ett kort och torrt råd per dygn, skrivet av AI och granskat av ett andra anrop innan det publiceras. Underkänt förslag ger ett nytt försök; misslyckas dygnet behålls gårdagens råd och kortet märks som äldre. Resultatet cachas per dygn, så kostnaden är två små anrop om dagen. Kräver att OpenAI är aktiverat; annars skapas varken sensor eller jobb.
