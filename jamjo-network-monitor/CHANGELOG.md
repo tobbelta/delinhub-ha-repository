@@ -1,5 +1,14 @@
 # Ändringslogg
 
+## 1.0.90
+
+- Dagens råd är nu **Dagens citat**: ett verkligt citat av en verklig person, med upphovsperson och källa. Kortet visar citatet och vem som sagt det; långtryck ger källan, en förklaring av vem personen var och i vilket sammanhang orden fälldes, samt tummarna och knappen Nytt citat.
+- Attributionen är det svåra, inte citatet. En språkmodell hänger gärna ett känt namn på en trovärdig rad, och de mest citatvänliga raderna är just de som oftast tillskrivs fel person. Därför måste valet ange verk och årtal, granskningen bedömer enbart om citatet är äkta och rätt tillskrivet, och **osäkerhet betyder nej**. Det är omvänt mot råden, där en osäker granskare skulle godkänna.
+- Koden avvisar det granskningen inte ska behöva argumentera om: saknad eller namnlös upphovsperson, och källor som "okänd", "tillskrivs", "ett tal" eller bara ett årtal. En källa som ingen kan kontrollera är ingen källa.
+- Källan visas för läsaren, så att citatet går att kontrollera.
+- Ett råd som ligger kvar i cachen från 1.0.89 saknar upphovsperson och är därmed inget citat. Det byts ut vid nästa körning i stället för att visas utan hänvisning.
+- Sensorn heter fortfarande `sensor.dagskoll_advice` men visas som "Dagens citat". Entitets-id:t är oförändrat så att historiken följer med.
+
 ## 1.0.89
 
 - Ett råd som inte går att förklara publiceras inte längre. Förklaringen skrivs innan rådet godkänns, och misslyckas den skrivs ett nytt råd i stället. Slår det fel alla tre försöken behålls gårdagens råd, precis som när granskningen underkänner. Ägaren vill hellre ha gårdagens råd än ett oförklarat.
