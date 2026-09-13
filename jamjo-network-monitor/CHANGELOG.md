@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.92
+
+- Underkända AI-citat ersätts direkt med nya försök. Förslagen som avvisats skickas med som sådant att undvika, och samma text granskas inte flera gånger.
+- Högst tolv kandidater per körning; inga fler påbörjas efter fyra minuter. Vid uttömda försök eller tekniska hämtnings-/granskningsfel behålls föregående godkända citat och schemat försöker senare.
+
 ## 1.0.91
 
 - Citat följer svenskt dygnsskifte och gör nytt försök efter fel. Misslyckat byte behåller citat, datum och omdöme. Omdömen måste ange citatets id, även vid flera citat samma dag.
