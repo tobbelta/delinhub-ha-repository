@@ -1,5 +1,13 @@
 # Ändringslogg
 
+## 1.0.91
+
+- Citat följer svenskt dygnsskifte och gör nytt försök efter fel. Misslyckat byte behåller citat, datum och omdöme. Omdömen måste ange citatets id, även vid flera citat samma dag.
+- Nytt citat kvitteras först när försöket är klart. HA och telefon visar fel i stället för falsk framgång. Telefonen behåller senast hämtade citat vid anslutningsfel.
+- Arkivvakten jämför alla hämtade träffar före visningens gräns på tolv. Nya fynd prioriteras och ofullständiga sökningar märks.
+- Målservice tar bort felaktiga händelser före matchstart. HTTP 429 pausar bara den begränsade källan, respekterar Retry-After och fortsätter reservkällorna. Pausen överlever omstart.
+- Installationskontrollen verifierar även citatkortet och undviker gamla terminalutdata vid filkontroll.
+
 ## 1.0.90
 
 - Dagens råd är nu **Dagens citat**: ett verkligt citat av en verklig person, med upphovsperson och källa. Kortet visar citatet och vem som sagt det; långtryck ger källan, en förklaring av vem personen var och i vilket sammanhang orden fälldes, samt tummarna och knappen Nytt citat.
