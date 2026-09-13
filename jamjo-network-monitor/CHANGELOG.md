@@ -1,5 +1,12 @@
 # Ändringslogg
 
+## 1.0.87
+
+- Dagens råd fastnade. Granskningen underkände varje förslag på grunder den hittade på: den påstod att längden "kan överskrida 180 tecken" trots att koden redan kortat texten. Kortet stod stilla på rådet från 11 september i två dygn. Nu avgörs längd, utropstecken, emoji och inledande hälsningsfras i kod, och granskaren får bara det som verkligen kräver omdöme. Granskningen använder dessutom den större modellen; att låta den minsta modellen bedöma sin egen text mot en kravlista fungerade inte.
+- Ett för långt råd kortas inte längre mitt i en mening utan skrivs om. Tre försök i stället för två, eftersom ett förslag som faller på en maskinell kontroll inte kostar något granskningsanrop.
+- Lokalhistoriken för Jämjö är uppdaterad med koordinatsökningen i Lantmäteriets arkiv: 25 kartakter i stället för nio, kartorna från 1735 och 1772, och svaret på var huset står. Det är inte någon av byns fem gårdar utan ett hus i byns södra ände, utsatt som 11:1 på 1978 års ekonomiska karta och synligt redan på flygbilden från 1938, med dammen femtio meter norrut.
+- Ny sensor **Lokalhistorisk vakt**. Den veckovisa arkivsökningen kommer ihåg vad den sett förut och räknar upp vad som är nytt. Nya spår märks också i Upptäck-kortet. Första körningen utropar ingenting; poängen är att fånga en förändring, inte att läsa upp utgångsläget.
+
 ## 1.0.86
 
 - Reddit-hämtningen identifierar sig nu i det format Reddit kräver, `plattform:app-id:version (by /u/användarnamn)`, i stället för en generisk sträng. Reddit stryper okända klienter hårdast, och de tre flödena har svarat 429 sedan 8 september. Den befintliga pausen rörs inte: den löper ut av sig själv och nästa försök görs då med den nya identiteten.
