@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.88
+
+- Håll inne dagens råd i telefonen så förklaras det i en ruta, och där går det att ge tummen upp eller ner. Förklaringen skrivs av AI när rådet godkänts och ligger färdig i sensorns attribut, så rutan öppnas direkt utan att vänta på ett anrop. Misslyckas förklaringen publiceras rådet ändå.
+- Tummarna sparas och visas för den som skriver nästa råd, som två korta listor över vad som fallit i smaken och inte. Det är prompten som styrs, ingen modell som tränas om. Tolv exempel av varje sort sparas, och de överlever dygnsbytet.
+- Ny MQTT-åtgärd `feedback` på `jamjo/advice/command`. Dagen måste följa med, så att en tumme på ett kort telefonen inte hunnit uppdatera inte kan landa på fel råd.
+
 ## 1.0.87
 
 - Dagens råd fastnade. Granskningen underkände varje förslag på grunder den hittade på: den påstod att längden "kan överskrida 180 tecken" trots att koden redan kortat texten. Kortet stod stilla på rådet från 11 september i två dygn. Nu avgörs längd, utropstecken, emoji och inledande hälsningsfras i kod, och granskaren får bara det som verkligen kräver omdöme. Granskningen använder dessutom den större modellen; att låta den minsta modellen bedöma sin egen text mot en kravlista fungerade inte.
