@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.89
+
+- Ett råd som inte går att förklara publiceras inte längre. Förklaringen skrivs innan rådet godkänns, och misslyckas den skrivs ett nytt råd i stället. Slår det fel alla tre försöken behålls gårdagens råd, precis som när granskningen underkänner. Ägaren vill hellre ha gårdagens råd än ett oförklarat.
+- Råd som skrevs före 1.0.88 saknade förklaring och visade "ingen förklaring kunde skrivas". De får nu sin förklaring ifylld vid nästa körning i stället för att stå tomma.
+- Nytt: be om ett nytt råd från telefonen. Knappen "Nytt råd" i förklaringsrutan skriver om dagens råd direkt. Det gamla rådet läggs i historiken så att det nya blir ett annat, och pausen efter ett misslyckat dygn hindrar inte en knapptryckning.
+
 ## 1.0.88
 
 - Håll inne dagens råd i telefonen så förklaras det i en ruta, och där går det att ge tummen upp eller ner. Förklaringen skrivs av AI när rådet godkänts och ligger färdig i sensorns attribut, så rutan öppnas direkt utan att vänta på ett anrop. Misslyckas förklaringen publiceras rådet ändå.
