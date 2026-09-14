@@ -1,8 +1,14 @@
+# Ändringslogg
+
+## 1.0.94
+
+- Enheter på Nygatan, i Huvudbyggnaden och i Lillstugan kan namnges och väljas till respektive besökarlista direkt i Home Assistant. Närvaron har fem minuters frånvarobekräftelse och visar hemkomst eller senast hemma; avbruten insamling visas som okänd.
+- Telefonens tre platser visar samma besökarlistor från Home Assistant. Den äldre separata Nygatan-listan används bara under övergången tills den nya datamodellen är aktiv.
+- HockeyAllsvenskans borttagna JSON-flöde ersätts med Svenska Ishockeyförbundets officiella spelschema och live-sida för säsongen 2026/27. HTML-felsvar kan inte längre läcka ut som JSON-felet `Expecting value`.
+
 ## 1.0.93
 
 - Wi-Fi-inventering per byggnad till Dagskolls HA-integration: namn, antal och historik för Huvudbyggnaden och Lillstugan. Ofullständig eller avbruten insamling rapporteras som otillgänglig.
-
-# Ändringslogg
 
 ## 1.0.92
 
