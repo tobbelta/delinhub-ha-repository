@@ -1,5 +1,11 @@
 # Ändringslogg
 
+## 1.0.97
+
+- Högst två schemalagda tunga jobb kör samtidigt, med utspridd uppstart. Målservice, status och väder får egna körmöjligheter.
+- Långvariga körningar och ihållande minnestryck ger driftvarningar. Fel i intervallberäkning får kontrollerat återförsök och tillfälliga schemaläggningsfel avslutar inte schemaläggaren.
+- Köstatus visas på svenska i telefon och HA. HA:s uppdragsvy får infällbara minnesvärden.
+
 ## 1.0.96
 
 - Telefonen får ett testläge under Nattens ljud: kontroll av notisåtkomst, ljudstyrning och Buds Live, direkt pausprov och separat historik för automatisk sömnsignal och bekräftad paus.
