@@ -1,3 +1,7 @@
+## 1.0.93
+
+- Wi-Fi-inventering per byggnad till Dagskolls HA-integration: namn, antal och historik för Huvudbyggnaden och Lillstugan. Ofullständig eller avbruten insamling rapporteras som otillgänglig.
+
 # Ändringslogg
 
 ## 1.0.92
