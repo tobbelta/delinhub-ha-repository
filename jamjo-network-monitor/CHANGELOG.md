@@ -1,3 +1,11 @@
+## 1.0.98
+
+- Telefon: snabbare återanslutning till HA med verifierade adresser, nätberoende vägval, gemensam anslutningskontroll och 15 sekunders paus efter fel.
+- Samtidiga hämtningar av HA:s tillstånd delar pågående anrop. Osäker leverans av vanliga servicekommandon skickas inte automatiskt igen via en annan adress.
+- Telefon: kompakt målservicevarning, tydlig Dexcom-lästid, nyhetscache, bättre tomma flöden samt Wi-Fi-sökning och tryckavläsning.
+- HA Core-integrationen dagskoll_wifi 1.2.0 och Wi-Fi-kortet stöder valfria personkopplingar till flera enheter. Core-filerna installeras separat.
+- Gemensamt versionsnummer 98; inga nya klockfunktioner eller ändringar i tilläggets körkod i denna release.
+
 # Ändringslogg
 
 ## 1.0.97
