@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.95
+
+- HA, telefon och klocka använder samma sista versionsnummer. Den här releasen är Dagskoll 95: HA 1.0.95, telefon 1.1.10.95 och klocka 1.0.19.95.
+- Installationsvyerna visar om alla tre komponenterna är synkade eller om en uppdatering återstår.
+
 ## 1.0.94
 
 - Enheter på Nygatan, i Huvudbyggnaden och i Lillstugan kan namnges och väljas till respektive besökarlista direkt i Home Assistant. Närvaron har fem minuters frånvarobekräftelse och visar hemkomst eller senast hemma; avbruten insamling visas som okänd.
