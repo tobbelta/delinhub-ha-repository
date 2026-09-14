@@ -1,5 +1,10 @@
 # Ändringslogg
 
+## 1.0.96
+
+- Telefonen får ett testläge under Nattens ljud: kontroll av notisåtkomst, ljudstyrning och Buds Live, direkt pausprov och separat historik för automatisk sömnsignal och bekräftad paus.
+- Gemensam release 96 för HA, telefon och klocka. Ingen ändring av klockans funktion eller HA:s insamling.
+
 ## 1.0.95
 
 - HA, telefon och klocka använder samma sista versionsnummer. Den här releasen är Dagskoll 95: HA 1.0.95, telefon 1.1.10.95 och klocka 1.0.19.95.
