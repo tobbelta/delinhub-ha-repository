@@ -1,3 +1,9 @@
+## 1.0.100
+
+- Rättar startfelet i 99: installerar konkreta openssh-client-default och openssh-keygen.
+- Båda färdiga containerbilderna måste klara ett prov med SSH-nyckelgenerering, publikt nyckeluttag, startskriptets syntax och Python-importer innan den gemensamma versionen publiceras.
+- Innehåller nyhetsförbättringarna från 99. Telefonens och klockans funktioner är oförändrade från 99.
+
 ## 1.0.99
 
 - Nyheter: högst två poster per följt ämne i vanliga flödet, normal poänggräns även för Drake och separat lista under Följda ämnen.
