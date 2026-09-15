@@ -1,3 +1,8 @@
+## 1.0.103
+- Godkänd klocklayout med tunnare stegring, månfassymbol och soluppgång/solnedgång direkt i huvudvyn.
+- Batteriikon och procent på samma rad. Tid och blodsocker något mindre; breda värden anpassas utan överlapp.
+- Månfasikonen visas även i telefonens väderkort och klockans detaljvy. Always-on behåller endast blodsocker, trend och ålder.
+
 ## 1.0.102
 - Wi-Fi-korten visar total, matchad och omatchad aktivitet samt kända enhetsnamn direkt.
 - Soluppgång, solnedgång och ungefärlig månfas i telefonens väderkort och HA:s Hemmet.
