@@ -1,3 +1,11 @@
+## 1.0.99
+
+- Nyheter: högst två poster per följt ämne i vanliga flödet, normal poänggräns även för Drake och separat lista under Följda ämnen.
+- Guardian Culture, Variety och Guardian Internet kompletterar källorna med kultur och internetfenomen. Samma begränsade AI-batchstorlekar och högst fyra samtidiga källhämtningar.
+- Kreditfel avbryter återstående AI-batcher; sparade nyheter behåller tiden och får det nya urvalet även vid fel.
+- Telefon: en kort statusrad med tryckbara detaljer ersätter stora felblock. Samma förkortning används i Systemkontroll.
+- Gemensam release 99. Klockans funktioner och HA Core-filer är oförändrade.
+
 ## 1.0.98
 
 - Telefon: snabbare återanslutning till HA med verifierade adresser, nätberoende vägval, gemensam anslutningskontroll och 15 sekunders paus efter fel.
