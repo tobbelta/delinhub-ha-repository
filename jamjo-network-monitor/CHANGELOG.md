@@ -1,3 +1,8 @@
+## 1.0.102
+- Wi-Fi-korten visar total, matchad och omatchad aktivitet samt kända enhetsnamn direkt.
+- Soluppgång, solnedgång och ungefärlig månfas i telefonens väderkort och HA:s Hemmet.
+- Tryck på vädret på klockan för sol- och måndetaljer. Huvudvy och always-on oförändrade.
+
 ## 1.0.101
 
 - HA och telefon: separat Wi-Fi-aktivitet för Huvudbyggnaden och Lillstugan, med observationer senaste fem minuterna och expanderbara matchningar till namngivna anslutna enheter.
