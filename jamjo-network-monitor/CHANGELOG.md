@@ -1,3 +1,10 @@
+## 1.0.101
+
+- HA och telefon: separat Wi-Fi-aktivitet för Huvudbyggnaden och Lillstugan, med observationer senaste fem minuterna och expanderbara matchningar till namngivna anslutna enheter.
+- Exakt MAC-matchning; omatchade sökningar är inte bevis för oanslutna enheter eller personer. Anslutningsantal och besökarnas Hemma/Borta påverkas inte.
+- Insamling via passiv hostapd-prenumeration på Jämjös fyra puckar, utan ändrat radioläge eller kanal. Installationen av pucktjänsten görs separat från tillägget.
+- Gemensam release 101; klockans funktioner är oförändrade. Ingen HA Core-omstart krävs.
+
 ## 1.0.100
 
 - Rättar startfelet i 99: installerar konkreta openssh-client-default och openssh-keygen.
