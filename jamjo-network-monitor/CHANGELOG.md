@@ -1,3 +1,8 @@
+## 1.0.104
+- Citatgranskningen jämför svensk översättning med originaltext och begär mer precisa källor. Avvisade förslag och motiveringar sparas inför nya försök.
+- Telefonen skiljer ett avvisat citat från uteblivet leveranskvitto och läser om citatets detaljer även när bytet misslyckas.
+- Spelas nu flyttat direkt under tiden i båda nattvyerna. Större, centrerad text med fortsatt dämpad färg.
+
 ## 1.0.103
 - Godkänd klocklayout med tunnare stegring, månfassymbol och soluppgång/solnedgång direkt i huvudvyn.
 - Batteriikon och procent på samma rad. Tid och blodsocker något mindre; breda värden anpassas utan överlapp.
