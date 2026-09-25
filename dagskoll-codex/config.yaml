@@ -1,0 +1,16 @@
+name: Dagskoll Codex
+version: "0.1.1"
+slug: dagskoll_codex
+description: Codex med ChatGPT-inloggning för Dagskolls analyser
+arch: [aarch64, amd64]
+image: ghcr.io/tobbelta/dagskoll-codex
+startup: application
+boot: manual
+init: false
+map:
+  - type: addon_config
+    read_only: false
+options:
+  access_token: ""
+schema:
+  access_token: password
