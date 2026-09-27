@@ -1,3 +1,10 @@
+## 1.0.111
+
+- Telefonen har ett av/på-schema för SVT 1 på Kök på Nygatan, måndag–fredag kl. 06.00 svensk tid. Aktiveras i Nygatan-vyn med Androids tillåtelse för exakta alarm.
+- Endast en kort väckning per vardag. Telefonen måste vara på lokalt Wi-Fi och verifiera rätt Hub innan Cast startas. Ingen GPS, ständig sökning eller senare start när man kommer hem.
+- Senaste resultat och nästa försök visas i appen. Schemat återställs efter omstart/uppdatering; dubbla och försenade alarm ignoreras. Avstängning stoppar kommande starter utan att stoppa pågående TV.
+- Manuell SVT-Cast i 110 är nu bekräftad fungerande av användaren. Den nya schemastarten med låst fysisk telefon behöver verifieras efter installation.
+
 ## 1.0.110
 
 - Rättar den felaktiga Cast-vägen i 109: telefonen styr Kök på Nygatans lokala Wi-Fi direkt. HA i Jämjö är inte inblandat. Hubben väljs med verifierat Cast-id, aldrig enbart namnet Kök.
