@@ -1,3 +1,8 @@
+## 1.0.107
+- Citat visar den konkreta orsaken när Gemini-kvoten är slut och behåller föregående citat.
+- Dygnskvot pausar nya AI-anrop till nästa midnatt i Stillahavstid. Citatets väntetid sparas även vid omstart.
+- Tillfälliga serverfel visas separat och leder inte till upprepade citatförsök.
+
 ## 1.0.106
 - Mindre AI-indata utan borttaget underlag: kompakt JSON och gemensam k?llbakgrund per nyhetsomg?ng.
 - Forskningsf?rklaringar ?teranv?nds upp till sju dagar endast n?r hela underlaget, modellen och instruktionerna ?r of?r?ndrade. Nya k?llor kontrolleras som tidigare och f?rklaringens ursprungliga datum beh?lls.

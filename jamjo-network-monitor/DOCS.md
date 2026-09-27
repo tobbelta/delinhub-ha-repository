@@ -250,8 +250,10 @@ I Gemini-l?ge skickas inga anrop till OpenAI eller Codex. Modellen ?r
 
 F?r gratis anv?ndning kr?vs ett Google AI Studio-projekt med Free tier utan
 fakturering och aktiverat Gemini API. Appen kan inte kontrollera projektets
-fakturering. Ingen betalniv? aktiveras av appen. Kvotfel pausar anropen en
-timme; ingen annan tj?nst anv?nds automatiskt.
+fakturering. Ingen betalnivå aktiveras av appen. Uppnådd dygnskvot pausar
+anropen till nästa midnatt i Stillahavstid, med en minuts marginal.
+Övriga kvotfel pausar anropen en timme. Ingen annan tjänst används automatiskt.
+Citatet visar orsaken och tid för nästa försök; föregående citat behålls.
 
 Analys och sammanfattning anv?nder befintligt underlag. Webbs?kning,
 webbaserade f?rdjupningar och nyhetsbed?mningar som kr?ver webbs?kning
