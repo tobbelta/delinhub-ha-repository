@@ -1,3 +1,8 @@
+## 1.0.105
+- Gemini som valbar AI-tj?nst f?r analyser, citat och sammanfattningar, utan extra process p? HA.
+- Kvotfel pausar Gemini-anrop i en timme; ingen automatisk ?verg?ng till en annan tj?nst.
+- Webbs?kning och webbaserade f?rdjupningar st?ds ?nnu inte i Gemini-l?get.
+
 ## 1.0.104
 - Citatgranskningen jämför svensk översättning med originaltext och begär mer precisa källor. Avvisade förslag och motiveringar sparas inför nya försök.
 - Telefonen skiljer ett avvisat citat från uteblivet leveranskvitto och läser om citatets detaljer även när bytet misslyckas.
