@@ -1,3 +1,7 @@
+## 1.0.109
+
+- Nygatan: SVT-kanaler och uppspelningskontroller går via Home Assistant till det fasta Cast-målet Kök. Telefonen behöver inte längre upptäcka Nest Hub över ett separat Wi-Fi-nät.
+
 ## 1.0.108
 - Telefonen delar den stora Home Assistant-tillståndshämtningen mellan hem, väder och ekonomi.
 - Uppdateringar begränsar samtidiga datakällor för jämnare belastning på HA.
