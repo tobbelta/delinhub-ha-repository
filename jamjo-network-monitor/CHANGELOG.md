@@ -1,3 +1,8 @@
+## 1.0.106
+- Mindre AI-indata utan borttaget underlag: kompakt JSON och gemensam k?llbakgrund per nyhetsomg?ng.
+- Forskningsf?rklaringar ?teranv?nds upp till sju dagar endast n?r hela underlaget, modellen och instruktionerna ?r of?r?ndrade. Nya k?llor kontrolleras som tidigare och f?rklaringens ursprungliga datum beh?lls.
+- Citatens separata granskning, modell och svarsl?ngder beh?lls.
+
 ## 1.0.105
 - Gemini som valbar AI-tj?nst f?r analyser, citat och sammanfattningar, utan extra process p? HA.
 - Kvotfel pausar Gemini-anrop i en timme; ingen automatisk ?verg?ng till en annan tj?nst.

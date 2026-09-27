@@ -257,3 +257,17 @@ Analys och sammanfattning anv?nder befintligt underlag. Webbs?kning,
 webbaserade f?rdjupningar och nyhetsbed?mningar som kr?ver webbs?kning
 ?r ?nnu inte tillg?ngliga i Gemini-l?get och ger ett tydligt fel.
 Sparade uppgifter beh?lls enligt respektive funktions befintliga felhantering.
+
+
+### Tokenf?rbrukning
+
+Strukturerade AI-indata skickas som kompakt JSON med alla v?rden bevarade.
+Nyhetsomg?ngar delar en tabell med k?llbakgrund i st?llet f?r att upprepa samma
+text f?r varje artikel. Forskningsgranskningen h?mtar fortfarande f?rska k?llor,
+men kan ?teranv?nda en tidigare komplett AI-f?rklaring i h?gst sju dagar n?r
+hela AI-underlaget, katalogversionen, instruktionerna och modellen ?r identiska.
+?ndringar eller felaktig cache ger ett nytt anrop; API-fel sparas inte som svar.
+F?rklaringens ursprungliga datum bevaras ?ven n?r den ?teranv?nds.
+
+Modell, kvalitetsskydd och svarsl?ngdsgr?nser ?r of?r?ndrade. Verklig
+tokenbesparing beror p? k?llf?rdelning och hur ofta underlaget ?ndras.
