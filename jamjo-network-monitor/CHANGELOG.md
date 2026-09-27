@@ -1,3 +1,10 @@
+## 1.0.110
+
+- Rättar den felaktiga Cast-vägen i 109: telefonen styr Kök på Nygatans lokala Wi-Fi direkt. HA i Jämjö är inte inblandat. Hubben väljs med verifierat Cast-id, aldrig enbart namnet Kök.
+- SVT använder HLS med fMP4-format och provar DASH en gång om laddningen avvisas. Spelarstatus kommer från mottagaren; gamla fördröjda, ovillkorliga spelbekräftelser är borttagna.
+- Sökning sker endast vid kanalval och har tidsgräns. Fel och anslutningsförlopp syns i vyn. Paus/spela/stopp har tillgängliga etiketter.
+- Nätåtkomst, enhetsidentitet och fyra strömadresser kontrollerade. Verklig SVT-uppspelning på Hubben återstår: användaren ville behålla pågående Spotify.
+
 ## 1.0.109
 
 - Nygatan: SVT-kanaler och uppspelningskontroller går via Home Assistant till det fasta Cast-målet Kök. Telefonen behöver inte längre upptäcka Nest Hub över ett separat Wi-Fi-nät.
