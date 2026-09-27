@@ -239,3 +239,21 @@ Installationsmanifestet genereras med `scripts/installation_manifest.py
 tillägg samt läser Android-releasen. Telefon och klocka rapporterar sina
 observerade versioner separat. Fysisk kontroll och en fullständig
 provåterställning ingår inte i denna automatiska kontroll.
+
+
+## Gemini
+
+V?lj `ai_provider: gemini` och ange `gemini_api_key`. Beh?ll `openai_enabled`
+aktiverat f?r AI-funktionerna; det ?r den befintliga huvudstr?mbrytaren.
+I Gemini-l?ge skickas inga anrop till OpenAI eller Codex. Modellen ?r
+`gemini-3.8-flash`. Ingen extra app eller lokal modell beh?vs.
+
+F?r gratis anv?ndning kr?vs ett Google AI Studio-projekt med Free tier utan
+fakturering och aktiverat Gemini API. Appen kan inte kontrollera projektets
+fakturering. Ingen betalniv? aktiveras av appen. Kvotfel pausar anropen en
+timme; ingen annan tj?nst anv?nds automatiskt.
+
+Analys och sammanfattning anv?nder befintligt underlag. Webbs?kning,
+webbaserade f?rdjupningar och nyhetsbed?mningar som kr?ver webbs?kning
+?r ?nnu inte tillg?ngliga i Gemini-l?get och ger ett tydligt fel.
+Sparade uppgifter beh?lls enligt respektive funktions befintliga felhantering.
