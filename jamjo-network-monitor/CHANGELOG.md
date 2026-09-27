@@ -1,3 +1,8 @@
+## 1.0.108
+- Telefonen delar den stora Home Assistant-tillståndshämtningen mellan hem, väder och ekonomi.
+- Uppdateringar begränsar samtidiga datakällor för jämnare belastning på HA.
+- Steg läses högst var femtonde minut i bakgrundstjänsten; live-resultat pollas var femte minut utanför matchfönster och var trettionde sekund nära match.
+
 ## 1.0.107
 - Citat visar den konkreta orsaken när Gemini-kvoten är slut och behåller föregående citat.
 - Dygnskvot pausar nya AI-anrop till nästa midnatt i Stillahavstid. Citatets väntetid sparas även vid omstart.
