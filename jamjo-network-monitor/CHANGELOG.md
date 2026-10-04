@@ -1,3 +1,9 @@
+## 1.0.114
+
+- SVT-kontroller visas också på Översikt: fyra kanaler till Kök på Nygatan, spela/pausa/stoppa, anslutningsstatus och kopierbar Cast-logg.
+- Morgonschemat kan öppnas direkt i kortet. Båda vyerna använder samma Cast-anslutning och schemainställningar; visning av kortet startar ingen sökning.
+- Kortet läggs efter dagens citat även hos befintliga installationer, med bibehållen inbördes ordning på andra kort. Det kan flyttas eller döljas i Anpassa översikten.
+
 ## 1.0.113
 
 - Morgon-TV kl. 06 på vardagar kräver en registrerad upplåsning av Tobias telefon mellan kl. 05 och 06 samma morgon, utöver Nygatans lokala Wi-Fi och verifierad köksskärm.
