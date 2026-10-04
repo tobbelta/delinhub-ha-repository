@@ -1,3 +1,9 @@
+## 1.0.113
+
+- Morgon-TV kl. 06 på vardagar kräver en registrerad upplåsning av Tobias telefon mellan kl. 05 och 06 samma morgon, utöver Nygatans lokala Wi-Fi och verifierad köksskärm.
+- Utan upplåsning startas ingen Cast-tjänst. Gårdagens upplåsning, en tidigare telefonstart och upplåsning efter kl. 06 räknas inte. Orsaken visas under senaste försök.
+- Upplåsningar registreras via Androids systemhändelser i befintlig appprocess; inga nya bakgrundstjänster, platsanrop eller återkommande kontroller.
+
 ## 1.0.112
 
 - Telefonens Cast initieras vid appstart, innan aktivitetsåterupptagning. Sökning vid kanalval följer nu anslutningen tills sessionen är klar eller tidsgränsen nås.
