@@ -1,3 +1,9 @@
+## 1.0.112
+
+- Telefonens Cast initieras vid appstart, innan aktivitetsåterupptagning. Sökning vid kanalval följer nu anslutningen tills sessionen är klar eller tidsgränsen nås.
+- Misslyckad Cast-anslutning till Kök frigör den gamla enhetsmarkeringen så att ett nytt försök kan starta en ny session. Sena frånkopplingshändelser från den tidigare sessionen ignoreras.
+- Större knapp för anslutningsfel och Cast-logg, med fler steg i anslutningsförloppet.
+
 ## 1.0.111
 
 - Telefonen har ett av/på-schema för SVT 1 på Kök på Nygatan, måndag–fredag kl. 06.00 svensk tid. Aktiveras i Nygatan-vyn med Androids tillåtelse för exakta alarm.
