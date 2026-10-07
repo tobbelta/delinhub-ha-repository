@@ -1,3 +1,10 @@
+## 1.0.115
+
+- Citat som redan har skapats eller granskats sparas mellan AI-försöken, även efter omstart. Kvotfel under granskning eller förklaring börjar inte längre om från början.
+- Högst fyra citatförslag granskas per försök för att hushålla med gratiskvoten. Samma källkontroll och förklaring krävs; ingen lokal citatreserv används.
+- Gemini-anslutningsfel visas med en begriplig orsak och fem minuters återhämtningstid. Felorsaken visas direkt i telefonens och HA:s citatkort.
+- Knappen Nytt citat kontrollerar att Dagskolls uppdragstjänst är tillgänglig innan kommandot skickas.
+
 ## 1.0.114
 
 - SVT-kontroller visas också på Översikt: fyra kanaler till Kök på Nygatan, spela/pausa/stoppa, anslutningsstatus och kopierbar Cast-logg.
