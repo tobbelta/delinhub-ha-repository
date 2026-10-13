@@ -1,3 +1,8 @@
+## 1.0.116
+
+- Morgon-TV kan med användarens tillåtna användningsåtkomst kontrollera Androids sparade upplåsningar mellan kl. 05 och 06 vid alarmet. En upplåsning missas därmed inte enbart för att appen varit avslutad eller Android fördröjt systemhändelsen.
+- Telefonen visar tillståndet för användningsåtkomst i morgonschemat. Kontrollen sker vid alarmet, utan ny bakgrundspollning. Upplåsningar efter kl. 06 eller före aktuell telefonstart räknas inte.
+
 ## 1.0.115
 
 - Citat som redan har skapats eller granskats sparas mellan AI-försöken, även efter omstart. Kvotfel under granskning eller förklaring börjar inte längre om från början.
