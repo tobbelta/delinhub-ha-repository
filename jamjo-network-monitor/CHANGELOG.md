@@ -1,3 +1,8 @@
+## 1.0.117
+
+- Telefonappen fortsätter att fungera när Samsung Healths grundinställning inte är slutförd eller behörighetskontrollen misslyckas, i stället för att krascha vid start.
+- Saknade steg förblir okända och befintlig cache bevaras. Avbrutna läsningar följer aktivitetens livscykel.
+
 ## 1.0.116
 
 - Morgon-TV kan med användarens tillåtna användningsåtkomst kontrollera Androids sparade upplåsningar mellan kl. 05 och 06 vid alarmet. En upplåsning missas därmed inte enbart för att appen varit avslutad eller Android fördröjt systemhändelsen.
