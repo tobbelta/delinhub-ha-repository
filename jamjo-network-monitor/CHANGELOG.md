@@ -1,3 +1,10 @@
+## 1.0.119
+
+- En giltig morgonstart skrivs inte över med nästa dags alarm när appen öppnas strax efter kl. 06.00. Samma upplåsningskrav och tvåminutersgräns gäller.
+- Varningen för saknat eller gammalt blodsocker använder samma lokala Dexcom-/Share-källval som appen. Varningsgränserna är oförändrade.
+- Börsuppgifter som inte kunde uppdateras märks som sparade i Börser, Översikt, Fonder och Systemkontroll, med bevarade kurser och källtider.
+- USB-diagnostik visar anslutningsstatus utan nycklar, kontouppgifter eller hälsovärden.
+
 ## 1.0.118
 
 - Säker återinloggning för Home Assistant och Dexcom Share efter telefonbyte. Saknade och oläsbara uppgifter visas tydligt; övriga inställningar och historik bevaras.
