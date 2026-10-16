@@ -1,3 +1,13 @@
+## 1.0.118
+
+- Säker återinloggning för Home Assistant och Dexcom Share efter telefonbyte. Saknade och oläsbara uppgifter visas tydligt; övriga inställningar och historik bevaras.
+- Telefonens HA-anrop använder betrodd HTTPS utan omdirigeringar. Samordnad anslutningskontroll förbrukar inte det efterföljande HTTP-anropets tidsbudget.
+- Bakgrundssynk startar även om aviseringsbehörigheten nekas. Health-läsningar vid aktivitetsstart samordnas och avbrutna behörighetskontroller följer livscykeln.
+- Bakgrunden slipper läsa tillbaka hela glukoshistoriken efter varje lagring och dubbeluppdaterar inte snabbwidgetarna.
+- Steg- och fondwidgetar kan ta emot nya cachevärden även under en pågående widgetsession. Nyligen hämtade fonddata återanvänds.
+- Låsskärmens bildarbete flyttas från huvudtråden, uppdateringar samordnas och stora foton avkodas i anpassad storlek.
+- Saknade steg och saknad innetemperatur visas som okända värden. Oanvänd kod med inbyggda standarduppgifter är borttagen.
+
 ## 1.0.117
 
 - Telefonappen fortsätter att fungera när Samsung Healths grundinställning inte är slutförd eller behörighetskontrollen misslyckas, i stället för att krascha vid start.
