@@ -1,3 +1,8 @@
+## 1.0.121
+
+- Nyhetsflödet skiljer Geminis saknade webbsökning från verkliga hämtningsfel. Vanliga nyheter kan uppdateras även när skvaller och viralt saknar stöd; omöjliga sökningar orsakar inga minutvisa återförsök.
+- Telefonen visar vilka kategorier och AI-fördjupningar som inte stöds av den valda anslutningen. Sparade poster och färdiga fördjupningar behålls med sina ursprungliga datum. Leverantör, API-nycklar och betalda funktioner ändras inte.
+
 ## 1.0.120
 
 - Målservice kan återhämta anslutningen utan att vänta på en ny matchrevision. Sena svar får inte återställa ett nyare anslutningsfel eller skriva över nyare resultat.
