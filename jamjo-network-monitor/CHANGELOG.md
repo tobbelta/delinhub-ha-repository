@@ -1,3 +1,12 @@
+## 1.0.120
+
+- Målservice kan återhämta anslutningen utan att vänta på en ny matchrevision. Sena svar får inte återställa ett nyare anslutningsfel eller skriva över nyare resultat.
+- SVT, SweHockey och CEV bevarar HTTP 429 och Retry-After genom sina källadaptrar. Övriga källor fortsätter och sparade matcher behåller sina verifieringstider. SweHockeys nya matchkort kan läsas.
+- Fondkurser hämtas med högst fyra samtidiga anrop och kortare tidsgräns. En reservkälla används endast med matchande ISIN och SEK; NAV, datum och saknade värden valideras.
+- Tillfälliga fondfel behåller senast giltiga kurs med tydlig märkning i app och widget. Ofullständiga portföljer ger inga påhittade totaler. Dagsbelopp beräknas från föregående värde och blandade kursdatum hålls isär.
+- Fondintegrationen i HA Core försöker automatiskt igen efter 1–15 minuter vid fel; lyckad hämtning behåller sex timmars intervall. Samtidiga uppdateringar slås ihop.
+- Systemkontrollens rubrik får full bredd. Citatets gamla fel rensas efter lyckat återförsök och texterna om Geminis gratisläge förtydligas.
+
 ## 1.0.119
 
 - En giltig morgonstart skrivs inte över med nästa dags alarm när appen öppnas strax efter kl. 06.00. Samma upplåsningskrav och tvåminutersgräns gäller.
