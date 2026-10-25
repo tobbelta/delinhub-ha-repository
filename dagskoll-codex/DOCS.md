@@ -35,7 +35,7 @@ limits; this bridge cannot report a reliable percentage of the plan's allowance.
 
 ## Sparse operation and usage
 
-`daily_start_limit` defaults to 40 and can be reduced to 1–40. It counts CLI
+`daily_start_limit` defaults to 40 and can be set to 1–200. It counts CLI
 launch attempts, including errors, timeouts and interrupted runs, for each
 calendar day in Europe/Stockholm. A news refresh may use several AI runs; it is
 not counted as one refresh. Authentication failures, invalid input and rejected
@@ -56,6 +56,29 @@ usage including cached tokens. Use the same Bearer token as for `/v1/responses`.
 It returns no prompts, credentials or account identity. Missing token usage on a
 failed or interrupted CLI run means unknown usage, not zero actual consumption.
 Incoming `max_output_tokens` is not a hard Codex CLI output-token limit.
+
+Authenticated `POST /settings` accepts exactly
+`{"daily_start_limit": 100}` with an integer from 1 to 200 and returns the same
+status object as `GET /status`. Booleans, strings, fractional numbers and extra
+fields are rejected. Status includes `settings_supported: true` and
+`max_daily_start_limit: 200` so clients can detect edit support. Settings requests never start an AI run. Home Assistant's
+backend can proxy this internal endpoint for the phone without exposing the
+bridge token to it; Supervisor API permission is not needed.
+
+The selected limit is atomically saved with mode 0600 in
+`/config/ai-settings.json`. This saved limit takes precedence over the addon's
+`daily_start_limit` configuration; the addon value is the fallback only while no
+saved setting exists. Both changes and daily rollover preserve this selection.
+A limit change never rewrites the separate usage ledger, refunds starts, clears
+failures or removes a cooldown. Lowering the limit below today's used count
+shows zero remaining starts and blocks the next start; an already running job
+can finish. Raising the limit permits additional starts, subject to the existing
+cooldown. Changes are accepted while an AI job is running.
+
+Invalid or unreadable saved settings block new AI starts. A failed settings
+write also blocks new starts until a subsequent valid save or restart verifies
+persisted state. An explicit valid settings save may replace corrupt settings,
+but never repairs or replaces a corrupt usage ledger.
 
 Failed runs report only sanitized diagnostic labels: failure category, process
 return code, known event counts, known MCP tool status and allowlisted HTTP error

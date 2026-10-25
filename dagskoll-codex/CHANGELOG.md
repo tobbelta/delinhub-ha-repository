@@ -1,3 +1,9 @@
+# 0.1.7
+
+- Add authenticated `POST /settings` for changing the daily AI start limit from 1 to 200, with a default of 40. Return the effective status and counters for the phone's usage controls.
+- Persist the selected limit atomically in a private settings file without modifying, refunding or resetting usage, failure streaks or cooldowns. Changes take effect during active runs and survive restarts and day rollover.
+- Block new starts if saved settings are corrupt or cannot be persisted; valid explicit settings updates preserve the separate usage ledger.
+
 # 0.1.6
 
 - Fetch explicitly requested HA context deterministically in the credential-owning parent through MCP initialize and the fixed read-only GetLiveContext call; no Home Assistant credential or active MCP server reaches the AI worker.

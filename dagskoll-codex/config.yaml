@@ -1,5 +1,5 @@
 name: Dagskoll Codex
-version: "0.1.6"
+version: "0.1.7"
 slug: dagskoll_codex
 description: Codex med ChatGPT-inloggning för Dagskolls analyser
 arch: [aarch64, amd64]
@@ -20,4 +20,4 @@ schema:
   access_token: password
   model: match(^[a-zA-Z0-9][a-zA-Z0-9._-]{0,79}$)
   reasoning_effort: list(low|medium)
-  daily_start_limit: int(1,40)
+  daily_start_limit: int(1,200)
