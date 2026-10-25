@@ -1,3 +1,11 @@
+## 1.0.126
+
+- Urtavlan följer klockappens layout med större glukos, separat trendpil,
+  mätålder bredvid tiden, större steg och batteriprocent med enhetsikoner.
+- Glukos och mätålder behålls i always-on; perifer information döljs där.
+- Vädret skiljer avstängd plats från saknad position och erbjuder valfri
+  bakgrundsplats för begränsade väderuppdateringar med appen stängd.
+
 ## 1.0.125
 
 - Dagskoll får en separat Watch Face Format-urtavla som installeras utöver Wear-appen och kan väljas i Wear OS urtavleväljare. Den kräver Wear OS 4 eller senare och använder befintliga datakällor, med minimal always-on-visning.
