@@ -21,8 +21,9 @@ Assistant API permission for explicit read-only MCP context questions. It has no
 Home Assistant configuration mount, Supervisor API permission or host Docker socket.
 
 Only one analysis runs at a time. A simultaneous request waits at most eight
-seconds, then returns an uncharged `busy` response. Execution times out after
-three minutes. There is no fallback to paid OpenAI API requests. The bridge
+seconds, then returns an uncharged `busy` response. Ordinary execution times out
+after three minutes; explicit HA-context jobs use 170 seconds after fetching
+context. There is no fallback to paid OpenAI API requests. The bridge
 listens on internal port 8787 with no host port exposed. Installing it alone
 does not switch Dagskoll's provider.
 
@@ -64,17 +65,31 @@ Raw CLI stderr, prompts, answers, context contents and credentials are not logge
 ## Explicit Home Assistant questions
 
 For a request that needs live home state, send
-`"metadata": {"homeassistant_context": true}` with the response request. This
-enables only the MCP tool `homeassistant__GetLiveContext` at
-`http://supervisor/core/api/mcp`. The integration must already be enabled in HA.
-The worker receives the Supervisor token only for that request. It cannot call
-the other MCP tools through this client's allowlist. A successful completed MCP
-call is required before the bridge accepts the answer as a live-context answer.
+`"metadata": {"homeassistant_context": true}` with the response request. The
+credential-owning bridge parent performs MCP `initialize`, then exactly one
+`tools/call` for `homeassistant__GetLiveContext` at the fixed
+`http://supervisor/core/api/mcp`. It never calls actuation tools. The integration
+must already be enabled in HA. The parent uses canonical JSON HTTP headers and
+verifies the result directly, avoiding dependence on native CLI MCP calls.
 
-News, quotes and other ordinary requests leave the controlled Home Assistant MCP
-server explicitly disabled and receive no Home Assistant credential. Unexpected
-MCP servers in the dedicated user/system config files block starts before quota
-reservation. API keys are never forwarded.
+The parent disables proxies and redirects, validates HTTP 200 JSON, matching
+JSON-RPC IDs, no RPC error and a single text result containing HA
+`success: true` with nonempty context. HTTP responses are limited to 128 KiB and
+context to 32,768 characters; oversize responses fail rather than being silently
+truncated. Each of the two HTTP calls has a five-second socket timeout. A failure
+returns only safe stage/reason/status diagnostics before any AI start is counted.
+
+The verified snapshot is passed in memory as labeled source data. Successful
+responses include `homeassistant_context` metadata with `verified`, `fetched_at`,
+`source` and `tool`, but no raw snapshot. The child model does not make this MCP
+call itself, cannot actuate HA and never receives the Supervisor token. No
+snapshot is written to disk or logs. The model's answer may describe home state
+as requested by the caller.
+
+All workers leave the controlled Home Assistant MCP server explicitly disabled.
+News, quotes and ordinary requests do not fetch HA context. Unexpected MCP
+servers in dedicated user/system config files block starts before quota
+reservation. API keys and HA credentials are never forwarded to workers.
 The app has Home Assistant API permission for the explicitly requested context
 connection; it has no Supervisor API permission, host networking, host Docker
 socket or Home Assistant configuration mount.
