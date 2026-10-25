@@ -1,3 +1,8 @@
+## 1.0.127
+
+- Breddade batterifält i urtavlan så att hela 100 % ryms även med
+  Samsung-teckensnittet på Watch6. Samma större sifferstorlek behålls.
+
 ## 1.0.126
 
 - Urtavlan följer klockappens layout med större glukos, separat trendpil,
