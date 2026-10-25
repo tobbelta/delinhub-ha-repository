@@ -56,6 +56,11 @@ It returns no prompts, credentials or account identity. Missing token usage on a
 failed or interrupted CLI run means unknown usage, not zero actual consumption.
 Incoming `max_output_tokens` is not a hard Codex CLI output-token limit.
 
+Failed runs report only sanitized diagnostic labels: failure category, process
+return code, known event counts, known MCP tool status and allowlisted HTTP error
+codes. These appear in the authenticated error response and private app log.
+Raw CLI stderr, prompts, answers, context contents and credentials are not logged.
+
 ## Explicit Home Assistant questions
 
 For a request that needs live home state, send
