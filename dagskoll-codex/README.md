@@ -16,13 +16,64 @@ downloads the ready image. Do not install the old 0.1.0 local-build prototype.
    code login in account security settings if necessary.
 
 Login credentials are stored privately in this app's configuration directory.
-Never include them in images, GitHub, or support messages. The app has no access
-to Home Assistant configuration, Supervisor API, or host Docker socket.
+Never include them in images, GitHub, or support messages. The app has Home
+Assistant API permission for explicit read-only MCP context questions. It has no
+Home Assistant configuration mount, Supervisor API permission or host Docker socket.
 
-Only one analysis runs at a time. Requests time out after three minutes and do
-not fall back to paid OpenAI API requests. The bridge listens on internal port
-8787 with no host port exposed. Connecting Dagskoll requires its compatible
-transport configuration; installing this bridge alone does not switch Dagskoll.
+Only one analysis runs at a time. A simultaneous request waits at most eight
+seconds, then returns an uncharged `busy` response. Execution times out after
+three minutes. There is no fallback to paid OpenAI API requests. The bridge
+listens on internal port 8787 with no host port exposed. Installing it alone
+does not switch Dagskoll's provider.
 
-Subscription login and resource usage still require verification on the target
-machine. GitHub tests verify the image and CLI without account credentials.
+The default model is `gpt-6-luna` with `reasoning_effort: low`. Model access and
+supported reasoning levels must be verified with the actual account; `medium`
+is an explicit alternative. Fast mode and subagents are disabled. Models still
+run in OpenAI's cloud and need internet. A ChatGPT subscription has shared usage
+limits; this bridge cannot report a reliable percentage of the plan's allowance.
+
+## Sparse operation and usage
+
+`daily_start_limit` defaults to 40 and can be reduced to 1–40. It counts CLI
+launch attempts, including errors, timeouts and interrupted runs, for each
+calendar day in Europe/Stockholm. A news refresh may use several AI runs; it is
+not counted as one refresh. Authentication failures, invalid input and rejected
+busy/paused requests do not use a start. The three-hour news schedule is set in
+Dagskoll separately.
+
+The root-owned private `/config/usage-budget.json` is atomically saved and fsynced
+before every launch attempt. Limits and token counters survive restarts. After
+three consecutive failures the bridge pauses new starts for 30 minutes. A
+successful run clears the failure streak. An interrupted reservation is counted
+as a failure after restart. Corrupt, inconsistent or unwritable state blocks
+starts; do not delete it to bypass the daily allowance. Inspect and repair it
+while the app is stopped, preserving the used-start count.
+
+Authenticated `GET /status` on the internal port returns today's starts,
+successes, failures, remaining starts, reset time, cooldown and CLI-reported
+usage including cached tokens. Use the same Bearer token as for `/v1/responses`.
+It returns no prompts, credentials or account identity. Missing token usage on a
+failed or interrupted CLI run means unknown usage, not zero actual consumption.
+Incoming `max_output_tokens` is not a hard Codex CLI output-token limit.
+
+## Explicit Home Assistant questions
+
+For a request that needs live home state, send
+`"metadata": {"homeassistant_context": true}` with the response request. This
+enables only the MCP tool `homeassistant__GetLiveContext` at
+`http://supervisor/core/api/mcp`. The integration must already be enabled in HA.
+The worker receives the Supervisor token only for that request. It cannot call
+the other MCP tools through this client's allowlist. A successful completed MCP
+call is required before the bridge accepts the answer as a live-context answer.
+
+News, quotes and other ordinary requests leave the controlled Home Assistant MCP
+server explicitly disabled and receive no Home Assistant credential. Unexpected
+MCP servers in the dedicated user/system config files block starts before quota
+reservation. API keys are never forwarded.
+The app has Home Assistant API permission for the explicitly requested context
+connection; it has no Supervisor API permission, host networking, host Docker
+socket or Home Assistant configuration mount.
+
+Live login, model availability, source-event compatibility and resource usage
+must be verified on the target machine. Unit tests use synthetic CLI events;
+they do not prove a real account can run the selected model.
