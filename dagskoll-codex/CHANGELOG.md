@@ -1,3 +1,10 @@
+# 0.1.8
+
+- Add explicit authenticated quota reset while retaining real daily starts, usage, failure streaks and cooldowns. A separate quota epoch determines the remaining allowance; reset refuses active or corrupt state and never launches AI.
+- Add bounded task-labelled usage, queue and execution metrics to the persistent ledger without logging prompts or home data.
+- Support a fixed read-only Dagskoll status profile with bounded saved diagnostic metadata, no tools and no hidden source refresh. Keep ordinary news/quote and explicit HA MCP paths separate.
+- Bound the aggregate HA-context wait with a single guarded worker and retain strict response/identity checks, subscription authentication and existing concurrency controls.
+
 # 0.1.7
 
 - Add authenticated `POST /settings` for changing the daily AI start limit from 1 to 200, with a default of 40. Return the effective status and counters for the phone's usage controls.
