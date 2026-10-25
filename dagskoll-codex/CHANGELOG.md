@@ -1,3 +1,8 @@
+# 0.1.4
+
+- Restore Home Assistant's injected environment through `with-contenv` when s6 starts the app, so explicitly requested MCP context can receive its authorized Supervisor token.
+- Report context credential availability as a boolean in authenticated `/status`; return a specific uncharged Home Assistant context error instead of a misleading ChatGPT login error when the token is missing.
+
 # 0.1.3
 
 - Add a persistent ceiling of 40 CLI start attempts per Stockholm calendar day, including failures, timeouts and interrupted runs. Corrupt or unwritable budget state blocks new runs.

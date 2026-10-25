@@ -1,5 +1,5 @@
 name: Dagskoll Codex
-version: "0.1.3"
+version: "0.1.4"
 slug: dagskoll_codex
 description: Codex med ChatGPT-inloggning för Dagskolls analyser
 arch: [aarch64, amd64]
