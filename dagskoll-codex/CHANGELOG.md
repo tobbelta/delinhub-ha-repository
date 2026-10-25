@@ -1,3 +1,8 @@
+# 0.1.5
+
+- Report sanitized CLI failure categories, return codes, event counts, known MCP tool status and allowlisted HTTP error codes to the protected response and app log.
+- Distinguish CLI exit, missing answer, failed turn and missing successful HA context without logging stderr, prompts, context contents, credentials or arbitrary tool names.
+
 # 0.1.4
 
 - Restore Home Assistant's injected environment through `with-contenv` when s6 starts the app, so explicitly requested MCP context can receive its authorized Supervisor token.
