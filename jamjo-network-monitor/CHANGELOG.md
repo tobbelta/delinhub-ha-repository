@@ -1,3 +1,8 @@
+## 1.0.122
+
+- Nyheternas sparade hämtningsintervall och HA-val stödjer nu 180 minuter. Schemalagda fel behåller det valda intervallet, så sparsamt AI-läge inte övergår i minutvisa försök. Manuella uppdateringar fungerar fortsatt.
+- Codex-anslutningen respekterar säkra väntetider för upptagen tjänst, dygnstak och felpaus. Ett upptaget AI-anrop lämnar citatet och dess historik kvar och använder tjänstens väntetid inför nästa försök.
+
 ## 1.0.121
 
 - Nyhetsflödet skiljer Geminis saknade webbsökning från verkliga hämtningsfel. Vanliga nyheter kan uppdateras även när skvaller och viralt saknar stöd; omöjliga sökningar orsakar inga minutvisa återförsök.
