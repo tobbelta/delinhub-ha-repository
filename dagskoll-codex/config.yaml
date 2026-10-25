@@ -1,5 +1,5 @@
 name: Dagskoll Codex
-version: "0.1.2"
+version: "0.1.3"
 slug: dagskoll_codex
 description: Codex med ChatGPT-inloggning för Dagskolls analyser
 arch: [aarch64, amd64]
@@ -7,10 +7,17 @@ image: ghcr.io/tobbelta/dagskoll-codex
 startup: application
 boot: manual
 init: false
+homeassistant_api: true
 map:
   - type: addon_config
     read_only: false
 options:
   access_token: ""
+  model: gpt-6-luna
+  reasoning_effort: low
+  daily_start_limit: 40
 schema:
   access_token: password
+  model: match(^[a-zA-Z0-9][a-zA-Z0-9._-]{0,79}$)
+  reasoning_effort: list(low|medium)
+  daily_start_limit: int(1,40)
