@@ -1,3 +1,11 @@
+## 1.0.125
+
+- Dagskoll får en separat Watch Face Format-urtavla som installeras utöver Wear-appen och kan väljas i Wear OS urtavleväljare. Den kräver Wear OS 4 eller senare och använder befintliga datakällor, med minimal always-on-visning.
+- Telefonens uppdateringscenter kan installera/reparera klockapp och urtavla i rätt ordning. Varje paket kontrolleras mot hash, signering, paket och version; delvis installation och val av aktiv urtavla redovisas var för sig.
+- Installerad urtavleversion rapporteras separat till telefonen och HA. Versionskontrollen räknar inte en saknad eller okänd urtavla som färdiginstallerad.
+- Klockans cachebaserade komplikationer får uppdateringssignaler från nya mätningar samt tidsberoende glukosålder och giltighet. Begränsad bakgrundshämtning fungerar utan att huvudappen är öppen; platsbegränsningar ger tydliga tomlägen.
+- Alla tre Androidpaket publiceras tillsammans först efter Googles officiella WFF-schema- och minnesvalidering. Befintlig appdata bevaras vid uppdatering.
+
 ## 1.0.124
 
 - Morgon-TV kl. 06 använder Tobias telefon hemma på verifierat Nygatan-nät och svensk arbetsdagskalender. Helgdagar, jul-/nyårs-/midsommarafton och egna lediga datum hoppas över. Det äldre upplåsningskravet tas bort. VPN-nätval, begränsade återförsök och bekräftad uppspelning får tydliga utfall.
