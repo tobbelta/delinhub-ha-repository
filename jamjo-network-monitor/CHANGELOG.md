@@ -1,3 +1,9 @@
+## 1.0.123
+
+- Systemkontroll i telefonen visar Dagskolls använda och återstående AI-anrop samt dygnstaket från AI-tjänstens verkliga räknare. Användaren kan spara ett tak på 1–200; standard är fortsatt 40. Misslyckade startförsök ingår och räknaren följer svensk kalenderdag.
+- Gränsändringar bevarar förbrukning och felpauser. Inställningar och statistik startar inga AI-anrop. Senast bekräftade uppgifter märks som gamla vid avbrott, och en ny gräns visas som sparad först efter bekräftelse och återläsning.
+- Samma räknare visas i Home Assistants Dagskoll-dashboard.
+
 ## 1.0.122
 
 - Nyheternas sparade hämtningsintervall och HA-val stödjer nu 180 minuter. Schemalagda fel behåller det valda intervallet, så sparsamt AI-läge inte övergår i minutvisa försök. Manuella uppdateringar fungerar fortsatt.
