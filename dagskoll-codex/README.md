@@ -35,9 +35,10 @@ limits; this bridge cannot report a reliable percentage of the plan's allowance.
 
 ## Sparse operation and usage
 
-`daily_start_limit` defaults to 40 and can be set to 1–200. It counts CLI
-launch attempts, including errors, timeouts and interrupted runs, for each
-calendar day in Europe/Stockholm. A news refresh may use several AI runs; it is
+`daily_start_limit` defaults to 40 and can be set to 1–200. It limits CLI
+launch attempts since the start of the Europe/Stockholm calendar day or the
+last explicit manual allowance reset. Actual daily history always counts all
+attempts, including errors, timeouts and interrupted runs. A news refresh may use several AI runs; it is
 not counted as one refresh. Authentication failures, invalid input and rejected
 busy/paused requests do not use a start. The three-hour news schedule is set in
 Dagskoll separately.
@@ -70,7 +71,7 @@ The selected limit is atomically saved with mode 0600 in
 `daily_start_limit` configuration; the addon value is the fallback only while no
 saved setting exists. Both changes and daily rollover preserve this selection.
 A limit change never rewrites the separate usage ledger, refunds starts, clears
-failures or removes a cooldown. Lowering the limit below today's used count
+failures or removes a cooldown. Lowering the limit below the current allowance's used count
 shows zero remaining starts and blocks the next start; an already running job
 can finish. Raising the limit permits additional starts, subject to the existing
 cooldown. Changes are accepted while an AI job is running.
@@ -80,12 +81,77 @@ write also blocks new starts until a subsequent valid save or restart verifies
 persisted state. An explicit valid settings save may replace corrupt settings,
 but never repairs or replaces a corrupt usage ledger.
 
+### Explicit manual allowance reset
+
+Authenticated `POST /settings/reset` accepts exactly `{}`. It restores the full
+selected allowance and records the reset atomically in the same ledger, without
+starting AI. Actual `started`, `succeeded`, `failed`, token usage, task metrics,
+failure streak and cooldown are preserved. A reset does not bypass the failure
+circuit. It is refused with HTTP 409 `busy` while an AI request or pending
+reservation exists. Unreadable settings, corrupt ledger and backward clock
+movement fail closed; reset is never a ledger repair operation.
+
+Status includes `quota_reset_supported: true`, `quota_started` (starts since the
+last manual reset, or day start), `quota_reset_at` (nullable ISO timestamp), and
+`manual_reset_count` for the current local day. `remaining_starts` is
+`max(0, daily_start_limit - quota_started)`. `started` remains the honest actual
+daily total and can exceed the selected limit after explicit manual resets.
+At local midnight the allowance and reset count begin a new day; the selected
+limit persists. A phone reset is a deliberate action with confirmation, never
+an automatic retry. The backend reads status before and after resetting and
+confirms the exact reset generation rather than assuming delivery succeeded.
+A queued AI start may appear in the POST status before it is returned, so reset
+confirmation checks the generation, timestamp, preserved daily history and
+matching allowance offset rather than requiring the returned used count to be zero.
+
+`task_metrics` contains only fixed workload labels and per-day started/succeeded/
+failed counts, CLI-reported token usage, aggregate queue seconds and aggregate
+execution seconds. Historical starts before this metric was introduced are not
+retroactively classified. Task metrics survive restart and reset, and roll over
+with the daily ledger. Missing CLI token counts still mean unknown consumption.
+Neither these metrics nor the quota are a plan-percentage or token guarantee.
+
 Failed runs report only sanitized diagnostic labels: failure category, process
 return code, known event counts, known MCP tool status and allowlisted HTTP error
 codes. These appear in the authenticated error response and private app log.
 Raw CLI stderr, prompts, answers, context contents and credentials are not logged.
 
-## Explicit Home Assistant questions
+## Explicit read-only context profiles
+
+`metadata.context_profile` is a fixed allowlist: `none` for ordinary jobs,
+`dagskoll_status` for bounded status explanations, and `assist_snapshot` for the
+existing explicitly requested home snapshot. It never accepts entity IDs, URLs,
+tool names or general HA commands from the model. News and quotes keep their
+existing behavior and receive no home context.
+
+### Dagskoll status questions
+
+The phone's Systemkontroll action publishes `ask_status` with a question of
+1–400 characters and its normal unique command ID. The backend's
+`DiagnosticsManager` reads already observed snapshots only. Its fixed profile
+contains service/job status, source freshness, next-run time, cache/stale flags,
+bounded counts, and categorized errors. Raw errors, article text, bookings,
+health, portfolio amounts, holdings, accounts and device data are excluded.
+Fund metadata is read from the existing retained Core publication, without a
+new NAV request. Observation/attempt timestamps stay distinct from NAV dates.
+
+The bridge validates this profile before reserving a start, uses a fixed
+instruction/schema, and disables all external tools including web search and HA
+MCP. The child has no HA credentials. Answers are limited to 2400 characters;
+the caller's output-token hint is still not a hard CLI token ceiling. Errors
+clear the prior answer. The sensor's `request_id` and a completed command receipt
+must both match before the phone presents a new answer. A read is never a hidden
+refresh or repair. Ordinary status/count displays require no model.
+
+Identical in-flight questions share one execution when their sanitized context
+revision and freshness minute match. Successful explanations can be reused for
+at most 60 seconds in memory, with original observation and answer timestamps;
+changed context invalidates the result. Cache, questions and answers are not
+written by this manager or included in operational metrics. The result sensor
+is published without MQTT retain; HA may still record entity state under its
+normal recorder/access rules. No diagnostic polling starts AI automatically.
+
+### Explicit home snapshot
 
 For a request that needs live home state, send
 `"metadata": {"homeassistant_context": true}` with the response request. The
@@ -94,6 +160,9 @@ credential-owning bridge parent performs MCP `initialize`, then exactly one
 `http://supervisor/core/api/mcp`. It never calls actuation tools. The integration
 must already be enabled in HA. The parent uses canonical JSON HTTP headers and
 verifies the result directly, avoiding dependence on native CLI MCP calls.
+The existing boolean selects `assist_snapshot`; specifying another profile
+along with it is rejected. This Assist tool does not support an entity filter,
+so it remains a deliberate broader snapshot, rather than a status-question path.
 
 The parent disables proxies and redirects, validates HTTP 200 JSON, matching
 JSON-RPC IDs, no RPC error and a single text result containing HA
@@ -109,6 +178,11 @@ call itself, cannot actuate HA and never receives the Supervisor token. No
 snapshot is written to disk or logs. The model's answer may describe home state
 as requested by the caller.
 
+Total caller wait for MCP is limited to ten seconds, including both RPCs. At
+most one private daemon reader can remain after timeout; late results are
+discarded and further context reads fail before AI reservation while it is
+still active. Socket timeouts remain five seconds. No late snapshot is reused.
+
 All workers leave the controlled Home Assistant MCP server explicitly disabled.
 News, quotes and ordinary requests do not fetch HA context. Unexpected MCP
 servers in dedicated user/system config files block starts before quota
@@ -120,3 +194,9 @@ socket or Home Assistant configuration mount.
 Live login, model availability, source-event compatibility and resource usage
 must be verified on the target machine. Unit tests use synthetic CLI events;
 they do not prove a real account can run the selected model.
+
+The working pinned CLI remains in use. Per-task queue/execution/token metrics
+provide evidence for any later warm-process investigation; no App Server
+migration or promised token saving is implied. Official guidance distinguishes
+[non-interactive jobs](https://learn.chatgpt.com/docs/non-interactive-mode) from
+the richer [App Server protocol](https://learn.chatgpt.com/docs/app-server).
