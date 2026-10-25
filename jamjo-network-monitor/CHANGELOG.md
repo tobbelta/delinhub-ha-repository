@@ -1,3 +1,13 @@
+## 1.0.124
+
+- Morgon-TV kl. 06 använder Tobias telefon hemma på verifierat Nygatan-nät och svensk arbetsdagskalender. Helgdagar, jul-/nyårs-/midsommarafton och egna lediga datum hoppas över. Det äldre upplåsningskravet tas bort. VPN-nätval, begränsade återförsök och bekräftad uppspelning får tydliga utfall.
+- Telefonen kan nollställa aktuell AI-kvot och behålla vald gräns. Dagens verkliga användning och felpauser bevaras; nollställningen bekräftas mot servern och startar ingen AI.
+- Fråga om Dagskolls status från Systemkontroll. Svaren bygger på begränsad sparad driftmetadata, kan återanvända ett färskt identiskt svar och utför inga styråtgärder. Samma senaste svar visas i HA.
+- Fondvyn skiljer bekräftad fondkurs/NAV med kursdatum och källa från preliminär börsindikator. Fondhanteringen reserverar väntande försäljningar och avvisar ogiltiga tal. Core-fondintegration 1.0.6 bevarar verifierade kurser över omstart med tydlig gammal-status.
+- AI-nätåtgärder kräver exakt visat förslag, mål och åtgärd. Avsikt och spärr sparas före SSH; osäkra resultat återkörs inte. HA får ett särskilt godkännandekort i stället för generiska knappar.
+- Nyhetsschemat överlever omstart och avbrott under körning. Väder och bokningar redovisar partiella fel, och senaste verifierade börs-/vädersvar finns kvar på disk. Matsedelns befintliga flöde kopplas in med giltiga erbjudandedatum.
+- Stegsynk använder källrevision, telefonens Dexcom-läsning samordnas och startup-vakenlåset släpps efter synken. Statusuppdateringar glesas ut efter synlig vy. Klockans presentation samordnar värde, ålder och gammal data utan nya täta hämtningar.
+
 ## 1.0.123
 
 - Systemkontroll i telefonen visar Dagskolls använda och återstående AI-anrop samt dygnstaket från AI-tjänstens verkliga räknare. Användaren kan spara ett tak på 1–200; standard är fortsatt 40. Misslyckade startförsök ingår och räknaren följer svensk kalenderdag.
