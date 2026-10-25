@@ -1,3 +1,9 @@
+# 0.1.6
+
+- Fetch explicitly requested HA context deterministically in the credential-owning parent through MCP initialize and the fixed read-only GetLiveContext call; no Home Assistant credential or active MCP server reaches the AI worker.
+- Use canonical JSON HTTP headers, no proxy or redirects, strict RPC/result validation and bounded response/context sizes. Context failures return safe stage/status diagnostics before any AI start is counted.
+- Attach only verified/fetched-at/source/tool metadata to successful responses and label the in-memory snapshot as source data. Context jobs use a 170-second CLI timeout; ordinary jobs retain 180 seconds.
+
 # 0.1.5
 
 - Report sanitized CLI failure categories, return codes, event counts, known MCP tool status and allowlisted HTTP error codes to the protected response and app log.
