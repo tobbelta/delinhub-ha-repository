@@ -1,5 +1,5 @@
 name: "Dagskoll"
-version: "1.0.127"
+version: "1.0.128"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"
@@ -46,23 +46,8 @@ options:
   openai_api_key: ""
   openai_model: "gpt-5.4-nano"
   openai_network_model: ""
-  openai_news_model: "gpt-5.4-mini"
   openai_dna_model: "gpt-5.4-mini"
   openai_min_interval_minutes: 10
-  news_enabled: true
-  news_poll_minutes: 30
-  news_interests: "teknik, AI, programmering, svensk/internationell politik, ekonomi, fonder, börser, Kalmar FF, svenska fotbollslandslaget, Kalmar, Jämjö, Borgholm, Blekinge, diabetes, Home Assistant, smarta hem, vetenskap, cybersäkerhet, stora samhällshändelser"
-  news_excluded_topics: ""
-  news_include_news: true
-  news_include_viral: true
-  news_include_gossip: true
-  news_relevance_threshold: 55
-  news_viral_relevance_threshold: 30
-  news_notification_threshold: 88
-  news_max_notifications_per_day: 3
-  news_quiet_start: "22:30"
-  news_quiet_end: "07:00"
-  news_history_limit: 40
   ai_remediation_enabled: false
   ai_remediation_cooldown_minutes: 360
   ai_proposal_ttl_minutes: 30
@@ -123,23 +108,8 @@ schema:
   openai_api_key: password
   openai_model: str
   openai_network_model: str?
-  openai_news_model: str?
   openai_dna_model: str?
   openai_min_interval_minutes: int(5,1440)
-  news_enabled: bool
-  news_poll_minutes: int(15,360)
-  news_interests: str
-  news_excluded_topics: str
-  news_include_news: bool
-  news_include_viral: bool
-  news_include_gossip: bool?
-  news_relevance_threshold: int(0,100)
-  news_viral_relevance_threshold: int(0,100)
-  news_notification_threshold: int(0,100)
-  news_max_notifications_per_day: int(0,20)
-  news_quiet_start: str
-  news_quiet_end: str
-  news_history_limit: int(10,100)
   ai_remediation_enabled: bool
   ai_remediation_cooldown_minutes: int(60,10080)
   ai_proposal_ttl_minutes: int(5,120)
