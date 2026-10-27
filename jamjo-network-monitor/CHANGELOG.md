@@ -1,3 +1,21 @@
+## 1.0.129
+
+- Starten väntar på kompletta MQTT-uppgifter och försöker ansluta igen vid
+  tillfälliga brokerfel. Viktiga MQTT-besked köas med QoS 1 och bekräftelse;
+  befintliga beständiga kommandokvitton förhindrar återexekvering.
+- Curling-EM får verifierade datum, dam-/herrklass och starttider från
+  World Curlings officiella schema. Text-TV-resultat kopplas till rätt match;
+  oklara datum blir inte automatiskt dagens matcher.
+- Telefonens glukosnotis markerar gammalt efter 12 minuter och visar inget
+  aktuellt värde efter 20. Telefonhistorik och klockcache skiljs per konto,
+  med bevarad äldre historik och skydd mot sena svar efter kontobyte.
+- Glooko avvisar NaN/oändliga tal och ogiltig JSON. Den sista avstängda
+  Guardian-grenen och dess inställning tas bort från Upptäck.
+- Pi-schemats sparande läses tillbaka och ger felbesked även vid timeout.
+  TV-styrningen visar slutresultat/fel och skyddar mot sena kommandosvar.
+- Wear använder stabil Health Services 1.1.0. Inga breda SDK- eller
+  byggverktygsbyten ingår i denna rättningsrelease.
+
 ## 1.0.128
 
 - Nyheter, skvaller och nättrender borttagna från telefon och HA: inga
