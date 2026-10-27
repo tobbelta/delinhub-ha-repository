@@ -1,3 +1,12 @@
+## 1.0.128
+
+- Nyheter, skvaller och nättrender borttagna från telefon och HA: inga
+  hämtningar, AI-körningar eller aviseringar. Gamla MQTT-entiteter tas bort.
+- Curling för Sveriges matcher via SVT Text, med poänghändelser och eget
+  sportval. Befintliga installationer får curling aktiverat en gång.
+- Hockeyns kommande matcher visas sju dagar framåt. En avslutad match får
+  inga nya härledda spelhändelser av ändrade perioduppgifter.
+
 ## 1.0.127
 
 - Breddade batterifält i urtavlan så att hela 100 % ryms även med
