@@ -1,3 +1,9 @@
+## 1.0.131
+
+- Telefonens förklaring till Dagens citat går att skrolla även med lång
+  text och stor textstorlek. Stäng och Nytt citat ligger kvar åtkomliga,
+  och nästa citat öppnas från början.
+
 ## 1.0.130
 
 - En äldre sparad curlingförhandsrad känns igen när officiellt schema införs.
