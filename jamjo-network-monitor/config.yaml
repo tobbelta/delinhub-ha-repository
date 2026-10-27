@@ -1,5 +1,5 @@
 name: "Dagskoll"
-version: "1.0.128"
+version: "1.0.129"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"
@@ -63,7 +63,6 @@ options:
   weather_poll_minutes: 15
   ticketmaster_api_key: ""
   nasa_api_key: ""
-  guardian_api_key: ""
   sportsdb_api_key: ""
   waste_pickup_id: "4317918"
   waste_address: "Jämjö Bygata 2"
@@ -82,7 +81,6 @@ options:
 schema:
   ticketmaster_api_key: password?
   nasa_api_key: password?
-  guardian_api_key: password?
   sportsdb_api_key: password?
   mqtt_host: str
   mqtt_port: port
