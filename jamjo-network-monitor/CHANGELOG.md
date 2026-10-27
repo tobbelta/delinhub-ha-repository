@@ -1,3 +1,10 @@
+## 1.0.130
+
+- En äldre sparad curlingförhandsrad känns igen när officiellt schema införs.
+  Samma match visas en gång med bevarad identitet; äldre tomma dubbletter
+  återkommer inte som falskt gamla matcher. Verkliga resultat och historik
+  bevaras.
+
 ## 1.0.129
 
 - Starten väntar på kompletta MQTT-uppgifter och försöker ansluta igen vid
