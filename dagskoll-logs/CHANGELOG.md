@@ -1,3 +1,14 @@
+## 0.2.0
+
+- Läsande dygnsöversikt räknar hela det kvarvarande mottagningsfönstret och
+  ger ett begränsat, balanserat evidensurval för HA:s AI-granskning via MCP.
+- Redovisar aktuell källhälsa, kö-/gallringsgränser och äldre klassningsartefakter
+  separat. Tysta Supervisor-strömmar återöppnas utan falskt enhetslarm.
+- Separat adminnyckel kan väcka en verifierat felande insamlares återförsök.
+  Åtgärden har beständigt dubblettskydd och audit; inga enhetskommandon körs.
+- Höjer standardgränserna till 2048 MiB och 2 miljoner poster. Befintliga
+  installationers options måste ändras uttryckligen; faktisk täckning redovisas.
+
 ## 0.1.4
 
 - Visar HTTP-batchkällor som Senast mottaget, med bevarad mottagningstid.

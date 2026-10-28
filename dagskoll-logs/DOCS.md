@@ -38,17 +38,20 @@ anslutningsstatus och kan visas som återanslutande eller frånkopplade.
 - `retention_days`: 1–365 dagar, normalt 30. Gallring utgår från när tjänsten
   tog emot posten, så en telefons offlinekö försvinner inte på grund av gammalt
   eller felaktigt klockslag.
-- `max_db_mb`: databasens hårda sidgräns, normalt 512 MB. Loggarnas innehåll
+- `max_db_mb`: databasens hårda sidgräns, normalt 2048 MiB. Loggarnas innehåll
   gallras tidigare för att ge plats åt index. WAL och tillfälliga SQLite-filer
   tillkommer med några MB under skrivning. En felande disk kvitteras aldrig
   som en lyckad leverans.
-- `max_rows`: högst 500 000 sparade poster normalt. Den första uppnådda
+- `max_rows`: högst 2 000 000 sparade poster normalt. Den första uppnådda
   gränsen (ålder, antal eller storlek) gallrar de äldsta mottagna posterna.
 - `ingest_tokens`: lista med `source` och `token`. Använd en slumpnyckel på
   minst 32 tecken för varje källa. Kortare än 24 tecken avvisas. Nyckeln ger
   bara skrivrätt för sin egen källa. Samma nyckel ska inte återanvändas.
 - `viewer_token`: valfri separat lång nyckel för programmatisk läsning.
   Den används aldrig i webbläsaren. Tom nyckel stänger extern läsning.
+- `admin_token`: separat slumpnyckel på minst 32 tecken för den enda
+  administrativa åtgärden, att väcka en felande insamlares återförsök.
+  Får inte vara samma som någon läs- eller skrivnyckel. Tomt stänger åtgärden.
 - `collectors`: lokala insamlare för Supervisor/system/HA och SSH-källor.
   SSH-nycklar förvaras under `/config/ssh/`, med verifierade värdnycklar i
   `known_hosts`. Använd separat läsnyckel med tvingat loggkommando; ge inte
@@ -103,7 +106,7 @@ loggtjänstens läsnyckel. Den stannar på servern. `ha_web_token` används för
 webbläsarens drifthändelser och är en separat skrivnyckel för källan `ha-web`.
 Tomma nyckelfält i inställningsformuläret behåller befintliga värden.
 
-MCP erbjuder tre verktyg:
+MCP erbjuder fyra verktyg:
 
 - **LogStatus** visar lagring, gallring, anslutningar och när källorna hördes av.
 - **SearchLogs** söker på källa, minsta nivå, text och tidsfönster. Normalt läses
@@ -111,6 +114,10 @@ MCP erbjuder tre verktyg:
 - **LogContext** hämtar sammanhanget kring ett exakt `source/event_id`, inom
   1–30 minuter åt varje håll. Ange `include_other_sources=true` för att även
   se närliggande händelser från andra enheter.
+- **LogReviewOverview** räknar hela det kvarvarande mottagningsfönstret
+  (normalt ett dygn, högst sju dygn) per källa och nivå. Detaljer väljs
+  balanserat med högst 64 källor, 24 grupper, 48 evidensposter och 48 KiB.
+  Detaljgrupper är märkta som lägre gränser när de bygger på urval.
 
 Svar innehåller citerbara `source/event_id`, händelsetid och mottagningstid.
 Saknad data och avkortade resultat markeras. Verktygen kan läsa filtrerade
@@ -129,6 +136,37 @@ Frågor kan exempelvis vara ”Vilka fel syns på puck3 ikväll?” eller
 ID och tid och beskriva vad underlaget faktiskt visar. Loggtext behandlas
 som observationer, aldrig som instruktioner till AI:n. Dagskolls brygga hämtar
 underlaget via det fasta MCP-verktyget innan modellen får frågan.
+
+## Dygnsgranskning och begränsad återanslutning
+
+HA-komponenten schemalägger en granskning kl. 08.00 Europe/Stockholm och
+erbjuder manuell start. AI-bryggans fasta `log_review`-profil hämtar
+`LogReviewOverview` innan en AI-start räknas. Svaret innehåller en sammanfattning,
+högst fem förbättringsförslag och tydliga begränsningar. Varje förslag måste
+hänvisa till verkliga evidens-ID:n. Inga modellverktyg eller enhetsåtgärder
+är aktiverade. Rapporter sparar begränsad täckningsmetadata, inte råloggar.
+
+`GET /v1/review?since=<ISO8601>&until=<ISO8601>` använder läsnyckeln.
+Översiktens gränser är fasta och räknas på mottagningstid; ursprunglig
+händelsetid finns separat. Mätstart, verkligt kvarvarande data och livstids-
+gallringsräknaren redovisas. Trettio dagars åldersgräns garanterar inte trettio
+dagars historik: antal och storlek kan gallra tidigare. Ändra befintliga options
+uttryckligen till de högre gränserna vid uppdatering; kontrollera därefter täckningen.
+
+Endast HA:s separat auktoriserade administratörsflöde får anropa
+`POST /v1/collectors/reconnect`, med adminnyckeln och JSON
+`{"source":"ha-core","request_id":"<UUID>","expected_error_id":"collector/<id>"}`.
+Servern kräver en konfigurerad strömkälla, samma aktuella felankare, minst tre
+minuters verkligt fel och en worker som väntar på återförsök. Batchkällor,
+friska läsningar och normala tysta strömmar avvisas. Claim och audit sparas
+atomiskt före väckning. Samma request-ID kvitteras utan ny åtgärd i 30 dagar;
+historiken har ett hårt tak och avvisar nya åtgärder om den blir full.
+
+Svar är `requested` eller `already_requested`; förändrad källa/felbild ger 409.
+Ett accepterat återförsök är inte bevis på återställd anslutning. HA läser tillbaka
+aktuell status och visar osäkert resultat om återhämtning inte kan verifieras.
+Ingen puck startas om, inga fjärrkommandon skickas och inga inställningar ändras.
+MCP, läsnyckeln, skrivnycklarna och ingressvyn saknar tillgång till åtgärds-API:t.
 
 ## Innehåll och begränsningar
 

@@ -1,5 +1,5 @@
 name: Dagskoll Logg
-version: "0.1.4"
+version: "0.2.0"
 slug: dagskoll_logs
 description: Samlad lokal driftlogg för Dagskoll, Home Assistant och nätverket
 url: https://github.com/tobbelta/delinhub
@@ -26,10 +26,11 @@ ports_description:
 watchdog: http://[HOST]:8098/health
 options:
   retention_days: 30
-  max_db_mb: 512
-  max_rows: 500000
+  max_db_mb: 2048
+  max_rows: 2000000
   ingest_tokens: []
   viewer_token: ""
+  admin_token: ""
   collectors:
     supervisor_enabled: true
     homeassistant_events_enabled: true
@@ -43,6 +44,7 @@ schema:
     - source: match(^[a-zA-Z0-9][a-zA-Z0-9._-]{0,63}$)
       token: password
   viewer_token: password
+  admin_token: password
   collectors:
     supervisor_enabled: bool
     homeassistant_events_enabled: bool
