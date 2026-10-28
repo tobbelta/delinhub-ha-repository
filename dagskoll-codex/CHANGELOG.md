@@ -1,3 +1,8 @@
+# 0.1.9
+
+- Add a fixed read-only log_snapshot profile that reads SearchLogs through Home Assistant MCP before reserving AI quota. Keep CLI tools disabled, preserve subscription login and all budget settings.
+- Bound queries to 31 days/50 events, validate MCP schema and constrain answer citations to actual returned events. Log text is treated as untrusted data; no device actions or log changes are available.
+
 # 0.1.8
 
 - Add explicit authenticated quota reset while retaining real daily starts, usage, failure streaks and cooldowns. A separate quota epoch determines the remaining allowance; reset refuses active or corrupt state and never launches AI.
