@@ -1,0 +1,56 @@
+name: Dagskoll Logg
+version: "0.1.0"
+slug: dagskoll_logs
+description: Samlad lokal driftlogg för Dagskoll, Home Assistant och nätverket
+url: https://github.com/tobbelta/delinhub
+arch: [amd64, aarch64]
+image: ghcr.io/tobbelta/dagskoll-logs
+startup: services
+boot: auto
+init: false
+ingress: true
+ingress_port: 8097
+panel_icon: mdi:text-box-search-outline
+panel_title: Dagskoll Logg
+panel_admin: true
+homeassistant_api: true
+hassio_api: true
+hassio_role: manager
+map:
+  - type: addon_config
+    read_only: false
+ports:
+  8098/tcp: null
+ports_description:
+  8098/tcp: Autentiserad loggmottagning (endast vid behov på privat nät)
+watchdog: http://[HOST]:8098/health
+options:
+  retention_days: 30
+  max_db_mb: 512
+  max_rows: 500000
+  ingest_tokens: []
+  viewer_token: ""
+  collectors:
+    supervisor_enabled: true
+    homeassistant_events_enabled: true
+    poll_seconds: 30
+    ssh_hosts: []
+schema:
+  retention_days: int(1,365)
+  max_db_mb: int(32,8192)
+  max_rows: int(1000,5000000)
+  ingest_tokens:
+    - source: match(^[a-zA-Z0-9][a-zA-Z0-9._-]{0,63}$)
+      token: password
+  viewer_token: password
+  collectors:
+    supervisor_enabled: bool
+    homeassistant_events_enabled: bool
+    poll_seconds: int(5,300)
+    ssh_hosts:
+      - source: match(^[a-zA-Z0-9][a-zA-Z0-9._-]{0,63}$)
+        host: str
+        user: str
+        port: port
+        identity: match(^[a-zA-Z0-9_-]{1,64}$)
+        kind: list(openwrt|linux)
