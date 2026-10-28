@@ -1,5 +1,5 @@
 name: Dagskoll Logg
-version: "0.1.0"
+version: "0.1.1"
 slug: dagskoll_logs
 description: Samlad lokal driftlogg för Dagskoll, Home Assistant och nätverket
 url: https://github.com/tobbelta/delinhub
