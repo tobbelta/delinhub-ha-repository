@@ -1,5 +1,5 @@
 name: "Dagskoll"
-version: "1.0.131"
+version: "1.0.132"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"
@@ -10,6 +10,7 @@ image: "ghcr.io/tobbelta/jamjo-network-monitor"
 startup: services
 boot: auto
 init: false
+timeout: 20
 homeassistant_api: true
 hassio_api: true
 services:
@@ -19,6 +20,8 @@ ports:
 ports_description:
   8099/tcp: "Vidarekopplad radio till högtalarna"
 options:
+  log_url: ""
+  log_token: ""
   mqtt_host: "192.168.1.249"
   mqtt_port: 1883
   mqtt_username: "jamjo_mqtt"
@@ -79,6 +82,8 @@ options:
       purchase_date: ""
       source_url: "https://lf.fondlista.se/sv/1/details/SE0002656611"
 schema:
+  log_url: url?
+  log_token: password?
   ticketmaster_api_key: password?
   nasa_api_key: password?
   sportsdb_api_key: password?
