@@ -1,3 +1,8 @@
+## 0.1.3
+
+- Hämtar Observer-loggen via HAOS värdjournal och dess stödda identifierare.
+- Återställer upptäckarens status när tilläggsupptäckten åter fungerar.
+
 ## 0.1.2
 
 - Startar Python med s6-miljön återställd så HA-/Supervisor-autentiseringen

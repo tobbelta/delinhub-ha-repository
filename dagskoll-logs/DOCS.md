@@ -5,6 +5,21 @@ om ledigt utrymme passar bättre för kontinuerlig loggskrivning än Pi:s SD-kor
 Tilläggets privata `/data/events.sqlite3` följer med i Home Assistants backup
 av tillägget. Backa upp tillägget och förvara även en kopia utanför Dell.
 
+## Privat lokal installation i Jämjö
+
+Den aktiva installationen heter **`local_dagskoll_logs`** och byggs privat på
+Dell. Dess interna värdnamn är **`local-dagskoll-logs`**. Backendens `log_url`
+och HA-integrationens `collector_url` anges till
+`http://local-dagskoll-logs:8098`. Loggvyn öppnas med HA-ingress; port 8098
+stannar på det interna tilläggsnätet.
+
+Källan ligger i HA:s lokala tilläggsmapp `/local_apps/dagskoll-logs`.
+Exportera filerna ur den granskade Git-revisionen och kontrollera deras
+hashar. I den lokala kopian av `config.yaml` utelämnas endast `image:` så
+Supervisor bygger på Dell. Hemligheter, `/data` och `/config/ssh` följer
+inte med i byggkontexten. Den lokala källan och tilläggets privata data ska
+båda ingå i säkerhetskopian.
+
 ## Användning
 
 Öppna webbgränssnittet från tillägget eller lägg det i HA:s sidopanel.
@@ -134,8 +149,28 @@ startar inte om puckar. Ingen firmwareåterställning installeras.
 
 ## Underhåll
 
-Uppdatera via Home Assistants tilläggsbutik. Rotera en källnyckel genom att
-byta den både i tillägget och den aktuella klienten. Vid lagringsfel,
+Vid en lokal uppdatering: ta först en krypterad backup av tillägget och dess
+lokala källa, kopiera den utanför Dell och verifiera hashen. Exportera därefter
+den granskade revisionen till samma lokala tilläggsmapp. Behåll options,
+databas och SSH-konfiguration. Höj tilläggets egen version, ladda om
+tilläggsbutiken och uppdatera **`local_dagskoll_logs`**. Kontrollera att den
+installerade versionen är rätt och tillståndet är `started`; ett accepterat
+uppdateringskommando är ingen slutkvittens.
+
+Python ska startas med `/usr/bin/with-contenv` så s6-miljön och
+`SUPERVISOR_TOKEN` når insamlaren. Kontrollera den autentiserade statusens
+`supervisor_token_present` och verkliga anslutningar till HA/Supervisor.
+CI använder en syntetisk Supervisor som kontrollerar autentisering från den
+verkliga insamlaren, samt provar omstart och bevarad databas. En separat
+`docker exec`-process miljö räcker inte som bevis för tjänstens inloggning.
+
+Version 0.1.3 läser Observer via HAOS värdjournalidentifierare och rättar
+upptäckarens anslutningsstatus. Äldre poster behåller sina ID:n, nivåer och
+meddelanden. Före 0.1.2 kunde socats normala N/I/D-rader få ERROR från
+OpenWrts stderr-etikett; bedöm även originalmeddelandet och versionsnotisen.
+
+Rotera en källnyckel genom att byta den både i tillägget och den aktuella
+klienten. Vid lagringsfel,
 kontrollera ledigt utrymme och HA:s logg innan en omstart. Kontakta
 projektets underhållare via projektets GitHub-repo för felrapporter och
 bifoga bara filtrerade tekniska uppgifter.
