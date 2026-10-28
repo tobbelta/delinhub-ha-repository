@@ -1,3 +1,9 @@
+## 0.1.4
+
+- Visar HTTP-batchkällor som Senast mottaget, med bevarad mottagningstid.
+  En omstart gör inte tysta telefon-/klockkällor till felande anslutningar.
+- Endast verkliga strömkällor markeras som återanslutande vid start.
+
 ## 0.1.3
 
 - Hämtar Observer-loggen via HAOS värdjournal och dess stödda identifierare.

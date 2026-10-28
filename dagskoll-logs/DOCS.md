@@ -28,6 +28,10 @@ medan sidan är synlig; äldre poster visas med Visa äldre. Filtret kan söka
 efter text, källa och nivå. Källornas senaste mottagning visas i lokal tid.
 Gul markering visar en frånkopplad eller återanslutande insamlare. En sovande
 mobil eller en tyst källa kan ha gammal mottagningstid utan att vara trasig.
+HTTP-batcher visas som **Senast mottaget**; de har ingen varaktig anslutning
+att övervaka. Telefonens, klockans och webbklientens mottagningstid bevaras
+vid loggtjänstens omstart. Strömmande SSH-/HA-källor har separat
+anslutningsstatus och kan visas som återanslutande eller frånkopplade.
 
 ## Inställningar
 
