@@ -1,3 +1,13 @@
+## 0.1.2
+
+- Startar Python med s6-miljön återställd så HA-/Supervisor-autentiseringen
+  finns tillgänglig för de verkliga insamlarna.
+- CI verifierar autentisering från den körande insamlaren med en syntetisk
+  Supervisor-tjänst, utan att skriva några nycklar i testresultaten.
+- Klassar socats egna N/I/D/W/E/F-nivåer före OpenWrts generella stderr-etikett.
+- Visar numerisk HTTP-felkod för felande insamlare och en autentiserad
+  statusflagga för närvaro av Supervisor-inloggning.
+
 ## 0.1.1
 
 - Maskerar även sammansatta nyckelnamn som `mqtt_password`, `zte_admin_password`
