@@ -1,3 +1,10 @@
+## 1.0.132
+
+Gemensam driftslogg för telefon, klocka och HA: bakgrundsjobb, kommandosteg,
+MQTT, SSH, HA-anrop och processfel får strukturerade loggar till Dagskoll Logg.
+Lokal begränsad kö med återförsök och kvittens efter lagring. Inga lösenord,
+hälsovärden, kommandopayloads eller svarstexter ingår i dessa händelser.
+
 ## 1.0.131
 
 - Telefonens förklaring till Dagens citat går att skrolla även med lång
