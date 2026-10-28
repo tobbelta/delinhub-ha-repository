@@ -1,3 +1,8 @@
+## 1.0.133
+
+- Giltig lokal standardadress för loggmottagningen så att HA:s URL-validering tillåter start direkt efter uppdatering och nyinstallation.
+- Starkare maskering av sammansatta lösenords- och nyckelfält i driftloggar och MCP-svar.
+
 ## 1.0.132
 
 Gemensam driftslogg för telefon, klocka och HA: bakgrundsjobb, kommandosteg,

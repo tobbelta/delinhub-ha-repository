@@ -1,5 +1,5 @@
 name: "Dagskoll"
-version: "1.0.132"
+version: "1.0.133"
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
 url: "https://developers.home-assistant.io/docs/apps"
@@ -20,7 +20,7 @@ ports:
 ports_description:
   8099/tcp: "Vidarekopplad radio till högtalarna"
 options:
-  log_url: ""
+  log_url: "http://1ae03bf6-dagskoll-logs:8098"
   log_token: ""
   mqtt_host: "192.168.1.249"
   mqtt_port: 1883
