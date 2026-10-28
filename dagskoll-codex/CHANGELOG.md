@@ -1,3 +1,9 @@
+# 0.2.0
+
+- Add a fixed log_review profile with balanced, bounded LogReviewOverview evidence from native HA MCP, fetched before AI quota reservation.
+- Validate the closed review schema and every proposal citation against actual evidence. Return coverage and trusted source metadata without raw logs in report history.
+- Keep the AI worker free of HA credentials, MCP, shell, web and repair tools. Safe manual collector reconnection is authorized and executed separately by Home Assistant.
+
 # 0.1.9
 
 - Add a fixed read-only log_snapshot profile that reads SearchLogs through Home Assistant MCP before reserving AI quota. Keep CLI tools disabled, preserve subscription login and all budget settings.

@@ -151,6 +151,32 @@ written by this manager or included in operational metrics. The result sensor
 is published without MQTT retain; HA may still record entity state under its
 normal recorder/access rules. No diagnostic polling starts AI automatically.
 
+### Balanced log reviews
+
+Home Assistant owns the daily 08:00 Stockholm schedule, durable manual requests
+and report history. It requests `metadata.task="logs"`,
+`metadata.context_profile="log_review"` and an optional `metadata.log_review`
+object containing only `since` and `until` (ISO8601 with timezone, at most seven
+days; default last 24 hours). The bridge parent fetches exactly the read-only
+`LogReviewOverview` tool at `/api/mcp/dagskoll_logs` before reserving AI quota.
+The fixed receipt-time window includes exact retained per-source/level counts,
+bounded balanced evidence, current source health and explicit retention limits.
+Historical severity artifacts and quiet-stream timeouts do not prove device failure.
+
+The worker receives no HA credential and cannot use shell, MCP, web or repair
+tools. Its closed JSON response contains `summary` (1200 characters), up to five
+text-only `proposals` and up to six `limitations`. Every proposal's 1–8 evidence
+IDs must match actual overview evidence. An empty proposal list is valid. The
+prompt targets roughly 2500 output tokens; the caller's token hint is not a hard
+CLI ceiling. Existing model, subscription authentication and budgets are preserved.
+
+The protected response's `homeassistant_context.review` contains verified window,
+coverage, counts, bounded trusted health and citation/source/time metadata, without
+raw messages or attributes. HA validates it again before storing the report.
+The model cannot select an action: HA may independently offer a narrowly fixed
+manual collector-reconnect action from current trusted source metadata. That
+separate admin flow never passes through this bridge or the read-only MCP API.
+
 ### Explicit home snapshot
 
 For a request that needs live home state, send
