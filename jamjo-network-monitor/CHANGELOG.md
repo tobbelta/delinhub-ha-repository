@@ -1,3 +1,9 @@
+## 1.0.134
+
+- Telefonappen visar HA:s loggförslag med prioritet, stöd i loggposter och verifieringssteg. Granskning kan startas manuellt i appen.
+- Kontrollerade åtgärder erbjuds som särskilda knappar när HA godkänt en aktuell åtgärd. Samma förfrågnings-ID används för osäkra kvittenser utan automatisk omkörning.
+- HA granskar det senaste dygnet varje morgon klockan 08.00 svensk tid via ett separat läsande MCP-underlag. AI tillämpar inga åtgärder automatiskt.
+
 ## 1.0.133
 
 - Giltig lokal standardadress för loggmottagningen så att HA:s URL-validering tillåter start direkt efter uppdatering och nyinstallation.
