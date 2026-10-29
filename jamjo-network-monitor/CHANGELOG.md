@@ -1,3 +1,9 @@
+## 1.0.135
+
+- Loggförslag visar varför en direktåtgärd finns, redan är löst eller behöver undersökas manuellt. Åtgärdsplanen går att läsa även när ingen direktknapp finns.
+- Verifierad Recorder-varning för matchsensorn får en särskild åtgärdsknapp. Appen kräver bekräftelse på att framtida HA-historik för sensorn stoppas och HA startas om kort. Livevisning och äldre historik behålls.
+- Beständig åtgärdskvittens följer konfigurationskontroll, omstart och faktisk verifiering. En kontroll av osäkert resultat skickar aldrig om ändringen.
+
 ## 1.0.134
 
 - Telefonappen visar HA:s loggförslag med prioritet, stöd i loggposter och verifieringssteg. Granskning kan startas manuellt i appen.
