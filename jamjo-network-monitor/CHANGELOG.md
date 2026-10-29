@@ -1,3 +1,9 @@
+## 1.0.136
+
+- AI-granskningen går igenom alla tillgängliga ERROR- och CRITICAL-poster i det låsta dygnsintervallet, grupperar upprepningar och bedömer varje feltyp.
+- Appen visar hur långt granskningen kommit och hur många feltyper som återstår. Ett nytt uttryckligt tryck kan fortsätta efter senast kvitterade sida när en körning avbrutits eller AI-gränsen nåtts.
+- De högst prioriterade förbättringsförslagen visas med kontrollerade åtgärdsknappar. Ändringar kräver din bekräftelse. Långa granskningar fortsätter i HA även om appens väntetid går ut.
+
 ## 1.0.135
 
 - Loggförslag visar varför en direktåtgärd finns, redan är löst eller behöver undersökas manuellt. Åtgärdsplanen går att läsa även när ingen direktknapp finns.
