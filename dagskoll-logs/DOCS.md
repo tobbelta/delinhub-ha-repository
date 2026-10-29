@@ -5,6 +5,48 @@ om ledigt utrymme passar bättre för kontinuerlig loggskrivning än Pi:s SD-kor
 Tilläggets privata `/data/events.sqlite3` följer med i Home Assistants backup
 av tillägget. Backa upp tillägget och förvara även en kopia utanför Dell.
 
+## Fullständig ERROR-/CRITICAL-inventering
+
+`GET /v1/review?mode=error_groups&since=...&until=...` är läsande och kräver
+visningsnyckel. Alla kvarvarande råa ERROR/CRITICAL räknas över hela det valda
+mottagningsfönstret och ett låst övre sekvensnummer. Grupperingen använder hela
+den lagrade normaliserade feltexten och tekniska fält; felkoder och olika
+diagnostiska suffix hålls isär. Tydliga tidsstämplar, process-, nätverks- och
+opaka identifierare normaliseras. Första/sista exempel visar både början och
+slutet av lång text, med uttrycklig markering av utdraget.
+
+Varje sida innehåller högst tio grupper med exakta antal och en eller två
+citerbara exempel per grupp. Rå ERROR/CRITICAL behålls även för klassade äldre
+stderr-notiser. Gruppantal avser hela inventeringen; evidens är exempel.
+`page.next_cursor` binds med HMAC till fönster, övre sekvens, inventeringshash
+och 24 timmars giltighet. Nästa sida ekar endast SHA-256 av begärd markör som
+`request_cursor_sha256`; råmarkören ska inte ingå i modelltext.
+
+Sidans vanliga JSON-representation är högst 48 KiB. Sidor tappar aldrig
+grupper för att få plats. Det går att minska två exempel till ett med en
+uttrycklig varningskod; även en för stor sådan sida avvisas. Högst 5000 grupper
+och en begränsad beräkningstid tillåts. Misslyckad inventering är ett fel,
+inte en tyst delmängd som påstås vara fullständig.
+
+Markören bevarar startens globala nivåantal, källantal och lagrade tidsgränser.
+Källrader har `counts_scope: error_groups`: deras antal avser enbart fasta
+ERROR/CRITICAL, medan övriga nivåer är noll i detta filtrerade läge.
+Gallring av INFO eller andra orelaterade poster stoppar inte fortsättningen:
+vid ändrad gallringsräknare verifieras de relevanta felposternas digest igen.
+Förlust av nödvändiga felposter ger `snapshot_pruned` (409), ändrat underlag `snapshot_changed` (409)
+och utgången markör `snapshot_expired` (410). Börja ett nytt uttryckligt
+granskningsförsök när en tidigare ögonblicksbild inte längre kan användas.
+En GET skapar inga databasposter eller persistenta ögonblicksbilder. RAM-cachen
+har högst två poster och 8 MiB; underlaget kan återbyggas från databasen.
+Nyckeln `/data/review-cursor.key` skapas före HTTP-start och ska bevaras med
+databasen vid uppdatering/backup. Den får aldrig publiceras eller loggas.
+
+`health_basis: current_at_fetch` och `health_checked_at` anger att källhälsa
+är en separat aktuell läsning. Den ingår inte i inventeringshashen och ändrar
+inte fönstrets fasta antal eller sidornas grupper. Åtgärder måste alltid
+kontrollera aktuell hälsa på nytt. Det tidigare balanserade översiktsläget
+fungerar fortsatt utan `mode=error_groups`.
+
 ## Privat lokal installation i Jämjö
 
 Den aktiva installationen heter **`local_dagskoll_logs`** och byggs privat på
