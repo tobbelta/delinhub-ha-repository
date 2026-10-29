@@ -177,6 +177,24 @@ The model cannot select an action: HA may independently offer a narrowly fixed
 manual collector-reconnect action from current trusted source metadata. That
 separate admin flow never passes through this bridge or the read-only MCP API.
 
+For complete error reviews, `metadata.log_review` additionally accepts
+`mode="error_groups"` and an optional opaque `cursor` (at most 2048 URL-safe
+characters). The fixed MCP call binds these values to one received-time window
+and a complete frozen ERROR/CRITICAL inventory. Each page holds at most ten
+groups and 48 KiB; every group must receive exactly one validated Swedish
+assessment, including recorded ERROR groups identified as historical severity
+artifacts. Five proposals are a prioritization, not a claim that unreturned pages
+were analyzed. HA stores progress and decides whether another bounded start fits
+the existing daily budget; the bridge never loops through pages or resets quota.
+
+The protected proof retains snapshot/page identifiers, exact group counts and
+safe source/severity/citation metadata. Continuation values never reach the AI
+worker. Changed/pruned snapshots return HTTP409, expired snapshots HTTP410;
+these paths launch no model. A verified inventory with zero ERROR/CRITICAL
+events returns a deterministic report with `no_paid_model_call=true`, without
+reserving quota. A successful nonempty page sets that flag to false and remains
+subject to normal start accounting. Full per-page JSON is capped at32KiB UTF8.
+
 ### Explicit home snapshot
 
 For a request that needs live home state, send

@@ -1,3 +1,9 @@
+# 0.3.0
+
+- Read complete retained ERROR/CRITICAL inventories through the fixed native HA MCP tool, one bounded page at a time. Validate the snapshot, exact counts, source/citation ownership and every group assessment before accepting a result.
+- Preserve signed pagination only in the credential-owning parent. Report snapshot expiry/pruning explicitly before AI quota and return verified empty inventories without starting a model.
+- Keep daily limits, durable usage, subscription login and all worker tool restrictions unchanged. Reports never execute repairs; Home Assistant's separate typed approval flow remains responsible for actions.
+
 # 0.2.0
 
 - Add a fixed log_review profile with balanced, bounded LogReviewOverview evidence from native HA MCP, fetched before AI quota reservation.
