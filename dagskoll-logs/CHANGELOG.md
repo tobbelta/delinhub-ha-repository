@@ -1,3 +1,18 @@
+## 0.3.0
+
+- Nytt läsläge `error_groups` räknar samtliga kvarvarande råa ERROR/CRITICAL i
+  ett låst mottagningsfönster och övre sekvensnummer, utan 400-radersgräns.
+- Exakta grupper har stabila ID:n och först/sist-evidens. Hela normaliserade
+  feltexten används; felkoder och diagnostiska suffix behålls. Äldre socat-
+  stderr-notiser ingår med ursprunglig nivå och förklarande klassning.
+- HMAC-skyddade markörer ger högst tio grupper per sida och gäller i 24 timmar.
+  Förlust av nödvändiga felposter, ändrat underlag, utgång, tids- och
+  storleksgränser ger uttryckliga fel. Orelaterad INFO-gallring tillåts när
+  felinventeringens digest är oförändrad; startens globala antal bevaras.
+- Markörnyckeln skapas enbart vid tjänstestart i privat `/data`; GET skriver
+  ingen inventering till databasen. Begränsad RAM-cache kan återbyggas efter
+  omstart. Aktuell källhälsa redovisas separat från den fasta inventeringen.
+
 ## 0.2.0
 
 - Läsande dygnsöversikt räknar hela det kvarvarande mottagningsfönstret och

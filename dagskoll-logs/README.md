@@ -9,7 +9,7 @@ Tjänsten lagrar strukturerade händelser och filtrerad driftinformation.
 Lösenord, nycklar, autentisering, råa hälsovärden och meddelandeinnehåll hör
 inte hemma i loggen. Loggning fungerar utan molntjänst eller abonnemang.
 
-Tillägget har egen version, för närvarande **0.2.0**. Uppdateringar byggs från
+Tillägget har egen version, för närvarande **0.3.0**. Uppdateringar byggs från
 granskad Git-källa i HA:s lokala tilläggsmapp. Privata nycklar och loggdata
 ligger utanför avbildningen och bevaras vid uppdatering. CI provar autentisering
 från den verkliga insamlarprocessen under normal containerstart.
