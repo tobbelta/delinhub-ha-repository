@@ -1,5 +1,5 @@
 name: "Dagskoll"
-version: "1.0.141"
+version: "1.0.142"
 # Shared release number for HA, the phone, Wear and the watch face.
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"

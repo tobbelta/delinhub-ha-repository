@@ -1,3 +1,10 @@
+## 1.0.142
+
+- Väntande hockeymatcher med en verifierad starttid ger inte längre falska resultatfel före matchstart. Saknade resultat efter matchstart rapporteras fortfarande.
+- Verifierade WebSocket-anslutningar med HTTP 101 loggas som lyckade. Riktiga HTTP- och nätfel behåller sina varningar.
+- Upptäck och Släktträd behåller hela innehållet i appen, medan HA sparar status och mindre metadata i historiken.
+- Fondgivarnas statistik behåller samma identiteter, valuta och mätklass utan den inkompatibla monetärklassen. Saknad uthyrningsstatus visas som okänd.
+
 ## 1.0.141
 
 - Telefonen får en besökssida för Nygatan, huvudbyggnaden i Jämjö och Lillstugan, med historik för vald person.
