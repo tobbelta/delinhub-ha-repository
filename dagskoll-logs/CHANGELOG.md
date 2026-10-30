@@ -1,3 +1,8 @@
+## 0.3.3
+
+- Loggposter följer tjänstens uttryckliga JSON-, syslog- eller textnivå före ord som "error" i själva meddelandet. Normala SSH-avslut, Thread-notiser, Matter-information och Cloudflare-varningar får rätt nivå.
+- Ursprunglig transportnivå och klassningsgrund bevaras som metadata. Verkliga kritiska meddelanden behåller kritisk nivå. Äldre lagrade poster ändras inte.
+
 ## 0.3.2
 
 - Fullständig felgranskning kan åter ge en kontrollerad återanslutningsknapp
