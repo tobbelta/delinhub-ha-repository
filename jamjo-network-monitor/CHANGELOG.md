@@ -1,3 +1,9 @@
+## 1.0.139
+
+- Lyckad loggöverföring med fler poster i kön fortsätter utan att räknas som nätfel. Telefon och klocka får begränsade uppladdningspass och behåller endast okvitterade poster.
+- HA får säker driftstatus för telefonens och klockans loggkö: antal, senaste försök och leverans samt kontrollerad felstatus. Inga hälsovärden eller nycklar ingår.
+- Appen läser den separata kvittensen för automatiska statusrapporter och inväntar att HA har sparat dem. Det minskar onödiga kontrollanrop.
+
 ## 1.0.138
 
 - Gamla matchrader som blivit inaktuella driver inte Målservice till tätare hämtningar.
