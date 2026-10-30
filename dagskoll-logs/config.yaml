@@ -1,5 +1,5 @@
 name: Dagskoll Logg
-version: "0.3.0"
+version: "0.3.1"
 slug: dagskoll_logs
 description: Samlad lokal driftlogg för Dagskoll, Home Assistant och nätverket
 url: https://github.com/tobbelta/delinhub
@@ -8,6 +8,7 @@ image: ghcr.io/tobbelta/dagskoll-logs
 startup: services
 boot: auto
 init: false
+backup: cold
 ingress: true
 ingress_port: 8097
 panel_icon: mdi:text-box-search-outline
