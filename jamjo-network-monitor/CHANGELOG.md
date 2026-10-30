@@ -1,3 +1,8 @@
+## 1.0.140
+
+- Loggöverföringen visar kontrollerad felklass och vilket steg som misslyckas vid teknisk felsökning. Nycklar, logginnehåll och felmeddelanden skrivs inte ut.
+- Behörig lokal felsökning kan starta ett begränsat nytt försök för enbart loggkön. Sparade poster och övriga bakgrundsjobb bevaras.
+
 ## 1.0.139
 
 - Lyckad loggöverföring med fler poster i kön fortsätter utan att räknas som nätfel. Telefon och klocka får begränsade uppladdningspass och behåller endast okvitterade poster.
