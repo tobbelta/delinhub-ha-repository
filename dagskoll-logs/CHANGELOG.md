@@ -1,3 +1,12 @@
+## 0.3.2
+
+- Fullständig felgranskning kan åter ge en kontrollerad återanslutningsknapp
+  när den aktuella felposten är verifierad på samma sida och loggkällans
+  serverstyrda återförsök får väckas. Friska eller tysta källor påverkas inte.
+- Verkliga misslyckade insamlingsanslutningar klassas som ERROR så deras
+  verifierade ankare ingår i felgranskningen. Tysta lästimeouter, vänteläge
+  och planerade stopp får fortsatt normala nivåer.
+
 ## 0.3.1
 
 - Säkerhetskopiering pausar endast loggappen under kopieringen och återstartar
