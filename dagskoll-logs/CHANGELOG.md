@@ -1,3 +1,9 @@
+## 0.3.1
+
+- Säkerhetskopiering pausar endast loggappen under kopieringen och återstartar
+  den därefter. Det ger en stabil SQLite-kopia och undviker att tillfälliga
+  markörfiler försvinner medan arkivet skrivs.
+
 ## 0.3.0
 
 - Nytt läsläge `error_groups` räknar samtliga kvarvarande råa ERROR/CRITICAL i
