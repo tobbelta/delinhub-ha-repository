@@ -1,3 +1,8 @@
+## 1.0.138
+
+- Gamla matchrader som blivit inaktuella driver inte Målservice till tätare hämtningar.
+- Tolv gamla MQTT-annonser för fondportföljen tas bort eftersom HA-integrationen redan sköter sensorerna. Befintliga sensorer, historik och fondkontroller bevaras.
+
 ## 1.0.137
 
 - Telefonens Morgon-TV-status godtas även när äldre appar utelämnar tomma tidsfält.
