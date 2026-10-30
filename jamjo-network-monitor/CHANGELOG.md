@@ -1,3 +1,9 @@
+## 1.0.137
+
+- Telefonens Morgon-TV-status godtas även när äldre appar utelämnar tomma tidsfält.
+- Målservice hämtar Allsvenskan enligt dess egna matcher. Curling och andra livesporter orsakar inte längre täta fotbollshämtningar; källans väntetid efter 429 behålls.
+- Saknade numeriska värden visas som okända i HA utan konverteringsfel. Giltiga nollvärden bevaras.
+
 ## 1.0.136
 
 - AI-granskningen går igenom alla tillgängliga ERROR- och CRITICAL-poster i det låsta dygnsintervallet, grupperar upprepningar och bedömer varje feltyp.
