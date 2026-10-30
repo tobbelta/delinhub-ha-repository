@@ -1,3 +1,8 @@
+## 1.0.141
+
+- Telefonen får en besökssida för Nygatan, huvudbyggnaden i Jämjö och Lillstugan, med historik för vald person.
+- HA använder ett gemensamt besökarregister mellan platserna och sparar personbesök separat från enhetsantal och ankomstnotiser. Okänd närvaro vid avbrott visas som okänd.
+
 ## 1.0.140
 
 - Loggöverföringen visar kontrollerad felklass och vilket steg som misslyckas vid teknisk felsökning. Nycklar, logginnehåll och felmeddelanden skrivs inte ut.
