@@ -1,3 +1,9 @@
+## 1.0.144
+
+- Now Bar kan visa samma nyligen lästa glukosnotis som appen, med tydlig ~-markering när mättiden saknas. Gamla och ogiltiga värden begär fortfarande ingen livevisning.
+- Inställningssidan visar den verkliga orsaken till utebliven livevisning och skiljer appens begäran från Androids svar.
+- Dubbla trendpilar känns igen även i aviseringen och blodsockerkortet.
+
 ## 1.0.143
 
 - Blodsockret får första platsen och ett större kort i telefonens översikt. Steg visas som siffror utan ring, målprogress eller varv.
