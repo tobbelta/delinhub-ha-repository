@@ -1,3 +1,8 @@
+## 1.0.146
+
+- Automatiska rapporter av samma typ skickas en i taget så samtidiga versionskontroller bekräftas korrekt.
+- Wi-Fi-integration 1.5.1 läser HA:s aktuella enhetsregister utan deprecationsvarning för vanliga lampenheter och behåller avgränsningen för äldre sammansatta enheter.
+
 ## 1.0.145
 
 - Automatisk nattvy på Nygatan vid trådlös laddning mellan 20.00 och 06.00. En separat nattstart fungerar med Samsungs rutiner även när Dagskoll inte är öppen; telefonens vanliga sidor visas inte över låsskärmen.
