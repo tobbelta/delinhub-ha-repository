@@ -1,3 +1,10 @@
+## 1.0.143
+
+- Blodsockret får första platsen och ett större kort i telefonens översikt. Steg visas som siffror utan ring, målprogress eller varv.
+- Besök får en egen ikon i bottenmenyn och en gemensam personlista med platsfilter. Samma person upprepas inte under varje plats; olika HA-profiler med samma namn skiljs åt med sina platskopplingar.
+- Ett nytt val för Samsung Now Bar visar blodsocker och trend genom Androids offentliga stöd för liveaviseringar. Gamla eller osäkra mätuppgifter markeras tydligt och begär inte livevisning.
+- Bottenmenyn anpassar antalet rader till skärmbredd och textstorlek. Historik, personkopplingar, steginsamling och övriga inställningar bevaras.
+
 ## 1.0.142
 
 - Väntande hockeymatcher med en verifierad starttid ger inte längre falska resultatfel före matchstart. Saknade resultat efter matchstart rapporteras fortfarande.
