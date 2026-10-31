@@ -1,3 +1,9 @@
+## 1.0.145
+
+- Automatisk nattvy på Nygatan vid trådlös laddning mellan 20.00 och 06.00. En separat nattstart fungerar med Samsungs rutiner även när Dagskoll inte är öppen; telefonens vanliga sidor visas inte över låsskärmen.
+- Nattvyn har en knapp för att släcka de verifierade SmartThings-lamporna på Nygatan. Otillgängliga lampor redovisas, och en oklar leverans skickas inte om automatiskt.
+- De ägarbekräftade dubbletterna på Besök kan visas som en person med gemensam historik. Originalprofiler, platskopplingar och besöksperioder bevaras.
+
 ## 1.0.144
 
 - Now Bar kan visa samma nyligen lästa glukosnotis som appen, med tydlig ~-markering när mättiden saknas. Gamla och ogiltiga värden begär fortfarande ingen livevisning.
