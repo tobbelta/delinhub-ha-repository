@@ -1,3 +1,8 @@
+## 0.3.5
+
+- Läser uttryckliga loggnivåer efter ett verifierat journalprefix med tidsstämpel, värdnamn och program/PID. Dockers egna varningar blir inte ERROR enbart för att meddelandet innehåller "error" eller "failed".
+- Ursprungliga meddelanden, tidsfält och redan lagrade loggposter/nivåer bevaras.
+
 ## 0.3.4
 
 - Klassificerar Cloudflareds uttryckliga avbrutna klientbegäranden separat från tunnelhaveri, med ursprunglig felgrad och råpost bevarade.
