@@ -1,3 +1,8 @@
+## 1.0.148
+
+- Tolkar officiella curlingkällans blanksteg i tomma omgångsrutor utan att skapa nollpoäng eller släppa poängkontroller.
+- Binder Curlits återanvända spelnummer till session och bana så att en ny match inte ärver en äldre matchs historik.
+
 ## 1.0.147
 
 - Samma kommande match visas en gång i översikten. Matchlistorna delar en stabil identitet, även vid säkert verifierade käll- och starttidsändringar.
