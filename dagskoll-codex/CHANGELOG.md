@@ -1,3 +1,7 @@
+# 0.3.1
+
+- Använder Supervisors aktuella app_config-metadata med oförändrad /config-monteringsplats och rättigheter. Konto, modell, budget och användningshistorik bevaras.
+
 # 0.3.0
 
 - Read complete retained ERROR/CRITICAL inventories through the fixed native HA MCP tool, one bounded page at a time. Validate the snapshot, exact counts, source/citation ownership and every group assessment before accepting a result.
