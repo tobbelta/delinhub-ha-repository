@@ -1,3 +1,11 @@
+## 1.0.147
+
+- Samma kommande match visas en gång i översikten. Matchlistorna delar en stabil identitet, även vid säkert verifierade käll- och starttidsändringar.
+- Gamla eller obekräftade matchposter visas separat med verklig källålder och behandlas inte som verifierad pågående match.
+- Fullständig matchsökning får en egen tidsgräns och långsamma Text-TV-sidor hindrar inte friska sidors uppdateringar.
+- Matchläget levereras med MQTT-kvittens och skickas om efter återanslutning. Telefonen läser aktuellt läge direkt när anslutningen kommer tillbaka.
+- Curling kan få poäng och omgångar direkt från World Curlings officiella resultatflöde, bundna till verifierat spelschema och tävlingsklass.
+
 ## 1.0.146
 
 - Automatiska rapporter av samma typ skickas en i taget så samtidiga versionskontroller bekräftas korrekt.
