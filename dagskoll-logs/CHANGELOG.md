@@ -1,3 +1,8 @@
+## 0.3.4
+
+- Klassificerar Cloudflareds uttryckliga avbrutna klientbegäranden separat från tunnelhaveri, med ursprunglig felgrad och råpost bevarade.
+- Använder Supervisors aktuella app_config-metadata med samma monteringsplats och läs-/skrivrättigheter.
+
 ## 0.3.3
 
 - Loggposter följer tjänstens uttryckliga JSON-, syslog- eller textnivå före ord som "error" i själva meddelandet. Normala SSH-avslut, Thread-notiser, Matter-information och Cloudflare-varningar får rätt nivå.
