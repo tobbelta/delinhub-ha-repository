@@ -1,3 +1,12 @@
+## 1.0.149
+
+- Skiljer användbar delvis målservice från fullständig förlust av färska liveresultat. Felaktiga källor och gammal data visas fortfarande tydligt.
+- Begränsar återförsök per trasig resultatkälla och bevarar 429-väntetider, så friska källor kan fortsätta uppdateras.
+- Anger fasta källkoder i HTTP-diagnostik utan att spara adresser, nycklar eller svarsinnehåll.
+- Skiljer avsiktligt begränsade arkivsökningar från driftfel och visar delvis status på svenska i HA.
+- Telefonens socketlogg skiljer avsiktlig stängning från verkligt anslutningsfel och undviker dubbla fel-/varningsposter.
+- Klienternas historiska bortfallsräknare får en varaktig baslinje; verklig ökning, återställning eller osäker räknare rapporteras separat.
+
 ## 1.0.148
 
 - Tolkar officiella curlingkällans blanksteg i tomma omgångsrutor utan att skapa nollpoäng eller släppa poängkontroller.
