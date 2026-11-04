@@ -1,3 +1,7 @@
+## 1.0.150
+
+- Telefonens besökshistorik visar diagram i stället för en lista: besök per vecka per plats, tid per plats och ankomsttid på dygnet. Pågående besök visas fortfarande som text. Tillägget i HA är oförändrat i övrigt.
+
 ## 1.0.149
 
 - Skiljer användbar delvis målservice från fullständig förlust av färska liveresultat. Felaktiga källor och gammal data visas fortfarande tydligt.
