@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "publishedAt": "2026-11-06T16:33:54Z",
+  "sourceRevision": "cceb4ea4301a84ac909ae0163a9869407006f1c3",
+  "app": {
+    "versionCode": 7,
+    "versionName": "0.2.5",
+    "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/bilvaljaren-0.2.5-7/bilvaljaren.apk",
+    "sha256": "fe1114b945255bbdc6ea8de8c1ae6bc0eb55c2012771b302c346734c81b96aa8"
+  }
+}
