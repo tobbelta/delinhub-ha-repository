@@ -1,3 +1,7 @@
+## 1.0.151
+
+- Telefonen får en Bilstereo-vy med checklistan för bilen och bilstereons status: direkt från Bilväljaren när telefonen och stereon är på samma nät (telefonens hotspot eller stereons Wi-Fi), annars från HA-entiteten sensor.bilvaljaren_stereostatus. Koppling med en sexsiffrig kod från stereon; nyckeln sparas krypterat och skickas aldrig igen. Inga blodsockervärden visas. Tillägget i HA är oförändrat i övrigt.
+
 ## 1.0.150
 
 - Telefonens besökshistorik visar diagram i stället för en lista: besök per vecka per plats, tid per plats och ankomsttid på dygnet. Pågående besök visas fortfarande som text. Tillägget i HA är oförändrat i övrigt.
