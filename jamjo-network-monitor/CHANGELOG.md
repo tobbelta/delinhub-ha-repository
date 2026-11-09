@@ -1,3 +1,7 @@
+## 1.0.152
+
+- Telefonens Hem får valet Bil bredvid Stugan och Nygatan: bilens position eller senast kända position på en karta, med ålder, källa (stereons GPS eller telefonen) och noggrannhet, och en knapp som öppnar platsen i Kartor. Tillägget i HA är oförändrat i övrigt.
+
 ## 1.0.151
 
 - Telefonen får en Bilstereo-vy med checklistan för bilen och bilstereons status: direkt från Bilväljaren när telefonen och stereon är på samma nät (telefonens hotspot eller stereons Wi-Fi), annars från HA-entiteten sensor.bilvaljaren_stereostatus. Koppling med en sexsiffrig kod från stereon; nyckeln sparas krypterat och skickas aldrig igen. Inga blodsockervärden visas. Tillägget i HA är oförändrat i övrigt.
