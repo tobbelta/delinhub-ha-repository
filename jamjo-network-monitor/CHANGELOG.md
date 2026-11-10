@@ -1,3 +1,10 @@
+## 1.0.155
+
+- Telefonens Now Bar och klockan behåller en nyare lokal Dexcom-snapshot när en äldre Share-snapshot har annat värde eller annan trend, även inom 90 sekunder. Värde och pil väljs tillsammans; aviseringstid anges fortsatt som okänd mättid. Ett nytt molnprov med senare mättid får fortfarande ta över.
+- En närliggande Share-mättid används för en lokal avisering bara när både värdet och trendpilen stämmer överens. Ingen trend beräknas från skillnaden mellan två visade tal, och källa, konto, ålder och skydd mot gamla svar behålls.
+- Separat HA-rättning: jamjo_funds 1.0.7 återställer measurement-klassning för nio befintliga statistikserier. Inga fondvärden, transaktioner eller historik tas bort. HA-installationen verifieras separat från Android-publiceringen.
+- Tilläggets övriga funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 155.
+
 ## 1.0.154
 
 - Hjälp och prov ger stegvisa guider, lokala egna provmarkeringar och automatiska läskontroller av HA, bilposition, reselogg och stereostatus. Automatiska resultat hålls skilda från verkliga handhavandeprov. Nattvy ingår inte i provlistan.
