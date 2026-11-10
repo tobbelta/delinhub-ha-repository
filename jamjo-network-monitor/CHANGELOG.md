@@ -1,3 +1,17 @@
+## 1.0.154
+
+- Hjälp och prov ger stegvisa guider, lokala egna provmarkeringar och automatiska läskontroller av HA, bilposition, reselogg och stereostatus. Automatiska resultat hålls skilda från verkliga handhavandeprov. Nattvy ingår inte i provlistan.
+
+- Bilkartans tidsreglage visar valt datum och klockslag, har 15-minuterssteg och val av exakt datum/tid. Vald historisk tid ligger still när ny data hämtas.
+- Senast kända bilposition gäller fram till nästa registrering. Visar registreringstid, hämtningsfel och avkortad historik utan att använda en gammal punkt över en avsiktligt utelämnad historikdel.
+- Samlar telefonens inställningar under Utseende och vardag, Anslutningar samt Uppdatering och felsökning. Befintliga inställningar och systemkontroll finns kvar.
+- Förbereder kontrollerad omkörning av HA-metadatapublicering från ett verifierat lyckat huvudgrensbygge, med skydd mot äldre metadata över en nyare release.
+- Separat förberedda loggkomponenter: HA-integration 1.4.4 för LLM-plattformsupptäckt och loggtjänst 0.3.6 för progressiva återförsök och faktisk historiktäckning. Installation och publicering verifieras separat.
+
+## 1.0.153
+
+- Telefonens Bil-vy får en tidsresa: dra reglaget bakåt (dygn, vecka eller månad) och kartan visar var bilen var då, med resan fram till dess. Under kartan visas kilometer och körtid i dag, i veckan, i månaden och i år. Uppgifterna kommer från Bilväljarens reselogg i HA (integration 1.3.30). Tillägget i HA är oförändrat i övrigt.
+
 ## 1.0.152
 
 - Telefonens Hem får valet Bil bredvid Stugan och Nygatan: bilens position eller senast kända position på en karta, med ålder, källa (stereons GPS eller telefonen) och noggrannhet, och en knapp som öppnar platsen i Kartor. Tillägget i HA är oförändrat i övrigt.
