@@ -1,3 +1,9 @@
+## 0.3.6
+
+- Ökar väntetiden vid upprepade insamlingsfel från 15 sekunder till högst 15 minuter. Varje försök behåller sin felpost, antal misslyckade försök och nästa väntetid; återhämtning återställer väntetiden för just den källan.
+- Visar äldsta och senaste mottagna händelse samt radgränsen i status och loggvyn. Lagringstid är ett tak, inte ett löfte om full historik.
+- Befintliga loggposter, kvittenser och räknare bevaras. Installationen ska verifieras separat.
+
 ## 0.3.5
 
 - Läser uttryckliga loggnivåer efter ett verifierat journalprefix med tidsstämpel, värdnamn och program/PID. Dockers egna varningar blir inte ERROR enbart för att meddelandet innehåller "error" eller "failed".
