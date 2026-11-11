@@ -1,5 +1,5 @@
 name: "Dagskoll"
-version: "1.0.156"
+version: "1.0.157"
 # Shared release number for HA, the phone, Wear and the watch face.
 slug: "jamjo_network_monitor"
 description: "Övervakning och manuellt godkända AI-åtgärder för fyra OpenWrt-puckar"
@@ -27,17 +27,11 @@ options:
   mqtt_port: 1883
   mqtt_username: "jamjo_mqtt"
   mqtt_password: ""
-  tobias_phone_mac: "<MAC-adress>"
-  tobias_phone_hostnames: "<tobias_phone_hostnames>"
+  tobias_phone_mac: ""
+  tobias_phone_hostnames: ""
   radio_relay_enabled: true
   radio_relay_port: 8099
-  personer:
-    - namn: "Tobias"
-      macar: "<MAC-adress>"
-      natverksnamn: "<tobias_phone_hostnames>"
-    - namn: "<namn>"
-      macar: "<MAC-adress>"
-      natverksnamn: "<natverksnamn>"
+  personer: []
   zte_sms_enabled: false
   zte_host: "192.168.0.1"
   zte_admin_password: ""
@@ -68,20 +62,13 @@ options:
   ticketmaster_api_key: ""
   nasa_api_key: ""
   sportsdb_api_key: ""
-  waste_pickup_id: "<waste_pickup_id>"
-  waste_address: "<waste_address>"
-  stugsommar_house_id: "<stugsommar_house_id>"
+  waste_pickup_id: ""
+  waste_address: ""
+  stugsommar_house_id: ""
   guest_ignore_macs: ""
   coop_probe_store: ""
   fund_portfolio_enabled: false
-  fund_transactions:
-    - fund_id: "<fund_id>"
-      name: "<name>"
-      isin: "<isin>"
-      units: 7.07
-      invested_sek: 5000
-      purchase_date: ""
-      source_url: "<source_url>"
+  fund_transactions: []
 schema:
   log_url: url?
   log_token: password?

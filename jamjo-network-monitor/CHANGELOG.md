@@ -1,3 +1,7 @@
+## 1.0.157
+
+- Tilläggets standardinställningar innehåller inte längre några personliga uppgifter (namn, telefoners MAC-adresser och nätverksnamn, adress, hämtnings-id, hus-id och fondinnehav). Dessa filer kopieras till ett publikt repo vid varje release. Befintliga installationer behåller sina sparade inställningar; en ny installation fyller i uppgifterna under tilläggets Konfiguration. Ändringsloggen är rensad på samma uppgifter. Telefon, klocka och urtavla är oförändrade mot 156.
+
 ## 1.0.155
 
 - Telefonens Now Bar och klockan behåller en nyare lokal Dexcom-snapshot när en äldre Share-snapshot har annat värde eller annan trend, även inom 90 sekunder. Värde och pil väljs tillsammans; aviseringstid anges fortsatt som okänd mättid. Ett nytt molnprov med senare mättid får fortfarande ta över.
@@ -869,7 +873,7 @@ Bakgrunden: Tobias stod i köket, telefonen satt på puck 1 med **-34 dBm**, och
 sa därför ingenting när han kom fram. Puck 1:s DHCP-lista gav svaret:
 
 ```
-<MAC-adress>   192.168.1.134   <tobias_phone_hostnames>
+<MAC-adress>   192.168.1.134   <telefonens nätverksnamn>
 ```
 
 Telefonen använder en slumpad MAC-adress (`e2` har biten för lokalt
@@ -881,7 +885,7 @@ går sönder och utan att något syns i loggen.
   eller mellanslag. Android slumpar en adress per SSID, och nätet har tre.
 - **Ny inställning `tobias_phone_hostnames`.** Tillägget läser
   `/tmp/dhcp.leases` från puckarna och matchar på namnet routern känner
-  apparaten som – `<tobias_phone_hostnames>`. Namnet överlever att adressen byts, vilket
+  apparaten som – `<telefonens nätverksnamn>`. Namnet överlever att adressen byts, vilket
   adressen per definition inte gör. Det här är den egentliga rättningen; flera
   MAC-adresser är bara bältet till hängslena.
 - Namnlistan **delas mellan puckarna**. Bara den puck som är DHCP-server har
@@ -1042,13 +1046,13 @@ Närvaron var hårdkodad till en person. Nu är den en lista.
 
 - **Ny bokningshämtning från Stugsommar.** Stugans bokningskalender läses från
   samma slutpunkt som sajtens egen kalender använder,
-  `POST /pubweb/vishus12/calendar?houseid=<stugsommar_house_id>&hotel=0&calendar=ÅÅÅÅMM`. Varje
+  `POST /pubweb/vishus12/calendar?houseid=<hus-id>&hotel=0&calendar=ÅÅÅÅMM`. Varje
   dag har en klass som säger om den är ledig (`_a`, `_b`, `_f`), upptagen (`_x`)
   eller utanför den bokningsbara perioden (`_n`), och `_z` markerar säsongens
   sista dag.
 - Modulen skiljer **stängd säsong från bokning**. Efter säsongens slut är varje
   dag markerad som upptagen ända tills nästa års kalender publiceras – för hus
-  <stugsommar_house_id> gäller det allt efter 3 oktober 2026. De dagarna räknas inte som
+  <hus-id> gäller det allt efter 3 oktober 2026. De dagarna räknas inte som
   bokningar. Utan den skillnaden hade sensorn påstått en bokning på tretton
   månader.
 - Fyra nya entiteter: `sensor.lillstugan_stugsommar_bokningar`,
