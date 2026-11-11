@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-11-10T18:50:25Z",
-  "sourceRevision": "4549f608c15b0470ed41831a9ed305b074ffe09d",
-  "release": 37,
-  "haIntegration": "1.3.37",
+  "publishedAt": "2026-11-11T07:26:19Z",
+  "sourceRevision": "eac1c22b0b7bcb042a7474fb0544b78a2e5bf95d",
+  "release": 38,
+  "haIntegration": "1.3.38",
   "app": {
-    "versionCode": 37,
-    "versionName": "0.3.37",
-    "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/bilvaljaren-0.3.37-37/bilvaljaren.apk",
-    "sha256": "2588ee7c9a927cd1918aa0ba295c099646da445b0e00d305a0ed6fa79a371e15"
+    "versionCode": 38,
+    "versionName": "0.3.38",
+    "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/bilvaljaren-0.3.38-38/bilvaljaren.apk",
+    "sha256": "7a0cf4d010e6917f46c8965f7b47ba410aa9568e944a1c55f159b89a4590bdd5"
   }
 }
