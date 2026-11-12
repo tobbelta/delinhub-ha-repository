@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-11-11T17:19:32Z",
-  "sourceRevision": "e437d2492ef7a4e7acf0095c52ffcce67b6b0b6e",
+  "publishedAt": "2026-11-12T19:54:17Z",
+  "sourceRevision": "9cefffbac8a328fdd7eb949d748ec4213038fbb4",
   "phone": {
-    "versionCode": 10157,
-    "versionName": "1.1.10.157",
-    "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/android-43064586367-1/delinhub-phone.apk",
-    "sha256": "e0c4fa62bcce1ef89f6ccec986200e26f592c5776eecc5d80ea738b7d8910d00"
+    "versionCode": 10158,
+    "versionName": "1.1.10.158",
+    "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/android-43292199183-1/delinhub-phone.apk",
+    "sha256": "b03679badea9aa8b58f5c7ebb6c0cad59deeee85fdd6ff617c28bde5804cc9d3"
   },
   "watch": {
-    "versionCode": 10157,
-    "versionName": "1.0.19.157",
-    "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/android-43064586367-1/delinhub-watch.apk",
-    "sha256": "1f000ea448e2a6e1d8801b526598dfe8030e12accbd778ca1e10dd64244f7bb5"
+    "versionCode": 10158,
+    "versionName": "1.0.19.158",
+    "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/android-43292199183-1/delinhub-watch.apk",
+    "sha256": "7bd7093830817b25613bbf8f477dff26bbb14e516d3ff13285791a16d57e02d9"
   },
   "watchFace": {
-    "versionCode": 10157,
-    "versionName": "1.0.0.157",
-    "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/android-43064586367-1/delinhub-watchface.apk",
-    "sha256": "ed54e3e16cd8e482f2e7bdbe678fc03e7a2ad58da37780d0c6c7dfa25c08b610"
+    "versionCode": 10158,
+    "versionName": "1.0.0.158",
+    "downloadUrl": "https://github.com/tobbelta/delinhub-ha-repository/releases/download/android-43292199183-1/delinhub-watchface.apk",
+    "sha256": "ecce5beccbd7af0cdd0deb08facd32cff5590536a64777ef6f66365343386793"
   }
 }
