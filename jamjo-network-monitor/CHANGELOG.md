@@ -645,7 +645,7 @@ Rättningarna från granskningen omfattar också separata telefon- och klockuppd
 ## 1.0.45
 
 - Följer OMX Stockholm Benchmark GI och Cap GI som närmaste marknadsreferenser
-  för <name>, samt OMXS30.
+  för den förvalda fonden, samt OMXS30.
 - Lägger till S&P 500, Nasdaq Composite, Dow Jones, Euro Stoxx 50, DAX,
   FTSE 100, Nikkei 225 och Hang Seng.
 - Publicerar kurs, dagsändring i procent och punkter samt källans kurstid till
