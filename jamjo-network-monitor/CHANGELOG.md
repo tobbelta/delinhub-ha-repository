@@ -1,3 +1,8 @@
+## 1.0.158
+
+- Telefonen får Fejka position under Inställningar → Verktyg: kartan visar den riktiga positionen, ett tryck väljer en annan plats och telefonen rapporterar den till andra appar tills den stängs av på skärmen eller i den varaktiga aviseringen. Kräver att Dagskoll väljs som app för simulerad plats i Utvecklaralternativ. Inga koordinater loggas eller skickas till HA.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 158.
+
 ## 1.0.157
 
 - Tilläggets standardinställningar innehåller inte längre några personliga uppgifter (namn, telefoners MAC-adresser och nätverksnamn, adress, hämtnings-id, hus-id och fondinnehav). Dessa filer kopieras till ett publikt repo vid varje release. Befintliga installationer behåller sina sparade inställningar; en ny installation fyller i uppgifterna under tilläggets Konfiguration. Ändringsloggen är rensad på samma uppgifter. Telefon, klocka och urtavla är oförändrade mot 156.
