@@ -1,3 +1,7 @@
+## 1.0.160
+
+- Provrelease för klockans självuppdatering: inga funktionsändringar i tillägget, telefonen, klockan eller urtavlan. En klocka med 159 ska hämta och installera 160 själv.
+
 ## 1.0.159
 
 - Klockan kan uppdatera Dagskoll själv, utan telefonen: den läser den publicerade versionsfilen var sjätte timme, kontrollerar kontrollsumma, version och signering och installerar tyst, klockappen först och sedan en redan installerad urtavla. Ägaren tillåter Installera okända appar för Dagskoll en gång (håll på tiden, tryck på versionsraden, Tillåt). Telefonens ADB-installation finns kvar.
