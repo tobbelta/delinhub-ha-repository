@@ -1,3 +1,8 @@
+## 1.0.162
+
+- Telefonen aviserar bara telefonens uppdateringar; klockan uppdaterar sig själv sedan 159. Installation på klockan från telefonen finns kvar som extraval i uppdateringscentret (nyinstallation, reparation, första urtavlan) och söker bara efter klockan när valet öppnas.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 162.
+
 ## 1.0.161
 
 - Klockans självuppdatering kör en kontroll åt gången och tar aldrig bort en fil som används; ett nytt tryck på Sök nu avbryter inte en pågående nedladdning. Första försöket mot 160 misslyckades när två kontroller överlappade. Loggen visar version och utfall.
