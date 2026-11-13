@@ -1,3 +1,8 @@
+## 1.0.167
+
+- Bilvyn i telefonen har ett nytt blad, Fjärrstart av stereon: en guide för ett ESP32-kort som startar stereon via Home Assistant när bilen står hemma (hur det fungerar, inköpslista, inkoppling och kontroller med bockar) och en wifi-mätare. Sitt i bilen, tryck Starta mätningen, så mäter telefonen hemmanätets signal i 30 sekunder och säger om kortet kommer att nå det. Det svagaste värdet avgör och sparas.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 167.
+
 ## 1.0.166
 
 - Diagnosloggen på telefonen och klockan tvingar inte längre en disksynk för varje rad. Raden skrivs fortfarande direkt till filen, så en appkrasch tappar inget; varningar och fel synkas direkt och övriga rader högst var 30:e sekund. Det sparar lagringsslitage och batteri.
