@@ -1,3 +1,9 @@
+## 1.0.163
+
+- Klockan visar inte längre ett gammalt blodsockervärde som aktuellt: efter 12 minuter står värdet med ~ men utan pil, förändring och färg, och efter 20 minuter visas --, på appen, urtavlan och brickan. Brickan byter själv även utan ny uppdatering.
+- Ett nyare molnvärde ersätter alltid det som visas; ett telefonvärde stoppar bara molnhämtningen tills nästa sensorvärde väntas.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 163.
+
 ## 1.0.162
 
 - Telefonen aviserar bara telefonens uppdateringar; klockan uppdaterar sig själv sedan 159. Installation på klockan från telefonen finns kvar som extraval i uppdateringscentret (nyinstallation, reparation, första urtavlan) och söker bara efter klockan när valet öppnas.
