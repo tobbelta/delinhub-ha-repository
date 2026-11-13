@@ -1,3 +1,8 @@
+## 1.0.164
+
+- Blodsocker på telefonen: när Dexcoms pil inte känns igen och Share har samma mätning visas Share-värdet med sin pil (även på klockan); en okänd pilbild loggas högst en gång i timmen utan värden. Ett oförändrat värde som Dexcom publicerar igen i sensorns takt blir inte längre gammalt efter 12 minuter. Aviseringsläsaren ber om att kopplas in igen när den tappat kontakten.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 164.
+
 ## 1.0.163
 
 - Klockan visar inte längre ett gammalt blodsockervärde som aktuellt: efter 12 minuter står värdet med ~ men utan pil, förändring och färg, och efter 20 minuter visas --, på appen, urtavlan och brickan. Brickan byter själv även utan ny uppdatering.
