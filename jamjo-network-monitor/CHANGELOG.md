@@ -1,3 +1,8 @@
+## 1.0.159
+
+- Klockan kan uppdatera Dagskoll själv, utan telefonen: den läser den publicerade versionsfilen var sjätte timme, kontrollerar kontrollsumma, version och signering och installerar tyst, klockappen först och sedan en redan installerad urtavla. Ägaren tillåter Installera okända appar för Dagskoll en gång (håll på tiden, tryck på versionsraden, Tillåt). Telefonens ADB-installation finns kvar.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 159.
+
 ## 1.0.158
 
 - Telefonen får Fejka position under Inställningar → Verktyg: kartan visar den riktiga positionen, ett tryck väljer en annan plats och telefonen rapporterar den till andra appar tills den stängs av på skärmen eller i den varaktiga aviseringen. Kräver att Dagskoll väljs som app för simulerad plats i Utvecklaralternativ. Inga koordinater loggas eller skickas till HA.
