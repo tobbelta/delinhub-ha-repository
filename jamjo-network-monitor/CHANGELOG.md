@@ -1,3 +1,9 @@
+## 1.0.166
+
+- Diagnosloggen på telefonen och klockan tvingar inte längre en disksynk för varje rad. Raden skrivs fortfarande direkt till filen, så en appkrasch tappar inget; varningar och fel synkas direkt och övriga rader högst var 30:e sekund. Det sparar lagringsslitage och batteri.
+- Publiceringen till release-förrådet försöker nu verkligen igen (upp till sex gånger) när ett annat flöde hunnit före.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 166.
+
 ## 1.0.165
 
 - Telefonen läser bara de Home Assistant-värden den visar (stugan, nätverket, vädret och fonderna, cirka 60 enheter och 44 kB) i stället för hela listan med cirka 500 enheter och 900 kB vid varje bakgrundskontroll. Om HA inte kan ta fram urvalet används hela listan som förut.
