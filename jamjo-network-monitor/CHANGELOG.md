@@ -1,3 +1,10 @@
+## 1.0.165
+
+- Telefonen läser bara de Home Assistant-värden den visar (stugan, nätverket, vädret och fonderna, cirka 60 enheter och 44 kB) i stället för hela listan med cirka 500 enheter och 900 kB vid varje bakgrundskontroll. Om HA inte kan ta fram urvalet används hela listan som förut.
+- Dexcom-lösenordet och HA-nyckeln skickas till klockan bara när de ändrats, när en annan klocka kopplats in, när klockan ber om dem eller var sjätte timme, i stället för med vartenda blodsockervärde. Klockan ber själv om dem när den saknar rätt version (till exempel efter en ominstallation).
+- Nedladdade uppdateringsfiler städas bort: installerade telefonversioner, ersatta versioner, filer äldre än en vecka och avbrutna nedladdningar.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 165.
+
 ## 1.0.164
 
 - Blodsocker på telefonen: när Dexcoms pil inte känns igen och Share har samma mätning visas Share-värdet med sin pil (även på klockan); en okänd pilbild loggas högst en gång i timmen utan värden. Ett oförändrat värde som Dexcom publicerar igen i sensorns takt blir inte längre gammalt efter 12 minuter. Aviseringsläsaren ber om att kopplas in igen när den tappat kontakten.
