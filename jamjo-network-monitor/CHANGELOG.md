@@ -1,3 +1,8 @@
+## 1.0.161
+
+- Klockans självuppdatering kör en kontroll åt gången och tar aldrig bort en fil som används; ett nytt tryck på Sök nu avbryter inte en pågående nedladdning. Första försöket mot 160 misslyckades när två kontroller överlappade. Loggen visar version och utfall.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 161.
+
 ## 1.0.160
 
 - Provrelease för klockans självuppdatering: inga funktionsändringar i tillägget, telefonen, klockan eller urtavlan. En klocka med 159 ska hämta och installera 160 själv.
