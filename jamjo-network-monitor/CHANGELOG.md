@@ -1,3 +1,11 @@
+## 1.0.168
+
+- Bilvyn i telefonen: kartan uppdaterar sig själv. Bilens markering flyttas utan att kartan laddas om, zoomen behålls och vägen bilen kört medan vyn är öppen ritas som en linje. Kartan följer bilen tills du själv drar i den; knappen Följ bilen slår på följningen igen. När bilen rapporterar läses positionen var tionde sekund, annars var trettionde.
+- Bilvyn visar klockslaget för den senaste positionsrapporten, till exempel "Senaste positionsrapport: i dag 14:32:05".
+- Rättat: telefonen väntade på status "live" men Bilväljaren skickar "active". Därför stod det alltid "Senast kända position" även när bilen rapporterade. Nu står det "Bilen just nu".
+- Bilvyn behåller positionen som visas om Home Assistant svarar utan koordinater strax efter en omstart.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 168.
+
 ## 1.0.167
 
 - Bilvyn i telefonen har ett nytt blad, Fjärrstart av stereon: en guide för ett ESP32-kort som startar stereon via Home Assistant när bilen står hemma (hur det fungerar, inköpslista, inkoppling och kontroller med bockar) och en wifi-mätare. Sitt i bilen, tryck Starta mätningen, så mäter telefonen hemmanätets signal i 30 sekunder och säger om kortet kommer att nå det. Det svagaste värdet avgör och sparas.
