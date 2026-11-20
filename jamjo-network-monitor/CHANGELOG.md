@@ -1,3 +1,9 @@
+## 1.0.171
+
+- Telefonen skickar nu varje ny blodsockermätning krypterat direkt till den kopplade bilstereon på det lokala nätet (Bilväljaren 0.3.53), så att stereon visar värdet även när Home Assistant är nere. Telefonen kontrollerar först att det är den kopplade stereon som svarar.
+- Reservbrevlådan: telefonen kopplas till Dagskoll reserv med en länk eller QR-kod (dagskoll://reserv…) utan att någon nyckel skrivs in, och kan kopplas bort under Inloggningar. Telefonen lämnar sedan stereons del av nyckeln till bilstereon. När Home Assistant inte svarar visar Bil-vyn stereons senaste position från reservbrevlådan ("Från reservbrevlådan · senast …"), och aviseringen och Systemkontroll berättar vad Nygatan-Pi:n ser: om nätet hemma fungerar och det bara är HA-datorn som inte svarar, om nätet i Jämjö inte går att nå, eller om även Nygatan-kontrollen är tyst.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 171.
+
 ## 1.0.170
 
 - Fonder och börser visar nu senast hämtade värden även när Home Assistant inte svarar, också efter att appen startats om. Uppgifterna märks tydligt, till exempel "Senast uppdaterad tis 17 nov 21:40 – Home Assistant svarar inte", och visas aldrig som aktuella. Om inget har sparats än står det att inga fond- eller börsdata finns sparade på telefonen. Sparade uppgifter ligger bara i appen, rensas vid byte av Home Assistant-token och används högst en månad.
