@@ -1,3 +1,8 @@
+## 1.0.170
+
+- Fonder och börser visar nu senast hämtade värden även när Home Assistant inte svarar, också efter att appen startats om. Uppgifterna märks tydligt, till exempel "Senast uppdaterad tis 17 nov 21:40 – Home Assistant svarar inte", och visas aldrig som aktuella. Om inget har sparats än står det att inga fond- eller börsdata finns sparade på telefonen. Sparade uppgifter ligger bara i appen, rensas vid byte av Home Assistant-token och används högst en månad.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 170.
+
 ## 1.0.169
 
 - När Home Assistant inte går att nå (som under de senaste dagarnas avbrott) försöker telefonen inte längre ansluta var 30:e sekund i all oändlighet. Väntetiden växer stegvis upp till 15 minuter och börjar om direkt när HA svarar igen eller telefonen byter nät. Blodsockret hämtas och visas precis som förut och väntar aldrig på HA; temperaturen hämtas nu i en egen slinga.
