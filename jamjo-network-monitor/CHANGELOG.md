@@ -1,3 +1,11 @@
+## 1.0.169
+
+- När Home Assistant inte går att nå (som under de senaste dagarnas avbrott) försöker telefonen inte längre ansluta var 30:e sekund i all oändlighet. Väntetiden växer stegvis upp till 15 minuter och börjar om direkt när HA svarar igen eller telefonen byter nät. Blodsockret hämtas och visas precis som förut och väntar aldrig på HA; temperaturen hämtas nu i en egen slinga.
+- Loggen fylls inte längre av samma fel om och om igen: första felet sparas, sedan en sammanfattning i timmen och en rad när kontakten är tillbaka, så att äldre loggar finns kvar efter ett långt avbrott. Kritiska händelser (krascher) synkas direkt till disk.
+- Temperaturerna i aviseringen och Now Bar visar hur gamla de är när HA inte svarar, till exempel "Inne: 21°C (2 tim)".
+- Varningen om att HA inte svarar berättar sedan när kontakten saknas, och appen påstår inte längre att HA nås via lokalt nät.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 169.
+
 ## 1.0.168
 
 - Bilvyn i telefonen: kartan uppdaterar sig själv. Bilens markering flyttas utan att kartan laddas om, zoomen behålls och vägen bilen kört medan vyn är öppen ritas som en linje. Kartan följer bilen tills du själv drar i den; knappen Följ bilen slår på följningen igen. När bilen rapporterar läses positionen var tionde sekund, annars var trettionde.
