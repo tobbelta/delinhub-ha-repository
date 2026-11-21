@@ -1,3 +1,8 @@
+## 1.0.172
+
+- Telefonens och klockans loggar skickas nu direkt när Home Assistant fungerar igen efter ett avbrott. Tidigare kunde loggarna vänta upp till fem timmar, eftersom väntetiden mellan försöken växer under ett långt avbrott. Nu skickar telefonen så fort Home Assistant svarar på något av appens vanliga anrop, och en kö som stått still försöker igen inom en kvart på telefonen och inom en timme på klockan. Den extra omstarten sker högst var femte minut.
+- Tilläggets funktioner är oförändrade; sista versionsnumret samordnar klientreleasen 172.
+
 ## 1.0.171
 
 - Telefonen skickar nu varje ny blodsockermätning krypterat direkt till den kopplade bilstereon på det lokala nätet (Bilväljaren 0.3.53), så att stereon visar värdet även när Home Assistant är nere. Telefonen kontrollerar först att det är den kopplade stereon som svarar.
