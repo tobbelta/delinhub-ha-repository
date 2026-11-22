@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "2026-11-22-modem-carplay",
+  "title": "Modem och CarPlay",
+  "minVersion": 62,
+  "maxVersion": 70,
+  "steps": [
+    {"id": "rest", "text": "Stå hemma med wifi. Välj ingen profil och låt skärmen vara på i 2 minuter.", "event": "modem.rest"},
+    {"id": "wake", "text": "Kör hemifrån. Internet ska komma tillbaka inom ungefär en halv minut.", "event": "modem.wake", "attrs": {"reason": "no_wifi"}},
+    {"id": "carplay", "text": "Välj en iPhone-profil och vänta tills CarPlay startar av sig själv.", "event": "splay.carplay_started"},
+    {"id": "from-carplay", "text": "Byt till en Android-profil medan CarPlay är igång. Stereon väntar några sekunder på Bluetooth innan telefonen ansluter.", "event": "test.bt_ready_wait", "attrs": {"ready": "true"}}
+  ]
+}
