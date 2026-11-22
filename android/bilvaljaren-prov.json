@@ -1,47 +1,52 @@
 {
   "schema": 1,
-  "id": "2026-11-22-ljud",
-  "title": "Ljudrutan och stereons ljudfält",
-  "minVersion": 66,
-  "maxVersion": 70,
+  "id": "2026-11-22-ljudfalt-carplay",
+  "title": "Ljudfält, CarPlay och wifi",
+  "minVersion": 67,
+  "maxVersion": 72,
   "steps": [
     {
       "id": "radio",
-      "text": "Starta stereons radioapp (FM) så att det hörs musik. Vrid upp så att du tydligt hör högtalarna.",
+      "text": "Starta stereons radioapp (FM) så att det hörs musik.",
       "event": "manual"
     },
     {
-      "id": "oppna",
-      "text": "Tryck på högtalarknappen nere till höger och välj Avancerad. Nu spelas stereons ljudrader in i 2 minuter – gör stegen nedan direkt.",
-      "event": "capture.start",
+      "id": "forare",
+      "text": "Öppna ljudrutan, välj Avancerad och dra den röda punkten till förarplatsen (vid ratten). Hörs ljudet mest där? Klart = ja, Hoppa över = nej.",
+      "event": "manual"
+    },
+    {
+      "id": "bak-hoger",
+      "text": "Dra punkten till bak höger. Hörs ljudet mest där? Klart = ja, Hoppa över = nej.",
+      "event": "manual"
+    },
+    {
+      "id": "mitten",
+      "text": "Tryck Mitten under bilen.",
+      "event": "sound.set",
       "attrs": {
-        "reason": "sound"
+        "setting": "field",
+        "balance": "0",
+        "fade": "0"
       }
     },
     {
-      "id": "fram-bak",
-      "text": "Dra Fram/bak i ljudrutan hela vägen åt ena hållet och sedan åt andra. Flyttades ljudet? Tryck Klart om ja, Hoppa över om inget hände.",
+      "id": "carplay",
+      "text": "Koppla från alla telefoner. Välj sedan en iPhone-profil och vänta på CarPlay, upp till en minut.",
+      "event": "splay.carplay_started"
+    },
+    {
+      "id": "carplay-sjalv",
+      "text": "Startade CarPlay utan att du behövde göra något mer? Klart = ja, Hoppa över = nej.",
       "event": "manual"
     },
     {
-      "id": "bas",
-      "text": "Dra Bas i ljudrutan upp och ner. Ändrades basen? Tryck Klart om ja, Hoppa över om inget hände.",
-      "event": "manual"
-    },
-    {
-      "id": "ljudfalt",
-      "text": "I radioappen: tryck på reglage-ikonen längst ner och välj Sound Field. Flytta den röda punkten till fram vänster och sedan till bak höger.",
-      "event": "manual"
-    },
-    {
-      "id": "ljudfalt-hors",
-      "text": "Flyttades ljudet när du flyttade den röda punkten? Tryck Klart om ja, Hoppa över om inget hände.",
-      "event": "manual"
-    },
-    {
-      "id": "igen",
-      "text": "Om stegen tog mer än 2 minuter: minimera ljudrutan, öppna den igen och flytta den röda punkten en gång till. Tryck sedan Klart.",
-      "event": "manual"
+      "id": "wifi",
+      "text": "Stanna där stereon brukar ha wifi. Tryck Wifi längst ner (koppla från telefonen om den frågar) och vänta en minut.",
+      "event": "wifi.manual_done",
+      "attrs": {
+        "ok": "true"
+      }
     }
   ]
 }
