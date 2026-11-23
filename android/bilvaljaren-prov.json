@@ -1,38 +1,18 @@
 {
   "schema": 1,
-  "id": "2026-11-23-fram-bak",
-  "title": "Fram och bak i ljudfältet",
-  "minVersion": 69,
-  "maxVersion": 73,
+  "id": "2026-11-23-krascher",
+  "title": "Stereons kraschrapporter",
+  "minVersion": 70,
+  "maxVersion": 74,
   "steps": [
     {
-      "id": "mitten",
-      "text": "Starta radion (FM). Tryck Ljud på startsidan, välj Avancerad och tryck Mitten. Låter radion lika i hela bilen? Klart = ja, Hoppa över = nej.",
-      "event": "manual"
+      "id": "las",
+      "text": "Inget att göra: när 0.3.70 startat läser den stereons kraschrapporter och bockar av detta steg själv.",
+      "event": "crash.summary"
     },
     {
-      "id": "bak",
-      "text": "Dra den röda punkten längst bak (åt höger i bilden). Hörs radion mest från bakhögtalarna? Klart = ja, Hoppa över = nej.",
-      "event": "manual"
-    },
-    {
-      "id": "fram",
-      "text": "Dra punkten längst fram (åt vänster i bilden). Hörs radion mest från framhögtalarna? Klart = ja, Hoppa över = nej.",
-      "event": "manual"
-    },
-    {
-      "id": "forare",
-      "text": "Dra punkten till förarplatsen (vid ratten). Hörs radion mest där? Klart = ja, Hoppa över = nej.",
-      "event": "manual"
-    },
-    {
-      "id": "splay",
-      "text": "Anslut en telefon med CarPlay eller Android Auto och spela musik. Dra punkten längst bak. Hörs musiken mest bak? Klart = ja, Hoppa över = nej.",
-      "event": "manual"
-    },
-    {
-      "id": "klart",
-      "text": "Tryck Mitten igen så att ljudet blir lika i hela bilen. Tryck sedan Klart.",
+      "id": "omstart",
+      "text": "Startar stereon om gång på gång under resan? Klart = nej, allt lugnt. Hoppa över = ja (dra då ur USB-modemet en stund).",
       "event": "manual"
     }
   ]
