@@ -1,52 +1,44 @@
 {
   "schema": 1,
-  "id": "2026-11-22-ljudfalt-carplay",
-  "title": "Ljudfält, CarPlay och wifi",
-  "minVersion": 67,
+  "id": "2026-11-23-ljudfalt",
+  "title": "Ljudfältet med rätt skala",
+  "minVersion": 68,
   "maxVersion": 72,
   "steps": [
     {
+      "id": "ljud-knapp",
+      "text": "Utan ansluten telefon: tryck Ljud längst ner på startsidan och välj Avancerad.",
+      "event": "sound.home"
+    },
+    {
       "id": "radio",
-      "text": "Starta stereons radioapp (FM) så att det hörs musik.",
+      "text": "Starta stereons radioapp (FM). Ljudrutan ska ligga kvar ovanpå. Tryck Klart när radion hörs.",
       "event": "manual"
     },
     {
-      "id": "forare",
-      "text": "Öppna ljudrutan, välj Avancerad och dra den röda punkten till förarplatsen (vid ratten). Hörs ljudet mest där? Klart = ja, Hoppa över = nej.",
+      "id": "radio-forare",
+      "text": "Dra den röda punkten till förarplatsen (vid ratten). Hörs radion mest där? Klart = ja, Hoppa över = nej.",
       "event": "manual"
     },
     {
-      "id": "bak-hoger",
-      "text": "Dra punkten till bak höger. Hörs ljudet mest där? Klart = ja, Hoppa över = nej.",
+      "id": "radio-bak",
+      "text": "Dra punkten till bak höger. Hörs radion mest där? Klart = ja, Hoppa över = nej.",
       "event": "manual"
     },
     {
-      "id": "mitten",
-      "text": "Tryck Mitten under bilen.",
-      "event": "sound.set",
-      "attrs": {
-        "setting": "field",
-        "balance": "0",
-        "fade": "0"
-      }
-    },
-    {
-      "id": "carplay",
-      "text": "Koppla från alla telefoner. Välj sedan en iPhone-profil och vänta på CarPlay, upp till en minut.",
-      "event": "splay.carplay_started"
-    },
-    {
-      "id": "carplay-sjalv",
-      "text": "Startade CarPlay utan att du behövde göra något mer? Klart = ja, Hoppa över = nej.",
+      "id": "radio-mitten",
+      "text": "Tryck Mitten. Låter radion lika i hela bilen? Klart = ja, Hoppa över = nej.",
       "event": "manual"
     },
     {
-      "id": "wifi",
-      "text": "Stanna där stereon brukar ha wifi. Tryck Wifi längst ner (koppla från telefonen om den frågar) och vänta en minut.",
-      "event": "wifi.manual_done",
-      "attrs": {
-        "ok": "true"
-      }
+      "id": "splay",
+      "text": "Anslut en telefon med CarPlay eller Android Auto och spela musik. Dra punkten till förarplatsen. Hörs musiken mest där? Klart = ja, Hoppa över = nej.",
+      "event": "manual"
+    },
+    {
+      "id": "splay-egen",
+      "text": "Flytta punkten i stereons egna ljudinställningar (Sound Field) medan musiken från telefonen spelar. Ändrades ljudet? Klart = ja, Hoppa över = nej.",
+      "event": "manual"
     }
   ]
 }
